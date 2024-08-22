@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -10,7 +11,7 @@ export default function Header() {
         >
           我的博客
         </Link>
-        <ul className="flex space-x-6 mt-4 md:mt-0">
+        <ul className="flex items-center space-x-6 mt-4 md:mt-0">
           <li>
             <Link
               href="/"
@@ -34,6 +35,9 @@ export default function Header() {
             >
               关于
             </Link>
+          </li>
+          <li className="flex items-center">
+            <ThemeToggle />
           </li>
         </ul>
       </nav>

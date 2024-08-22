@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     title: "Next.js 13新特性解析",
     excerpt: "深入了解Next.js 13带来的革命性变化...",
     content:
-      "Next.js 13引入了许多激动人心的新特性,如App Router、服务器组件、流式渲染等。本文将详细介绍这些新特性的使用方法和优势。我们将探讨App Router如何简化路由管理,服务器组件如何提升性能和SEO,以及流式渲染如何改善大型应用的用户体验。同时,我们还将讨论从Next.js 12迁移到13版本的最佳实践和注意事项。",
+      "Next.js 13引入了许多激动人心的新特性,如App Router、服务器组件、流式渲染等。本文将详细介绍这些新特性的使用方法和优势。我们将探讨App Router��何简化路由管理,服务器组件如何提升性能和SEO,以及流式渲染如何改善大型应用的用户体验。同时,我们还将讨论从Next.js 12迁移到13版本的最佳实践和注意事项。",
     date: "2024-03-20",
     author: "李四",
     tags: ["Next.js", "服务器组件", "性能优化"],
@@ -44,9 +44,140 @@ export const blogPosts: BlogPost[] = [
     title: "TypeScript高级类型技巧",
     excerpt: "掌握TypeScript中的高级类型用法...",
     content:
-      "TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际例子展示这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。",
+      "TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际��子展示这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。",
     date: "2024-03-30",
     author: "赵六",
     tags: ["TypeScript", "类型系统", "前端开发"],
+  },
+  {
+    id: 5,
+    title: "深入理解JavaScript异步编程",
+    excerpt: "探索JavaScript中的异步编程模式和最佳实践...",
+    content: `
+# JavaScript异步编程深度解析
+
+JavaScript的异步编程是前端开发中的重要概念。本文将深入探讨各种异步编程模式及其应用。
+
+## 回调函数
+
+回调函数是最基本的异步编程方式:
+
+\`\`\`javascript
+function fetchData(callback) {
+  setTimeout(() => {
+    callback('Data fetched');
+  }, 1000);
+}
+
+fetchData((result) => {
+  console.log(result);
+});
+\`\`\`
+
+## Promise
+
+Promise提供了更优雅的异步处理方式:
+
+\`\`\`javascript
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data fetched');
+    }, 1000);
+  });
+}
+
+fetchData()
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
+\`\`\`
+
+## Async/Await
+
+Async/Await是基于Promise的语法糖,使异步代码更易读:
+
+\`\`\`javascript
+async function getData() {
+  try {
+    const result = await fetchData();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getData();
+\`\`\`
+
+通过掌握这些异步编程模式,我们可以更好地处理复杂的异步操作,提高代码的可读性和可维护性。
+    `,
+    date: "2024-04-05",
+    author: "陈七",
+    tags: ["JavaScript", "异步编程", "Promise", "Async/Await"],
+  },
+  {
+    id: 6,
+    title: "React性能优化实战指南",
+    excerpt: "学习React应用的高级性能优化技巧...",
+    content: `
+# React性能优化实战指南
+
+在构建大型React应用时,性能优化至关重要。本文将介绍一些实用的React性能优化技巧。
+
+## 使用React.memo
+
+React.memo可以帮助我们避免不必要的重渲染:
+
+\`\`\`jsx
+const MyComponent = React.memo(function MyComponent(props) {
+  /* 渲染使用到的props */
+});
+\`\`\`
+
+## 使用useMemo和useCallback
+
+useMemo和useCallback可以帮助我们缓存计算结果和回调函数:
+
+\`\`\`jsx
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+const memoizedCallback = useCallback(
+  () => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
+\`\`\`
+
+## 虚拟化长列表
+
+对于长列表,我们可以使用虚拟化技术来提高性能:
+
+\`\`\`jsx
+import { FixedSizeList as List } from 'react-window';
+
+function Row({ index, style }) {
+  return <div style={style}>Row {index}</div>;
+}
+
+function Example() {
+  return (
+    <List
+      height={150}
+      itemCount={1000}
+      itemSize={35}
+      width={300}
+    >
+      {Row}
+    </List>
+  );
+}
+\`\`\`
+
+通过应用这些优化技巧,我们可以显著提升React应用的性能,为用户提供更流畅的体验。
+    `,
+    date: "2024-04-10",
+    author: "林八",
+    tags: ["React", "性能优化", "虚拟列表"],
   },
 ];

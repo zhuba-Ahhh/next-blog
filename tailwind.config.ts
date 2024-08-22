@@ -9,12 +9,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#3490dc",
-        secondary: "#ffed4a",
-        dark: "#2d3748",
+        primary: {
+          DEFAULT: "#1890ff",
+          light: "#40a9ff",
+          dark: "#096dd9",
+        },
+        secondary: {
+          DEFAULT: "#36CFC9",
+          light: "#17E4DC",
+          dark: "#289490",
+        },
+        dark: {
+          DEFAULT: "#001529",
+          light: "#002140",
+          darker: "#000c17",
+        },
+        light: "#f0f2f5",
+        accent: "#f5222d",
+        warning: "#faad14",
+        info: "#13c2c2",
+        gray: {
+          DEFAULT: "#d9d9d9",
+          light: "#f5f5f5",
+          dark: "#8c8c8c",
+        },
       },
     },
   },
   plugins: [],
 };
+
 export default config;
