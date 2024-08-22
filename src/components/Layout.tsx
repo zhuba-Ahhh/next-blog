@@ -1,7 +1,7 @@
 import { ReactNode, useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { debounce } from "lodash"; // 需要安装lodash库
+import { debounce } from "lodash-es"; // 需要安装lodash库
 
 interface LayoutProps {
   children: ReactNode;
