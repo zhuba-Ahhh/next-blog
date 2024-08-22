@@ -39,9 +39,6 @@ jobs:
       - name: Build  📦
         run: pnpm build
 
-      - name: Static HTML export with Next.js
-        run: pnpm run export
-
       - name: Deploy 🚀
         if: ${{ matrix.os == 'ubuntu-latest' }}
         uses: JamesIves/github-pages-deploy-action@v4.6.0
