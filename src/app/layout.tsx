@@ -20,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh" suppressHydrationWarning>
+      <link rel="icon" href="/next.svg" type="image/svg+xml" />
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <ThemeProvider attribute="class">
           <Header />
