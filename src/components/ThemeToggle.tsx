@@ -23,15 +23,69 @@ const SunIcon = () => (
 function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [userOverride, setUserOverride] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+
+    // 检查当前时间并设置默认主题
+    const checkTime = () => {
+      const currentHour = new Date().getHours();
+      const storedOverride = localStorage.getItem("themeOverride");
+
+      if (storedOverride) {
+        const { theme: overrideTheme, timestamp } = JSON.parse(storedOverride);
+        const overrideTime = new Date(timestamp);
+        const now = new Date();
+
+        // 如果override是在今天设置的,则使用override主题
+        if (overrideTime.toDateString() === now.toDateString()) {
+          setTheme(overrideTheme);
+          setUserOverride(true);
+          return;
+        } else {
+          // 如果override不是今天设置的,则清除它
+          localStorage.removeItem("themeOverride");
+        }
+      }
+
+      // 如果没有有效的override,则根据时间设置主题
+      if (currentHour >= 20 || currentHour < 8) {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
+      setUserOverride(false);
+    };
+
+    // 首次加载时检查
+    checkTime();
+
+    // 每分钟检查一次
+    const interval = setInterval(checkTime, 60000);
+
+    return () => clearInterval(interval);
+  }, [setTheme]);
 
   if (!mounted) return null;
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    setUserOverride(true);
+    localStorage.setItem(
+      "themeOverride",
+      JSON.stringify({
+        theme: newTheme,
+        timestamp: new Date().toISOString(),
+      })
+    );
+  };
 
   return (
     <button
       className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={toggleTheme}
       aria-label={theme === "dark" ? "切换到亮色模式" : "切换到暗色模式"}
     >
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
