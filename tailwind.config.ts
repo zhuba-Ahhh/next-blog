@@ -2,6 +2,11 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import typography from "@tailwindcss/typography";
 import animate from "tailwindcss-animate";
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const config = {
   darkMode: ["class"],
@@ -79,16 +84,16 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       backgroundColor: {
-        'code-light': 'var(--code-bg)',
-        'code-dark': 'var(--code-bg)',
+        "code-light": "var(--code-bg)",
+        "code-dark": "var(--code-bg)",
       },
       textColor: {
-        'code-light': 'var(--code-text)',
-        'code-dark': 'var(--code-text)',
+        "code-light": "var(--code-text)",
+        "code-dark": "var(--code-text)",
       },
     },
   },
   plugins: [animate, typography],
 } satisfies Config;
 
-export default config;
+export default withBundleAnalyzer(config);

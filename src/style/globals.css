@@ -70,4 +70,14 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  a {
+    text-decoration: none;
+    text-decoration-line: none !important;
+  }
+
+  a:hover {
+    text-decoration: none;
+    text-decoration-line: none !important;
+  }
 }
