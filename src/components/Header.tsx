@@ -29,6 +29,7 @@ export default function Header() {
                   ? "text-foreground"
                   : "text-foreground/60"
               }`}
+              aria-current={pathname === item.href ? "page" : undefined}
             >
               {item.label}
             </Link>

@@ -51,20 +51,21 @@ export default function Home() {
         <h2 className="text-3xl font-semibold mb-4">最新文章</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sortedPosts.map((post, index) => (
-            <motion.div
-              key={post.id}
-              className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg cursor-pointer border border-white border-opacity-20"
-              whileHover={{
-                scale: 1.03,
-                backgroundColor: "rgba(255,255,255,0.15)",
-              }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-              <p className="text-sm opacity-80">{post.date}</p>
-            </motion.div>
+            <Link href={`/blog/${post.id}`} key={post.id}>
+              <motion.div
+                className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg cursor-pointer border border-white border-opacity-20"
+                whileHover={{
+                  scale: 1.03,
+                  backgroundColor: "rgba(255,255,255,0.15)",
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
+                <p className="text-sm opacity-80">{post.date}</p>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </motion.div>
