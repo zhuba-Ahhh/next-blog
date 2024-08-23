@@ -5,3 +5,5 @@ export * from "./skeleton";
 export * from "./textarea";
 export * from "./card";
 export * from "./alert";
+export * from "./select";
+export * from "./label";

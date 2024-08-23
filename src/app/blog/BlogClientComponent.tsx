@@ -17,12 +17,21 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
+  Label,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/components/ui";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { AlertCircle } from "lucide-react";
 
 const POSTS_PER_PAGE = 6;
 const INITIAL_TAG_COUNT = 10;
+
+// 添加新的排序选项类型
+type SortOption = "date" | "title";
 
 export default function BlogList() {
   const router = useRouter();
@@ -33,6 +42,7 @@ export default function BlogList() {
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
   const [isTagsExpanded, setIsTagsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [sortOption, setSortOption] = useState<SortOption>("date");
 
   const handleSearchParamsChange = useCallback(() => {
     const tag = searchParams.get("tag");
@@ -54,13 +64,24 @@ export default function BlogList() {
   }, []);
 
   const filteredPostsMemo = useMemo(() => {
-    return filteredPosts.filter(
+    let posts = filteredPosts.filter(
       (post) =>
         (post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           post.content.toLowerCase().includes(searchTerm.toLowerCase())) &&
         (!selectedTag || post.tags.includes(selectedTag))
     );
-  }, [searchTerm, selectedTag, filteredPosts]);
+
+    // 根据选择的排序选项进行排序
+    posts.sort((a, b) => {
+      if (sortOption === "date") {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      } else {
+        return a.title.localeCompare(b.title);
+      }
+    });
+
+    return posts;
+  }, [searchTerm, selectedTag, filteredPosts, sortOption]);
 
   const currentPosts = useMemo(() => {
     const indexOfLastPost = currentPage * POSTS_PER_PAGE;
@@ -111,14 +132,36 @@ export default function BlogList() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8 text-center">博客文章</h1>
-      <div className="mb-6 relative">
-        <Input
-          type="text"
-          placeholder="搜索文章..."
-          value={searchTerm}
-          onChange={handleSearch}
-          className="w-full"
-        />
+      <div className="mb-6 flex items-end space-x-4">
+        <div className="flex-grow">
+          <Label htmlFor="search" className="mb-2 block">
+            搜索文章
+          </Label>
+          <Input
+            id="search"
+            type="text"
+            placeholder="输入关键词..."
+            value={searchTerm}
+            onChange={handleSearch}
+          />
+        </div>
+        <div className="w-40">
+          <Label htmlFor="sort" className="mb-2 block">
+            排序方式
+          </Label>
+          <Select
+            onValueChange={(value: SortOption) => setSortOption(value)}
+            defaultValue={sortOption}
+          >
+            <SelectTrigger id="sort" className="w-full">
+              <SelectValue placeholder="选择排序方式" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="date">按日期排序</SelectItem>
+              <SelectItem value="title">按标题排序</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
       <div className="mb-6 flex flex-wrap items-center gap-2">
         <Badge

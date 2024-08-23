@@ -6,6 +6,7 @@ export interface BlogPost {
   date: string;
   author: string;
   tags: string[];
+  category?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -24,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     title: "Next.js 13新特性解析",
     excerpt: "深入了解Next.js 13带来的革命性变化...",
     content:
-      "Next.js 13引入了许多激动人心的新特性,如App Router、服务器组件、流式渲染等。本文将详细介绍这些新特性的使用方法和优势。我们将探讨App Router��何简化路由管理,服务器组件如何提升性能和SEO,以及流式渲染如何改善大型应用的用户体验。同时,我们还将讨论从Next.js 12迁移到13版本的最佳实践和注意事项。",
+      "Next.js 13引入了许多激动人心的新特性,如App Router、服务器组件、流式渲染等。本文将详细介绍这些新特性的使用方法和优势。我们将探讨App Router何���化路由管理,服务器组件如何提升性能和SEO,以及流式渲染如何改善大型应用的用户体验。同时,我们还将讨论从Next.js 12迁移到13版本的最佳实践和注意事项。",
     date: "2024-03-20",
     author: "李四",
     tags: ["Next.js", "服务器组件", "性能优化"],
@@ -44,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     title: "TypeScript高级类型技巧",
     excerpt: "掌握TypeScript中的高级类型用法...",
     content:
-      "TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际��子展示这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。",
+      "TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际子展���这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。",
     date: "2024-03-30",
     author: "赵六",
     tags: ["TypeScript", "类型系统", "前端开发"],
@@ -211,7 +212,7 @@ function Example() {
     id: 10,
     title: "微前端架构实践与性能优化",
     excerpt: "深入理解微前端的实现原理和优化策略...",
-    content: `微前端架构允许多个独立开发、部署的前端应用共存于一个页面。本文将详细介绍微前端的实现方法,包括Single-SPA、Qiankun等框架的使用。我们将探讨微前端的通信机制、样式隔离、性能优化等关键问题,并分享大型项目中的实践经验和注意事项。`,
+    content: `微前端架构允许多个独立开发、部署的前端应用共存于一个页面。本文将详细介绍微前端的实现方法,包括Single-SPA、Qiankun等框架的使用。我们将探讨微前端的通信机制、样式隔离、性能优化等关键��题,并分享大型项目中的实践经验和注意事项。`,
     date: "2024-04-30",
     author: "刘十二",
     tags: ["微前端", "架构设计", "性能优化"],
@@ -224,5 +225,77 @@ function Example() {
     date: "2024-05-05",
     author: "赵十三",
     tags: ["数据可视化", "WebGL", "3D渲染"],
+  },
+  {
+    id: 12,
+    title: "渐进式Web应用(PWA)开发指南",
+    excerpt: "学习如何构建离线可用、类原生应用体验的Web应用...",
+    content: `
+渐进式Web应用(PWA)结合了Web和原生应用的优点,提供了卓越的用户体验。本文将深入探讨PWA的核心技术:
+
+1. Service Workers: 实现离线缓存和后台同步
+2. Web App Manifest: 定义应用图标和启动行为
+3. Push Notifications: 实现推送通知功能
+
+我们将通过一个实际项目,演示如何将现有的Web应用转换为PWA,并讨论PWA在不同平台上的表现和局限性。此外,我们还将探讨PWA的未来发展趋势,如Web Bluetooth和Web USB等新API的应用前景。
+    `,
+    date: "2024-05-10",
+    author: "钱十四",
+    tags: ["PWA", "离线应用", "移动Web"],
+  },
+  {
+    id: 13,
+    title: "GraphQL与现代API设计",
+    excerpt: "探索GraphQL如何改变前后端交互模式...",
+    content: `
+GraphQL正在改变我们设计和使用API的方式。本文将深入讨论GraphQL的核心概念和优势:
+
+1. 类型系统: 强类型定义提高了API的可预测性
+2. 按需获取: 客户端可以精确指定所需数据,减少过度获取
+3. 实时更新: Subscriptions支持实时数据流
+
+我们将通过一个实际的全栈项目,展示如何使用Apollo Client在React应用中集成GraphQL。同时,我们还将探讨GraphQL的性能优化策略,如查询合并、缓存管理等,以及在大型项目中使用GraphQL的最佳实践。
+    `,
+    date: "2024-05-15",
+    author: "孙十五",
+    tags: ["GraphQL", "API设计", "全栈开发"],
+  },
+  {
+    id: 14,
+    title: "前端安全最佳实践",
+    excerpt: "学习保护Web应用免受常见安全威胁...",
+    content: `
+随着Web应用日益复杂,前端安全变得越来越重要。本文将全面介绍前端安全最佳实践:
+
+1. XSS防御: 使用内容安全策略(CSP)和输入验证
+2. CSRF保护: 实现合适的CSRF令牌机制
+3. 安全的第三方库管理: 使用npm audit和Snyk等工具
+4. HTTPS: 正确配置SSL/TLS
+5. 安全的本地存储: 敏感数据加密存储
+
+我们将通过实际案例分析常见的安全漏洞,并提供具体的防御策略。同时,我们还将讨论新兴的安全威胁和防御技术,如子资源完整性(SRI)和特征策略等。
+    `,
+    date: "2024-05-20",
+    author: "周十六",
+    tags: ["Web安全", "XSS", "CSRF"],
+  },
+  {
+    id: 15,
+    title: "前端工程化与构建优化",
+    excerpt: "探索现代前端工程化实践和构建性能优化...",
+    content: `
+前端工程化对于大型项目的可维护性和性能至关重要。本文将深入探讨前端工程化的各个方面:
+
+1. 模块化: ES6模块、CommonJS和AMD的对比
+2. 构建工具: Webpack、Rollup和Vite的选择与配置
+3. 代码分割: 实现按需加载,提高首屏加载速度
+4. Tree Shaking: 消除无用代码,减小包体积
+5. 持续集成/持续部署(CI/CD): 自动化测试和部署流程
+
+我们将通过一个复杂的前端项目,演示如何优化构建过程,提高开发效率和应用性能。同时,我们还将探讨新兴的构建工具和优化技术,如ESBuild和Rust-based工具链等。
+    `,
+    date: "2024-05-25",
+    author: "吴十七",
+    tags: ["工程化", "构建优化", "性能优化"],
   },
 ];
