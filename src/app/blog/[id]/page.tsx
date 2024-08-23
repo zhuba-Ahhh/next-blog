@@ -61,19 +61,20 @@ function TableOfContents({
   headings: { text: string; level: number; slug: string }[];
 }) {
   return (
-    <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg sticky top-20">
-      <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+    <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg sticky top-20 w-[240px] mr-2">
+      <h2 className="text-lg font-bold mb-3 text-gray-900 dark:text-white">
         目录
       </h2>
       <nav>
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {headings.map((heading, index) => (
-            <li key={index} className={`${heading.level === 3 ? "ml-4" : ""}`}>
+            <li key={index} className={`${heading.level === 3 ? "ml-2" : ""}`}>
               <a
                 href={`#${heading.slug}`}
-                className="text-primary dark:text-primary-light hover:underline text-sm"
+                className="text-primary dark:text-primary-light hover:underline text-sm block truncate"
+                title={heading.text}
               >
-                {heading.text}
+                {heading.text.length > 20 ? heading.text.slice(0, 20) + '...' : heading.text}
               </a>
             </li>
           ))}

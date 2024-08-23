@@ -1305,7 +1305,7 @@ GraphQL是一种用于API的查询语言,也是一个运行时。它的主要特
 
 1. 定义Schema:
 
-\`\`\`
+\`\`\`javascript
 type Query {
   getPost(id: ID!): Post
   getAllPosts: [Post]
@@ -1343,7 +1343,7 @@ input PostInput {
 
 2. 使用Apollo Client:
 
-\`\`\`
+\`\`\`javascript
 import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, useMutation } from '@apollo/client';
 
 const client = new ApolloClient({
