@@ -21,11 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh" suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning className="h-full">
       <link rel="icon" href="/next.svg" type="image/svg+xml" />
       <body
         className={cn(
-          `${inter.className} flex flex-col min-h-screen bg-background font-sans antialiased`,
+          `${inter.className} flex flex-col bg-background font-sans antialiased h-full`,
           inter.variable
         )}
       >

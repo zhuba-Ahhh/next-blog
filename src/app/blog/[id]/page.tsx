@@ -9,11 +9,9 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardFooter,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+  Badge,
+  Button,
+} from "@/components/ui";
 
 function ShareButtons({ url, title }: { url: string; title: string }) {
   return (

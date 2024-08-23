@@ -1,21 +1,28 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { blogPosts } from "@/data/blogPosts";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
+  Input,
+  Button,
+  Badge,
+  Skeleton,
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/components/ui/card";
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 const POSTS_PER_PAGE = 6;
+const INITIAL_TAG_COUNT = 10;
 
 export default function BlogList() {
   const router = useRouter();
@@ -24,22 +31,21 @@ export default function BlogList() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [filteredPosts, setFilteredPosts] = useState(blogPosts);
-  const [expandedTags, setExpandedTags] = useState(false);
-  const [expandedPostTags, setExpandedPostTags] = useState<{
-    [key: string]: boolean;
-  }>({});
-  const [tagsContainerRef, setTagsContainerRef] =
-    useState<HTMLDivElement | null>(null);
-  const [showExpandButton, setShowExpandButton] = useState(false);
+  const [isTagsExpanded, setIsTagsExpanded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  const handleSearchParamsChange = useCallback(() => {
     const tag = searchParams.get("tag");
     setSelectedTag(tag || null);
     setFilteredPosts(
       tag ? blogPosts.filter((post) => post.tags.includes(tag)) : blogPosts
     );
-    setExpandedTags(!!tag); // 当选中标签时，默认展开
   }, [searchParams]);
+
+  useEffect(() => {
+    handleSearchParamsChange();
+    setIsLoading(false);
+  }, [handleSearchParamsChange]);
 
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -56,31 +62,51 @@ export default function BlogList() {
     );
   }, [searchTerm, selectedTag, filteredPosts]);
 
-  const indexOfLastPost = currentPage * POSTS_PER_PAGE;
-  const indexOfFirstPost = indexOfLastPost - POSTS_PER_PAGE;
-  const currentPosts = filteredPostsMemo.slice(
-    indexOfFirstPost,
-    indexOfLastPost
+  const currentPosts = useMemo(() => {
+    const indexOfLastPost = currentPage * POSTS_PER_PAGE;
+    const indexOfFirstPost = indexOfLastPost - POSTS_PER_PAGE;
+    return filteredPostsMemo.slice(indexOfFirstPost, indexOfLastPost);
+  }, [currentPage, filteredPostsMemo]);
+
+  const paginate = useCallback(
+    (pageNumber: number) => setCurrentPage(pageNumber),
+    []
   );
 
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  const handleTagClick = useCallback(
+    (tag: string | null) => {
+      setSelectedTag(tag);
+      if (tag) {
+        router.push(`/blog?tag=${encodeURIComponent(tag)}`, { scroll: false });
+      } else {
+        router.push("/blog", { scroll: false });
+      }
+    },
+    [router]
+  );
 
-  useEffect(() => {
-    if (tagsContainerRef) {
-      const isOverflowing =
-        tagsContainerRef.scrollWidth > tagsContainerRef.clientWidth;
-      setShowExpandButton(isOverflowing);
-    }
-  }, [tagsContainerRef, allTags, expandedTags]);
+  const visibleTags = useMemo(
+    () => (isTagsExpanded ? allTags : allTags.slice(0, INITIAL_TAG_COUNT)),
+    [isTagsExpanded, allTags]
+  );
 
-  const handleTagClick = (tag: string | null) => {
-    setSelectedTag(tag);
-    if (tag) {
-      router.push(`/blog?tag=${encodeURIComponent(tag)}`, { scroll: false });
-    } else {
-      router.push('/blog', { scroll: false });
-    }
-  };
+  const handleSearch = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const newSearchTerm = e.target.value;
+      setSearchTerm(newSearchTerm);
+      setCurrentPage(1); // 重置到第一页
+
+      // 立即更新过滤后的文章列表，同时考虑选中的标签
+      const newFilteredPosts = blogPosts.filter(
+        (post) =>
+          (post.title.toLowerCase().includes(newSearchTerm.toLowerCase()) ||
+            post.content.toLowerCase().includes(newSearchTerm.toLowerCase())) &&
+          (!selectedTag || post.tags.includes(selectedTag))
+      );
+      setFilteredPosts(newFilteredPosts);
+    },
+    [selectedTag]
+  );
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -90,7 +116,7 @@ export default function BlogList() {
           type="text"
           placeholder="搜索文章..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleSearch}
           className="w-full"
         />
       </div>
@@ -102,7 +128,7 @@ export default function BlogList() {
         >
           全部
         </Badge>
-        {allTags.map((tag) => (
+        {visibleTags.map((tag) => (
           <Badge
             key={tag}
             variant={tag === selectedTag ? "default" : "secondary"}
@@ -112,53 +138,107 @@ export default function BlogList() {
             {tag}
           </Badge>
         ))}
-      </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {currentPosts.map((post) => (
-          <Card key={post.id}>
-            <CardHeader>
-              <CardTitle>
-                <Link href={`/blog/${post.id}`} className="hover:underline">
-                  {post.title}
-                </Link>
-              </CardTitle>
-              <CardDescription>
-                {post.date} | {post.author}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>{post.excerpt}</p>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <Badge
-                  key={tag}
-                  variant="secondary"
-                  className="text-xs px-2 py-1 h-6 cursor-pointer"
-                  onClick={() => handleTagClick(tag)}
-                >
-                  {tag}
-                </Badge>
-              ))}
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-      <div className="mt-8 flex justify-center">
-        {Array.from(
-          { length: Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE) },
-          (_, i) => (
-            <Button
-              key={i}
-              onClick={() => paginate(i + 1)}
-              variant={currentPage === i + 1 ? "default" : "outline"}
-              className="mx-1"
-            >
-              {i + 1}
-            </Button>
-          )
+        {allTags.length > INITIAL_TAG_COUNT && (
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsTagsExpanded(!isTagsExpanded)}
+            className="ml-2"
+          >
+            {isTagsExpanded ? (
+              <>
+                收起 <ChevronUp className="ml-1 h-4 w-4" />
+              </>
+            ) : (
+              <>
+                展开 <ChevronDown className="ml-1 h-4 w-4" />
+              </>
+            )}
+          </Button>
         )}
       </div>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {isLoading ? (
+          Array.from({ length: POSTS_PER_PAGE }).map((_, index) => (
+            <Card key={index}>
+              <CardHeader>
+                <Skeleton className="h-6 w-3/4" />
+                <Skeleton className="h-4 w-1/2 mt-2" />
+              </CardHeader>
+              <CardContent>
+                <Skeleton className="h-20 w-full" />
+              </CardContent>
+              <CardFooter>
+                <Skeleton className="h-6 w-1/4 mr-2" />
+                <Skeleton className="h-6 w-1/4" />
+              </CardFooter>
+            </Card>
+          ))
+        ) : currentPosts.length > 0 ? (
+          currentPosts.map((post) => (
+            <Card key={post.id}>
+              <CardHeader>
+                <CardTitle>
+                  <Link href={`/blog/${post.id}`} className="hover:underline">
+                    {post.title}
+                  </Link>
+                </CardTitle>
+                <CardDescription>
+                  {post.date} | {post.author}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>{post.excerpt}</p>
+              </CardContent>
+              <CardFooter className="flex flex-wrap gap-2">
+                {post.tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    variant="secondary"
+                    className="text-xs px-2 py-1 h-6 cursor-pointer"
+                    onClick={() => handleTagClick(tag)}
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </CardFooter>
+            </Card>
+          ))
+        ) : (
+          <div className="col-span-full">
+            <Alert variant="default">
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>未找到匹配的文章</AlertTitle>
+              <AlertDescription>
+                抱歉，没有找到与您的搜索条件相匹配的文章。请尝试以下操作：
+                <ul className="list-disc list-inside mt-2">
+                  <li>检查您的拼写</li>
+                  <li>使用不同的关键词</li>
+                  <li>尝试更广泛的搜索词</li>
+                  <li>清除所有筛选条件，重新开始搜索</li>
+                </ul>
+              </AlertDescription>
+            </Alert>
+          </div>
+        )}
+      </div>
+      {filteredPostsMemo.length > 0 && (
+        <div className="mt-8 flex justify-center">
+          {Array.from(
+            { length: Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE) },
+            (_, i) => (
+              <Button
+                key={i}
+                onClick={() => paginate(i + 1)}
+                variant={currentPage === i + 1 ? "default" : "outline"}
+                className="mx-1"
+              >
+                {i + 1}
+              </Button>
+            )
+          )}
+        </div>
+      )}
     </div>
   );
 }
