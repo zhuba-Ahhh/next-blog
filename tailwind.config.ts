@@ -78,6 +78,14 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      backgroundColor: {
+        'code-light': 'var(--code-bg)',
+        'code-dark': 'var(--code-bg)',
+      },
+      textColor: {
+        'code-light': 'var(--code-text)',
+        'code-dark': 'var(--code-text)',
+      },
     },
   },
   plugins: [animate, typography],

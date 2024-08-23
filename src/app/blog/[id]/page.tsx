@@ -1,3 +1,7 @@
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { serialize } from "next-mdx-remote/serialize";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogPosts } from "@/data/blogPosts";
@@ -12,6 +16,8 @@ import {
   Badge,
   Button,
 } from "@/components/ui";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function ShareButtons({ url, title }: { url: string; title: string }) {
   return (
@@ -44,8 +50,11 @@ function ShareButtons({ url, title }: { url: string; title: string }) {
   );
 }
 
-function TableOfContents({ content }: { content: string }) {
-  const headings = content.match(/#{2,3}\s.+/g) || [];
+function TableOfContents({
+  headings,
+}: {
+  headings: { text: string; level: number; slug: string }[];
+}) {
   return (
     <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg sticky top-8">
       <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -54,18 +63,12 @@ function TableOfContents({ content }: { content: string }) {
       <nav>
         <ul className="space-y-2">
           {headings.map((heading, index) => (
-            <li
-              key={index}
-              className={`${heading.startsWith("### ") ? "ml-4" : ""}`}
-            >
+            <li key={index} className={`${heading.level === 3 ? "ml-4" : ""}`}>
               <a
-                href={`#${heading
-                  .replace(/[^a-zA-Z0-9\s]/g, "")
-                  .toLowerCase()
-                  .replace(/\s/g, "-")}`}
+                href={`#${heading.slug}`}
                 className="text-primary dark:text-primary-light hover:underline text-sm"
               >
-                {heading.replace(/^#{2,3}\s/, "")}
+                {heading.text}
               </a>
             </li>
           ))}
@@ -88,12 +91,104 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: { params: { id: string } }) {
-  const post = blogPosts.find((p) => p.id.toString() === params.id); // 使用字符串比较
+const components = {
+  h1: (props: any) => (
+    <h1
+      className="text-3xl font-bold mt-8 mb-4 text-gray-900 dark:text-white"
+      {...props}
+    />
+  ),
+  h2: (props: any) => (
+    <h2
+      className="text-2xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200"
+      {...props}
+    />
+  ),
+  h3: (props: any) => (
+    <h3
+      className="text-xl font-medium mt-4 mb-2 text-gray-700 dark:text-gray-300"
+      {...props}
+    />
+  ),
+  p: (props: any) => (
+    <p className="mb-4 text-gray-600 dark:text-gray-400" {...props} />
+  ),
+  a: (props: any) => (
+    <a
+      className="text-blue-500 hover:underline dark:text-blue-400"
+      {...props}
+    />
+  ),
+  ol: (props: any) => (
+    <ol
+      className="list-decimal list-inside mb-4 text-gray-600 dark:text-gray-400"
+      {...props}
+    />
+  ),
+  li: (props: any) => (
+    <li className="mb-2 text-gray-600 dark:text-gray-400" {...props} />
+  ),
+  code: ({ className, ...props }: any) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : 'text';
+    return (
+      <div className="relative">
+        <SyntaxHighlighter
+          language={language}
+          style={oneLight}
+          className="bg-code-light dark:bg-code-dark rounded-lg p-4 my-4 overflow-auto"
+          codeTagProps={{
+            className: "text-code-light dark:text-code-dark",
+          }}
+          customStyle={{
+            backgroundColor: 'var(--code-bg)',
+            color: 'var(--code-text)',
+          }}
+          {...props}
+        />
+        <div className="absolute top-2 right-2 text-xs font-mono text-gray-500 dark:text-gray-400">
+          {language}
+        </div>
+      </div>
+    );
+  },
+  pre: (props: any) => <div {...props} />,
+};
+
+function extractHeadings(content: string) {
+  const headingRegex = /^(#{1,3})\s+(.+)$/gm;
+  const headings = [];
+  let match;
+
+  while ((match = headingRegex.exec(content)) !== null) {
+    headings.push({
+      level: match[1].length,
+      text: match[2],
+      slug: match[2].toLowerCase().replace(/\s+/g, "-"),
+    });
+  }
+
+  return headings;
+}
+
+export default async function BlogPost({ params }: { params: { id: string } }) {
+  const post = blogPosts.find((p) => p.id.toString() === params.id);
 
   if (!post) {
     notFound();
   }
+
+  const mdxSource = await serialize(post.content, {
+    mdxOptions: {
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: "wrap" }],
+      ],
+    },
+    parseFrontmatter: true,
+  });
+
+  const headings = extractHeadings(post.content);
 
   const relatedPosts = blogPosts
     .filter(
@@ -104,62 +199,78 @@ export default function BlogPost({ params }: { params: { id: string } }) {
   return (
     <div className="container mx-auto px-4 py-8">
       <ReadingProgress />
-      <article className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-        <div className="mb-4 text-muted-foreground">
-          <span>{post.date}</span> | <span>{post.author}</span> |
-          <span>预计阅读时间: {estimateReadingTime(post.content)} 分钟</span>
-        </div>
-        <div className="prose dark:prose-invert max-w-none mb-6">
-          <p>{post.content}</p>
-        </div>
-        <div className="mb-6 flex flex-wrap gap-2">
-          {post.tags.map((tag) => (
-            <Link key={tag} href={`/blog?tag=${encodeURIComponent(tag)}`}>
-              <Badge
-                variant="secondary"
-                className="cursor-pointer hover:bg-secondary-hover"
-              >
-                {tag}
-              </Badge>
-            </Link>
-          ))}
-        </div>
-        <Button asChild variant="outline">
-          <Link href="/blog">&larr; 返回博客列表</Link>
-        </Button>
+      <div className="flex flex-col md:flex-row gap-8">
+        <aside className="md:w-1/4">
+          <TableOfContents headings={headings} />
+        </aside>
+        <article className="md:w-3/4">
+          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+          <div className="mb-4 text-muted-foreground">
+            <span>{post.date}</span> | <span>{post.author}</span> |
+            <span>预计阅读时间: {estimateReadingTime(post.content)} 分钟</span>
+          </div>
 
-        {relatedPosts.length > 0 && (
-          <Card className="mt-12">
-            <CardHeader>
-              <CardTitle>相关文章</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2">
-                {relatedPosts.map((relatedPost) => (
-                  <li key={relatedPost.id}>
-                    <Link
-                      href={`/blog/${relatedPost.id}`}
-                      className="text-primary hover:underline"
-                    >
-                      {relatedPost.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        )}
+          <MDXRemote
+            source={post.content}
+            components={components}
+            options={{
+              mdxOptions: {
+                rehypePlugins: [
+                  rehypeSlug,
+                  [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                ],
+              },
+            }}
+          />
 
-        <ShareButtons
-          url={`https://yourblog.com/blog/${post.id}`}
-          title={post.title}
-        />
+          <div className="mb-6 flex flex-wrap gap-2">
+            {post.tags.map((tag) => (
+              <Link key={tag} href={`/blog?tag=${encodeURIComponent(tag)}`}>
+                <Badge
+                  variant="secondary"
+                  className="cursor-pointer hover:bg-secondary-hover"
+                >
+                  {tag}
+                </Badge>
+              </Link>
+            ))}
+          </div>
+          <Button asChild variant="outline">
+            <Link href="/blog">&larr; 返回博客列表</Link>
+          </Button>
 
-        <div className="mt-16">
-          <Comments />
-        </div>
-      </article>
+          {relatedPosts.length > 0 && (
+            <Card className="mt-12">
+              <CardHeader>
+                <CardTitle>相关文章</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {relatedPosts.map((relatedPost) => (
+                    <li key={relatedPost.id}>
+                      <Link
+                        href={`/blog/${relatedPost.id}`}
+                        className="text-primary hover:underline"
+                      >
+                        {relatedPost.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          )}
+
+          <ShareButtons
+            url={`https://yourblog.com/blog/${post.id}`}
+            title={post.title}
+          />
+
+          <div className="mt-16">
+            <Comments />
+          </div>
+        </article>
+      </div>
     </div>
   );
 }
