@@ -1,8 +1,12 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { blogPosts } from "@/data/blogPosts";
 
 export default function Home() {
+  // 根据日期排序博客文章,并取最新的两篇
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 2);
+
   return (
     <div className="flex flex-col items-center justify-center h-full text-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-4">
       {/* 标题和介绍 */}
@@ -46,12 +50,9 @@ export default function Home() {
       >
         <h2 className="text-3xl font-semibold mb-4">最新文章</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-            { title: "React 18新特性解析", date: "2023-04-01" },
-            { title: "Next.js 13性能优化指南", date: "2023-03-15" },
-          ].map((post, index) => (
+          {sortedPosts.map((post, index) => (
             <motion.div
-              key={post.title}
+              key={post.id}
               className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg cursor-pointer border border-white border-opacity-20"
               whileHover={{
                 scale: 1.03,

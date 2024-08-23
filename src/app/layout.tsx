@@ -31,9 +31,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class">
           <Header />
-          <main className="flex-grow container mx-auto px-4 py-4">
-            {children}
-          </main>
+          <main className="flex-grow container mx-auto px-4">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

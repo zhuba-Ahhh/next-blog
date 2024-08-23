@@ -74,7 +74,9 @@ function TableOfContents({
                 className="text-primary dark:text-primary-light hover:underline text-sm block truncate"
                 title={heading.text}
               >
-                {heading.text.length > 20 ? heading.text.slice(0, 20) + '...' : heading.text}
+                {heading.text.length > 20
+                  ? heading.text.slice(0, 20) + "..."
+                  : heading.text}
               </a>
             </li>
           ))}
