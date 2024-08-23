@@ -17,7 +17,12 @@ import {
   Button,
 } from "@/components/ui";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  oneDark,
+  oneLight,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
+import remarkGfm from "remark-gfm";
+import rehypeInlineCode from "@/lib/rehypeInlineCode";
 
 function ShareButtons({ url, title }: { url: string; title: string }) {
   return (
@@ -129,8 +134,17 @@ const components = {
     <li className="mb-2 text-gray-600 dark:text-gray-400" {...props} />
   ),
   code: ({ className, ...props }: any) => {
-    const match = /language-(\w+)/.exec(className || '');
-    const language = match ? match[1] : 'text';
+    const match = /language-(\w+)/.exec(className || "");
+    const language = match ? match[1] : "text";
+    const isInline = className === "inline-code";
+    if (isInline) {
+      return (
+        <code
+          className="bg-gray-100 dark:bg-gray-800 rounded px-1 py-0.5 font-mono text-sm"
+          {...props}
+        />
+      );
+    }
     return (
       <div className="relative">
         <SyntaxHighlighter
@@ -141,8 +155,8 @@ const components = {
             className: "text-code-light dark:text-code-dark",
           }}
           customStyle={{
-            backgroundColor: 'var(--code-bg)',
-            color: 'var(--code-text)',
+            backgroundColor: "var(--code-bg)",
+            color: "var(--code-text)",
           }}
           {...props}
         />
@@ -183,6 +197,7 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
       rehypePlugins: [
         rehypeSlug,
         [rehypeAutolinkHeadings, { behavior: "wrap" }],
+        rehypeInlineCode,
       ],
     },
     parseFrontmatter: true,
@@ -215,11 +230,14 @@ export default async function BlogPost({ params }: { params: { id: string } }) {
             components={components}
             options={{
               mdxOptions: {
+                remarkPlugins: [remarkGfm],
                 rehypePlugins: [
                   rehypeSlug,
                   [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                  rehypeInlineCode,
                 ],
               },
+              parseFrontmatter: true,
             }}
           />
 

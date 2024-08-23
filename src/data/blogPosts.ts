@@ -14,8 +14,206 @@ export const blogPosts: BlogPost[] = [
     id: 1,
     title: "深入理解React Hooks",
     excerpt: "探索React Hooks的工作原理和最佳实践...",
-    content:
-      "React Hooks是React 16.8中引入的新特性,它允许我们在函数组件中使用状态和其他React特性。本文将深入探讨Hooks的工作原理,包括useState、useEffect、useContext等常用Hooks的实现细节和使用技巧。我们还将讨论自定义Hooks的创建方法和应用场景,以及Hooks在大型应用中的性能优化策略。",
+    content: `
+# 深入理解React Hooks
+
+React Hooks是React 16.8中引入的新特性，它彻底改变了我们编写React组件的方式。本文将深入探讨Hooks的工作原理，包括常用Hooks的实现细节和使用技巧，以及如何创建自定义Hooks。
+
+## 为什么需要Hooks？
+
+在Hooks出现之前，React组件主要分为类组件和函数组件。类组件可以使用状态和生命周期方法，而函数组件则更简单，但功能有限。Hooks的出现使得函数组件也能够使用状态和其他React特性，从而带来以下优势：
+
+1. 更简洁的代码
+2. 更容易复用逻辑
+3. 更好的性能优化
+4. 更容易理解和维护的组件
+
+## 常用Hooks详解
+
+### useState
+
+\`useState\`是最基本的Hook，用于在函数组件中添加状态。
+
+\`\`\`jsx
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+\`\`\`
+
+\`useState\`返回一个数组，第一个元素是当前状态值，第二个元素是更新状态的函数。
+
+### useEffect
+
+\`useEffect\`用于处理副作用，如数据获取、订阅或手动修改DOM等。
+
+\`\`\`jsx
+import React, { useState, useEffect } from 'react';
+
+function DataFetcher() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []); // 空数组表示只在组件挂载时执行一次
+
+  return (
+    <div>
+      {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'}
+    </div>
+  );
+}
+\`\`\`
+
+\`useEffect\`接受两个参数：一个函数和一个依赖数组。函数在组件渲染后执行，依赖数组决定了effect何时重新运行。
+
+### useContext
+
+\`useContext\`用于访问React的Context API，使得组件可以订阅上下文变化。
+
+\`\`\`jsx
+import React, { useContext } from 'react';
+
+const ThemeContext = React.createContext('light');
+
+function ThemedButton() {
+  const theme = useContext(ThemeContext);
+  return <button className={theme}>I am styled by theme context!</button>;
+}
+\`\`\`
+
+### useReducer
+
+\`useReducer\`是\`useState\`的替代方案，用于管理复杂的状态逻辑。
+
+\`\`\`jsx
+import React, { useReducer } from 'react';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+    </>
+  );
+}
+\`\`\`
+
+## 自定义Hooks
+
+创建自定义Hook允许你将组件逻辑提取到可重用的函数中。
+
+\`\`\`jsx
+import { useState, useEffect } from 'react';
+
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return width;
+}
+
+function MyResponsiveComponent() {
+  const width = useWindowWidth();
+  return <div>Window width is {width}</div>;
+}
+\`\`\`
+
+## Hooks的使用规则
+
+使用Hooks时需要遵循两个重要规则：
+
+1. 只在最顶层使用Hooks
+2. 只在React函数中调用Hooks
+
+这些规则确保Hooks在每次渲染时都以相同的顺序被调用，这对于Hooks的正确工作至关重要。
+
+## Hooks与类组件的对比
+
+Hooks和类组件各有优势。Hooks通常能让代码更简洁，逻辑更容易复用，但类组件在某些场景下仍然有其优势，如错误边界。
+
+以下是一个简单的对比：
+
+| 特性 | Hooks | 类组件 |
+| ---- | ----- | ------ |
+| 代码简洁性 | ✅ | ❌ |
+| 逻辑复用 | ✅ | ❌ |
+| 学习曲线 | 中等 | 较陡 |
+| 性能 | ✅ | ✅ |
+
+## 性能优化
+
+Hooks提供了几种方式来优化组件性能：
+
+1. \`useMemo\`: 缓存计算结果
+2. \`useCallback\`: 缓存函数
+3. \`React.memo\`: 优化函数组件的重渲染
+
+\`\`\`jsx
+import React, { useMemo, useCallback } from 'react';
+
+function ExpensiveComponent({ data, onItemClick }) {
+  const sortedData = useMemo(() => {
+    return data.sort((a, b) => a.id - b.id);
+  }, [data]);
+
+  const handleClick = useCallback((item) => {
+    console.log('Item clicked:', item);
+    onItemClick(item);
+  }, [onItemClick]);
+
+  return (
+    <ul>
+      {sortedData.map(item => (
+        <li key={item.id} onClick={() => handleClick(item)}>
+          {item.name}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default React.memo(ExpensiveComponent);
+\`\`\`
+
+## 结论
+
+React Hooks是一个强大的特性，它简化了状态管理和副作用处理，使得函数组件更加灵活和强大。通过深入理解Hooks的工作原理和使用技巧，我们可以编写出更简洁、可维护和高性能的React应用。
+
+然而，Hooks并不是银弹。在某些场景下，类组件可能仍然是更好的选择。关键是要根据具体情况选择最合适的工具。随着React的不断发展，我们可以期待看到更多围绕Hooks的创新和最佳实践的出现。
+    `,
     date: "2024-03-15",
     author: "张三",
     tags: ["React", "Hooks", "前端开发"],
@@ -24,8 +222,235 @@ export const blogPosts: BlogPost[] = [
     id: 2,
     title: "Next.js 13新特性解析",
     excerpt: "深入了解Next.js 13带来的革命性变化...",
-    content:
-      "Next.js 13引入了许多激动人心的新特性,如App Router、服务器组件、流式渲染等。本文将详细介绍这些新特性的使用方法和优势。我们将探讨App Router何���化路由管理,服务器组件如何提升性能和SEO,以及流式渲染如何改善大型应用的用户体验。同时,我们还将讨论从Next.js 12迁移到13版本的最佳实践和注意事项。",
+    content: `
+# Next.js 13新特性解析
+
+Next.js 13是一个重大更新，引入了许多激动人心的新特性，如App Router、服务器组件、流式渲染等。本文将详细介绍这些新特性的使用方法和优势，以及如何从Next.js 12迁移到13版本。
+
+## App Router
+
+App Router是Next.js 13最显著的新特性之一，它彻底改变了路由管理的方式。
+
+### 基于文件系统的路由
+
+App Router延续了Next.js基于文件系统的路由概念，但引入了新的\`app\`目录结构：
+
+\`\`\`
+app/
+  layout.js
+  page.js
+  about/
+    page.js
+  blog/
+    [slug]/
+      page.js
+\`\`\`
+
+在这个结构中，\`page.js\`文件定义了路由的主要内容，而\`layout.js\`则定义了共享布局。
+
+### 嵌套布局
+
+App Router支持嵌套布局，这使得创建复杂的页面结构变得更加简单：
+
+\`\`\`jsx
+// app/layout.js
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  )
+}
+
+// app/blog/layout.js
+export default function BlogLayout({ children }) {
+  return (
+    <div>
+      <nav>Blog Navigation</nav>
+      {children}
+    </div>
+  )
+}
+\`\`\`
+
+### 服务器组件
+
+默认情况下，App Router中的所有组件都是服务器组件。这意味着它们在服务器上渲染，可以直接访问后端资源，并且不会增加客户端的JavaScript包大小。
+
+\`\`\`jsx
+// app/page.js
+async function getData() {
+  const res = await fetch('https://api.example.com/data')
+  return res.json()
+}
+
+export default async function Page() {
+  const data = await getData()
+  return <main>{data.map(item => <div key={item.id}>{item.title}</div>)}</main>
+}
+\`\`\`
+
+### 客户端组件
+
+当需要客户端交互时，可以使用客户端组件：
+
+\`\`\`jsx
+'use client'
+
+import { useState } from 'react'
+
+export default function Counter() {
+  const [count, setCount] = useState(0)
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Count: {count}
+    </button>
+  )
+}
+\`\`\`
+
+## 服务器组件
+
+服务器组件是Next.js 13的另一个重要特性，它允许我们在服务器上渲染React组件，从而提高性能和SEO。
+
+### 优势
+
+1. 减少客户端JavaScript包大小
+2. 直接访问后端资源
+3. 自动代码分割
+4. 改善首次加载性能
+
+### 使用场景
+
+服务器组件特别适合于：
+
+- 需要访问后端资源的组件
+- 不需要客户端交互的静态内容
+- SEO关键的页面内容
+
+\`\`\`jsx
+// app/products/page.js
+async function getProducts() {
+  const res = await fetch('https://api.example.com/products')
+  return res.json()
+}
+
+export default async function ProductsPage() {
+  const products = await getProducts()
+  return (
+    <div>
+      <h1>Products</h1>
+      <ul>
+        {products.map(product => (
+          <li key={product.id}>{product.name}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+\`\`\`
+
+## 流式渲染
+
+流式渲染允许将页面内容分块传输到客户端，这可以显著改善大型应用的用户体验。
+
+### 实现方式
+
+Next.js 13通过\`loading.js\`文件和React的\`Suspense\`组件支持流式渲染：
+
+\`\`\`jsx
+// app/dashboard/loading.js
+export default function Loading() {
+  return <div>Loading...</div>
+}
+
+// app/dashboard/page.js
+import { Suspense } from 'react'
+import UserProfile from './UserProfile'
+import UserPosts from './UserPosts'
+
+export default function Dashboard() {
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <Suspense fallback={<div>Loading profile...</div>}>
+        <UserProfile />
+      </Suspense>
+      <Suspense fallback={<div>Loading posts...</div>}>
+        <UserPosts />
+      </Suspense>
+    </div>
+  )
+}
+\`\`\`
+
+## 新的图片组件
+
+Next.js 13引入了新的\`Image\`组件，它提供了更好的性能和用户体验：
+
+\`\`\`jsx
+import Image from 'next/image'
+
+export default function Avatar() {
+  return (
+    <Image
+      src="/avatar.png"
+      alt="User Avatar"
+      width={64}
+      height={64}
+      priority
+    />
+  )
+}
+\`\`\`
+
+新的\`Image\`组件支持：
+
+- 自动图片优化
+- 延迟加载
+- 响应式图片
+- 防止布局偏移
+
+## 字体优化
+
+Next.js 13引入了新的字体系统，它可以自动优化和加载自定义字体：
+
+\`\`\`jsx
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={inter.className}>
+      <body>{children}</body>
+    </html>
+  )
+}
+\`\`\`
+
+这个系统可以：
+
+- 自动内联字体CSS
+- 消除布局偏移
+- 预加载关键字体文件
+
+## 从Next.js 12迁移到13
+
+迁移到Next.js 13需要注意以下几点：
+
+1. 创建新的\`app\`目录，逐步迁移路由
+2. 更新\`next/image\`导入为\`next/legacy/image\`
+3. 将客户端组件标记为\`'use client'\`
+4. 更新API路由到新的\`app/api\`目录
+5. 使用新的数据获取方法替代\`getServerSideProps\`和\`getStaticProps\`
+
+## 结论
+
+Next.js 13带来了许多令人兴奋的新特性，这些特性不仅提高了开发效率，还大大改善了应用性能和用户体验。App Router、服务器组件和流式渲染等新特性为我们提供了更灵活、更强大的工具，使得构建现代Web应用变得更加容易。
+
+随着Next.js的不断发展，我们可以期待看到更多令人兴奋的新特性和改进。如果您还没有尝试过Next.js 13，现在是时候了！
+    `,
     date: "2024-03-20",
     author: "李四",
     tags: ["Next.js", "服务器组件", "性能优化"],
@@ -34,8 +459,94 @@ export const blogPosts: BlogPost[] = [
     id: 3,
     title: "CSS-in-JS解决方案对比",
     excerpt: "比较流行的CSS-in-JS库的优缺点...",
-    content:
-      "CSS-in-JS已成为现代前端开发中的重要工具。本文将对比分析几种流行的CSS-in-JS解决方案,包括styled-components、Emotion、CSS Modules等。我们将从性能、开发体验、维护性等多个角度进行评估,并提供每种方案的最佳使用场景。此外,我们还将探讨CSS-in-JS与传统CSS方法的区别,以及如何在大型项目中有效管理样式。",
+    content: `
+# CSS-in-JS解决方案对比
+
+CSS-in-JS已成为现代前端开发中的重要工具。本文将对比分析几种流行的CSS-in-JS解决方案,包括styled-components、Emotion、CSS Modules等。我们将从性能、开发体验、维护性等多个角度进行评估,并提供每种方案的最佳使用场景。此外,我们还将探讨CSS-in-JS与传统CSS方法的区别,以及如何在大型项目中有效管理样式。
+
+## styled-components
+
+styled-components是最流行的CSS-in-JS库之一。它结合了CSS和JavaScript的优点,使得我们可以在React组件中定义样式。
+
+### 优点
+
+1. 简洁的语法
+2. 支持动态样式
+3. 自动生成唯一的类名
+4. 易于主题化
+5. 良好的开发体验
+
+### 缺点
+
+1. 运行时性能开销
+2. 学习曲线较陡
+3. 不支持CSS Modules的特性
+
+### 最佳使用场景
+
+styled-components适用于需要动态样式和主题化的项目,尤其是中小型项目。
+
+## Emotion
+
+Emotion是另一种流行的CSS-in-JS库,它提供了更灵活的API和更好的性能。
+
+### 优点
+
+1. 高性能
+2. 支持CSS Modules的特性
+3. 易于主题化
+4. 良好的开发体验
+
+### 缺点
+
+1. 学习曲线较陡
+2. 不支持动态样式
+
+### 最佳使用场景
+
+Emotion适用于需要高性能和CSS Modules特性的项目,尤其是大型项目。
+
+## CSS Modules
+
+CSS Modules是一种CSS-in-JS解决方案,它将CSS模块化,并将类名作为JavaScript对象导出。
+
+### 优点
+
+1. 简单易用
+2. 支持CSS Modules的特性
+3. 良好的开发体验
+
+### 缺点
+
+1. 不支持动态样式
+2. 不易于主题化
+3. 类名不是唯一的
+
+### 最佳使用场景
+
+CSS Modules适用于需要简单、可维护的样式解决方案的项目,尤其是小型项目。
+
+## CSS-in-JS与传统CSS的区别
+
+CSS-in-JS与传统CSS有一些重要的区别:
+
+1. 作用域隔离: CSS-in-JS可以确保样式只应用于特定的组件,而传统CSS需要手动管理类名和命名空间。
+2. 动态样式: CSS-in-JS可以根据组件的状态和属性动态生成样式,而传统CSS需要使用JavaScript来切换类名。
+3. 主题化: CSS-in-JS可以轻松地支持主题化,而传统CSS需要使用预处理器或后处理器来实现。
+
+## 在大型项目中管理样式
+
+在大型项目中,有效管理样式是一个重要的挑战。以下是一些建议:
+
+1. 使用CSS-in-JS库: CSS-in-JS库可以提供更好的作用域隔离和动态样式支持,从而简化样式管理。
+2. 使用主题化: 主题化可以使样式更易于维护和扩展,尤其是在多个项目或不同环境中。
+3. 使用CSS Modules: CSS Modules可以提供简单、可维护的样式解决方案,尤其是在小型项目中。
+4. 使用CSS-in-JS库的最佳实践: 每个CSS-in-JS库都有自己的最佳实践,例如styled-components的\`ThemeProvider\`和Emotion的\`css\`函数。
+
+## 结论
+
+CSS-in-JS是一种强大的工具,它可以提供更好的作用域隔离、动态样式支持和主题化。styled-components、Emotion和CSS Modules都是流行的解决方案,每种方案都有自己的优缺点和最佳使用场景。在选择CSS-in-JS库时,应该根据项目的需求和规模来权衡性能、开发体验和维护性。
+    `,
     date: "2024-03-25",
     author: "王五",
     tags: ["CSS-in-JS", "styled-components", "Emotion"],
@@ -44,8 +555,100 @@ export const blogPosts: BlogPost[] = [
     id: 4,
     title: "TypeScript高级类型技巧",
     excerpt: "掌握TypeScript中的高级类型用法...",
-    content:
-      "TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际子展���这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。",
+    content: `
+# TypeScript高级类型技巧
+
+TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际子展这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。
+
+## 条件类型
+
+条件类型允许我们根据条件选择不同的类型。它的语法如下：
+
+\`\`\`
+type SomeType<T> = T extends SomeCondition ? TrueType : FalseType;
+\`\`\`
+
+例如,我们可以使用条件类型来创建一个\`Nullable\`类型：
+
+\`\`\`
+type Nullable<T> = T extends null | undefined ? T : T & { notNull: true };
+\`\`\`
+
+## 映射类型
+
+映射类型允许我们对现有类型的每个属性进行转换。它的语法如下：
+
+\`\`\`
+type MappedType<T> = {
+  [P in keyof T]: TransformedType;
+};
+\`\`\`
+
+例如,我们可以使用映射类型来创建一个\`Readonly\`类型：
+
+\`\`\`
+type Readonly<T> = {
+  readonly [P in keyof T]: T[P];
+};
+\`\`\`
+
+## 联合类型和交叉类型
+
+联合类型允许我们表示多个类型中的任意一个。它的语法如下：
+
+\`\`\`
+type UnionType = Type1 | Type2 | Type3;
+\`\`\`
+
+交叉类型允许我们组合多个类型的属性。它的语法如下：
+
+\`\`\`
+type IntersectionType = Type1 & Type2 & Type3;
+\`\`\`
+
+例如,我们可以使用交叉类型来创建一个\`WithRequired\`类型：
+
+\`\`\`
+type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] };
+\`\`\`
+
+## 类型推断
+
+TypeScript的类型推断机制可以自动推断变量的类型。它基于以下规则：
+
+1. 如果有明确的类型注释,则使用该类型
+2. 如果没有类型注释,则从初始化表达式推断类型
+3. 如果初始化表达式是函数调用,则使用函数返回类型
+
+例如,以下代码中的\`x\`和\`y\`都会被推断为\`number\`类型：
+
+\`\`\`
+let x = 10;
+let y = x * 2;
+\`\`\`
+
+## 自定义类型守卫
+
+自定义类型守卫允许我们在运行时检查类型。它的语法如下：
+
+\`\`\`
+function isTypeGuard(value: any): value is Type {
+  // 检查类型
+}
+\`\`\`
+
+例如,我们可以使用自定义类型守卫来检查一个值是否是\`string\`类型：
+
+\`\`\`
+function isString(value: any): value is string {
+  return typeof value === 'string';
+}
+\`\`\`
+
+## 结论
+
+TypeScript的高级类型技巧可以帮助我们创建更灵活、更安全的代码。通过掌握条件类型、映射类型、联合类型和交叉类型等高级类型,我们可以更好地表达复杂的类型关系。同时,通过理解TypeScript的类型推断机制和自定义类型守卫,我们可以更好地控制类型检查。
+    `,
     date: "2024-03-30",
     author: "赵六",
     tags: ["TypeScript", "类型系统", "前端开发"],
@@ -212,7 +815,7 @@ function Example() {
     id: 10,
     title: "微前端架构实践与性能优化",
     excerpt: "深入理解微前端的实现原理和优化策略...",
-    content: `微前端架构允许多个独立开发、部署的前端应用共存于一个页面。本文将详细介绍微前端的实现方法,包括Single-SPA、Qiankun等框架的使用。我们将探讨微前端的通信机制、样式隔离、性能优化等关键��题,并分享大型项目中的实践经验和注意事项。`,
+    content: `微前端架构允许多个独立开发、部署的前端应用共存于一个页面。本文将详细介绍微前端的实现方法,包括Single-SPA、Qiankun等框架的使用。我们将探讨微前端的通信机制、样式隔离、性能优化等关键问题,并分享大型项目中的实践经验和注意事项。`,
     date: "2024-04-30",
     author: "刘十二",
     tags: ["微前端", "架构设计", "性能优化"],

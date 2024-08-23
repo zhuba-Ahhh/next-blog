@@ -34,8 +34,10 @@
     "react-syntax-highlighter": "^15.5.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
