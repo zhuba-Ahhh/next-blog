@@ -4,9 +4,11 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+import { cn } from "@/lib/utils";
+
 import { ThemeProvider } from "next-themes";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "我的博客",
@@ -21,10 +23,15 @@ export default function RootLayout({
   return (
     <html lang="zh" suppressHydrationWarning>
       <link rel="icon" href="/next.svg" type="image/svg+xml" />
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body
+        className={cn(
+          `${inter.className} flex flex-col min-h-screen bg-background font-sans antialiased`,
+          inter.variable
+        )}
+      >
         <ThemeProvider attribute="class">
           <Header />
-          <main className="flex-grow container mx-auto px-4 py-8">
+          <main className="flex-grow container mx-auto px-4 py-4">
             {children}
           </main>
           <Footer />

@@ -4,6 +4,16 @@ import { blogPosts } from "@/data/blogPosts";
 import Comments from "@/components/Comments";
 import ReadingProgress from "@/components/ReadingProgress";
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 function ShareButtons({ url, title }: { url: string; title: string }) {
   return (
@@ -94,71 +104,64 @@ export default function BlogPost({ params }: { params: { id: string } }) {
     .slice(0, 3);
 
   return (
-    <div className="max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+    <div className="container mx-auto px-4 py-8">
       <ReadingProgress />
-      <div className="flex flex-col md:flex-row gap-8 relative">
-        <aside className="md:w-1/3 md:sticky md:top-8 md:self-start">
-          <TableOfContents content={post.content} />
-        </aside>
-        <article className="md:w-2/3">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            {post.title}
-          </h1>
-          <div className="mb-4 text-gray-600 dark:text-gray-400">
-            <span>{post.date}</span> | <span>{post.author}</span> |
-            <span>预计阅读时间: {estimateReadingTime(post.content)} 分钟</span>
-          </div>
-          <div className="prose dark:prose-invert lg:prose-xl mb-6 text-gray-900 dark:text-gray-200">
-            <p>{post.content}</p>
-          </div>
-          <div className="mb-6">
-            {post.tags.map((tag) => (
-              <Link
-                key={tag}
-                href={`/blog?tag=${encodeURIComponent(tag)}`}
-                className="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+      <article className="max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+        <div className="mb-4 text-muted-foreground">
+          <span>{post.date}</span> | <span>{post.author}</span> |
+          <span>预计阅读时间: {estimateReadingTime(post.content)} 分钟</span>
+        </div>
+        <div className="prose dark:prose-invert max-w-none mb-6">
+          <p>{post.content}</p>
+        </div>
+        <div className="mb-6 flex flex-wrap gap-2">
+          {post.tags.map((tag) => (
+            <Link key={tag} href={`/blog?tag=${encodeURIComponent(tag)}`}>
+              <Badge
+                variant="secondary"
+                className="cursor-pointer hover:bg-secondary-hover"
               >
                 {tag}
-              </Link>
-            ))}
-          </div>
-          <Link
-            href="/blog"
-            className="text-primary dark:text-primary-light hover:underline"
-          >
-            &larr; 返回博客列表
-          </Link>
+              </Badge>
+            </Link>
+          ))}
+        </div>
+        <Button asChild variant="outline">
+          <Link href="/blog">&larr; 返回博客列表</Link>
+        </Button>
 
-          {relatedPosts.length > 0 && (
-            <div className="mt-12">
-              <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                相关文章
-              </h2>
+        {relatedPosts.length > 0 && (
+          <Card className="mt-12">
+            <CardHeader>
+              <CardTitle>相关文章</CardTitle>
+            </CardHeader>
+            <CardContent>
               <ul className="space-y-2">
                 {relatedPosts.map((relatedPost) => (
                   <li key={relatedPost.id}>
                     <Link
                       href={`/blog/${relatedPost.id}`}
-                      className="text-primary dark:text-primary-light hover:underline"
+                      className="text-primary hover:underline"
                     >
                       {relatedPost.title}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
-          )}
+            </CardContent>
+          </Card>
+        )}
 
-          <ShareButtons
-            url={`https://yourblog.com/blog/${post.id}`}
-            title={post.title}
-          />
+        <ShareButtons
+          url={`https://yourblog.com/blog/${post.id}`}
+          title={post.title}
+        />
 
-          <div className="mt-16">
-            <Comments />
-          </div>
-        </article>
-      </div>
+        <div className="mt-16">
+          <Comments />
+        </div>
+      </article>
     </div>
   );
 }

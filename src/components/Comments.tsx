@@ -1,5 +1,16 @@
 "use client";
 import { useState, useCallback, useMemo } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
 
 interface Comment {
   id: number;
@@ -12,27 +23,27 @@ interface Comment {
 export default function Comments() {
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState({ author: "", content: "" });
-  const [sortOrder, setSortOrder] = useState<'newest' | 'oldest'>('newest');
+  const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
 
   const sortedComments = useMemo(() => {
     return [...comments].sort((a, b) => {
-      return sortOrder === 'newest'
+      return sortOrder === "newest"
         ? new Date(b.date).getTime() - new Date(a.date).getTime()
         : new Date(a.date).getTime() - new Date(b.date).getTime();
     });
   }, [comments, sortOrder]);
 
   const addReply = useCallback((parentId: number, replyContent: string) => {
-    setComments(prevComments => {
+    setComments((prevComments) => {
       const newComments = [...prevComments];
-      const parentComment = newComments.find(c => c.id === parentId);
+      const parentComment = newComments.find((c) => c.id === parentId);
       if (parentComment) {
         parentComment.replies.push({
           id: Date.now(),
           author: "匿名用户",
           content: replyContent,
           date: new Date().toLocaleString(),
-          replies: []
+          replies: [],
         });
       }
       return newComments;
@@ -47,7 +58,7 @@ export default function Comments() {
         author: newComment.author.trim(),
         content: newComment.content.trim(),
         date: new Date().toLocaleString(),
-        replies: []
+        replies: [],
       };
       setComments((prevComments) => [...prevComments, comment]);
       setNewComment({ author: "", content: "" });
@@ -63,67 +74,62 @@ export default function Comments() {
     []
   );
 
+  const toggleSortOrder = useCallback(() => {
+    setSortOrder((prevOrder) => (prevOrder === "newest" ? "oldest" : "newest"));
+  }, []);
+
   return (
     <div className="mt-12">
-      <h2 className="text-2xl font-bold mb-4 dark:text-white">评论</h2>
-      <form onSubmit={handleSubmit} className="mb-8">
-        <input
+      <h2 className="text-2xl font-bold mb-4">评论</h2>
+      <form onSubmit={handleSubmit} className="mb-8 space-y-4">
+        <Input
           type="text"
           name="author"
           placeholder="您的名字"
           value={newComment.author}
           onChange={handleInputChange}
-          className="w-full p-3 mb-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500"
           required
         />
-        <textarea
+        <Textarea
           name="content"
           placeholder="您的评论"
           value={newComment.content}
           onChange={handleInputChange}
-          className="w-full p-3 mb-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500"
           rows={4}
           required
-        ></textarea>
-        <button
-          type="submit"
-          className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition duration-300"
-        >
-          提交评论
-        </button>
+        />
+        <Button type="submit">提交评论</Button>
       </form>
-      <div>
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-xl font-semibold">评论列表</h3>
+        <Button onClick={toggleSortOrder} variant="outline">
+          {sortOrder === "newest" ? "最新优先" : "最早优先"}
+        </Button>
+      </div>
+      <div className="space-y-4">
         {sortedComments.map((comment) => (
-          <div
-            key={comment.id}
-            className="mb-4 p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm"
-          >
-            <p className="font-bold text-lg mb-1 dark:text-white">
-              {comment.author}
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-2">
-              {comment.content}
-            </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              {comment.date}
-            </p>
-            {comment.replies.map((reply) => (
-              <div
-                key={reply.id}
-                className="mt-2 ml-4 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-sm"
-              >
-                <p className="font-bold text-sm mb-1 dark:text-white">
-                  {reply.author}
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">
-                  {reply.content}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {reply.date}
-                </p>
-              </div>
-            ))}
-          </div>
+          <Card key={comment.id}>
+            <CardHeader>
+              <CardTitle>{comment.author}</CardTitle>
+              <CardDescription>{comment.date}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>{comment.content}</p>
+            </CardContent>
+            <CardFooter>
+              {comment.replies.map((reply) => (
+                <Card key={reply.id} className="mt-2 w-full">
+                  <CardHeader>
+                    <CardTitle>{reply.author}</CardTitle>
+                    <CardDescription>{reply.date}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{reply.content}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </div>
