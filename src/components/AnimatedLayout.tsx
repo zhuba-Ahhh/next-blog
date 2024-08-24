@@ -25,7 +25,7 @@ export default function AnimatedLayout({ children }: AnimatedLayoutProps) {
 
   return (
     <LazyMotion features={domAnimation}>
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <motion.div
           key={pathname}
           initial="initial"
