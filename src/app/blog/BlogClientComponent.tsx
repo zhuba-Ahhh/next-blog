@@ -159,7 +159,7 @@ export default function BlogList() {
             </Card>
           ))
         ) : currentPosts.length > 0 ? (
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {currentPosts.map((post, index) => (
               <BlogPostCard
                 key={post.id}
