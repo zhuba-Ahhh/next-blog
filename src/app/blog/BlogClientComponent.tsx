@@ -24,14 +24,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { AlertCircle } from "lucide-react";
+import { ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const POSTS_PER_PAGE = 6;
 const INITIAL_TAG_COUNT = 10;
 
 // 添加新的排序选项类型
 type SortOption = "date" | "title";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 20 },
+};
 
 export default function BlogList() {
   const router = useRouter();
@@ -218,35 +224,52 @@ export default function BlogList() {
             </Card>
           ))
         ) : currentPosts.length > 0 ? (
-          currentPosts.map((post) => (
-            <Card key={post.id}>
-              <CardHeader>
-                <CardTitle>
-                  <Link href={`/blog/${post.id}`} className="hover:underline">
-                    {post.title}
-                  </Link>
-                </CardTitle>
-                <CardDescription>
-                  {post.date} | {post.author}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>{post.excerpt}</p>
-              </CardContent>
-              <CardFooter className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <Badge
-                    key={tag}
-                    variant="secondary"
-                    className="text-xs px-2 py-1 h-6 cursor-pointer"
-                    onClick={() => handleTagClick(tag)}
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </CardFooter>
-            </Card>
-          ))
+          <AnimatePresence mode="wait">
+            {currentPosts.map((post, index) => (
+              <motion.div
+                key={post.id}
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                layout
+              >
+                <Card>
+                  <CardHeader>
+                    <CardTitle>
+                      <Link
+                        href={`/blog/${post.id}`}
+                        className="hover:underline"
+                      >
+                        {post.title}
+                      </Link>
+                    </CardTitle>
+                    <CardDescription>
+                      {post.date} | {post.author}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="line-clamp-1 overflow-hidden">
+                      {post.excerpt}
+                    </p>
+                  </CardContent>
+                  <CardFooter className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <Badge
+                        key={tag}
+                        variant="secondary"
+                        className="text-xs px-2 py-1 h-6 cursor-pointer"
+                        onClick={() => handleTagClick(tag)}
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         ) : (
           <div className="col-span-full">
             <Alert variant="default">
@@ -266,21 +289,29 @@ export default function BlogList() {
         )}
       </div>
       {filteredPostsMemo.length > 0 && (
-        <div className="mt-8 flex justify-center">
-          {Array.from(
-            { length: Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE) },
-            (_, i) => (
-              <Button
-                key={i}
-                onClick={() => paginate(i + 1)}
-                variant={currentPage === i + 1 ? "default" : "outline"}
-                className="mx-1"
-              >
-                {i + 1}
-              </Button>
-            )
-          )}
-        </div>
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          layout
+        >
+          <div className="mt-8 flex justify-center">
+            {Array.from(
+              { length: Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE) },
+              (_, i) => (
+                <Button
+                  key={i}
+                  onClick={() => paginate(i + 1)}
+                  variant={currentPage === i + 1 ? "default" : "outline"}
+                  className="mx-1"
+                >
+                  {i + 1}
+                </Button>
+              )
+            )}
+          </div>
+        </motion.div>
       )}
     </div>
   );

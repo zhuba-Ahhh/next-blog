@@ -12,6 +12,7 @@ interface CopyButtonProps {
 
 const CopyButton: React.FC<CopyButtonProps> = ({ text, language }) => {
   const [state, setState] = useState<"idle" | "copy" | "copied">("idle");
+  const [isHovered, setIsHovered] = useState(false);
   const { theme } = useTheme();
 
   const throttledCopy = useMemo(
@@ -43,6 +44,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({ text, language }) => {
       transition-all duration-300 ease-in-out
       flex items-center justify-center
       shadow-sm hover:shadow-md dark:shadow-gray-900
+      overflow-hidden
       h-[30px]
     `,
     []
@@ -57,34 +59,50 @@ const CopyButton: React.FC<CopyButtonProps> = ({ text, language }) => {
   return (
     <button
       onClick={handleCopy}
-      onMouseEnter={() => setState((prev) => (prev === "idle" ? "copy" : prev))}
-      onMouseLeave={() => setState((prev) => (prev === "copy" ? "idle" : prev))}
+      onMouseEnter={() => {
+        setIsHovered(true);
+        setState((prev) => (prev === "idle" ? "copy" : prev));
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        setState((prev) => (prev === "copy" ? "idle" : prev));
+      }}
       className={buttonClassName}
       title={state === "idle" ? language : state === "copy" ? "复制" : "已复制"}
     >
-      {state === "idle" && (
+      <div
+        className={`flex items-center transition-transform duration-300 ${
+          isHovered ? "-translate-y-[200%]" : "translate-y-0"
+        }`}
+      >
         <span className="text-xs font-mono text-gray-700 dark:text-gray-300">
           {language}
         </span>
-      )}
-      {state === "copy" && (
-        <Image
-          src={getImageSrc("copy")}
-          alt="复制"
-          width={18}
-          height={18}
-          // className="text-gray-700 dark:text-gray-300"
-        />
-      )}
-      {state === "copied" && (
-        <Image
-          src={getImageSrc("check")}
-          alt="已复制"
-          width={18}
-          height={18}
-          className="text-green-600 dark:text-green-400"
-        />
-      )}
+      </div>
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-transform duration-300 ${
+          isHovered ? "translate-y-0" : "translate-y-[200%]"
+        }`}
+      >
+        {state === "copy" && (
+          <Image
+            src={getImageSrc("copy")}
+            alt="复制"
+            width={16}
+            height={16}
+            // className="text-gray-700 dark:text-gray-300"
+          />
+        )}
+        {state === "copied" && (
+          <Image
+            src={getImageSrc("check")}
+            alt="已复制"
+            width={16}
+            height={16}
+            className="text-green-600 dark:text-green-400"
+          />
+        )}
+      </div>
     </button>
   );
 };

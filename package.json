@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "next-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
     "analyze": "pnpm clean && ANALYZE=true next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
     "clean": "rm -rf .next"
   },
   "dependencies": {
