@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BlogPost } from "./types";
+import { BlogPost } from "@/data/blogPosts";
 
 interface BlogHeaderProps {
   post: BlogPost;

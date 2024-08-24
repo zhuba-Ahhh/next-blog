@@ -1,6 +1,11 @@
 "use client";
 
-import { LazyMotion, domAnimation, motion, AnimatePresence } from "framer-motion";
+import {
+  LazyMotion,
+  domAnimation,
+  motion,
+  AnimatePresence,
+} from "framer-motion";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 

@@ -9,7 +9,8 @@ import ShareButtons from "./ShareButtons";
 import TableOfContents from "./TableOfContents";
 import Comments from "@/components/Comments";
 import { mdxComponents } from "./MdxComponents";
-import type { BlogPost, Heading } from "./types";
+import type { Heading } from "./types";
+import type { BlogPost } from "@/data/blogPosts";
 
 interface AnimatedBlogPostProps {
   post: BlogPost;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Badge, Button } from "@/components/ui";
-import { BlogPost } from "./types";
+import { BlogPost } from "@/data/blogPosts";
 
 interface BlogFooterProps {
   post: BlogPost;

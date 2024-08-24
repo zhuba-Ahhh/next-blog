@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
-import { BlogPost } from "./types";
+import { BlogPost } from "@/data/blogPosts";
 
 function RelatedPosts({ posts }: { posts: BlogPost[] }) {
   if (posts.length === 0) return null;

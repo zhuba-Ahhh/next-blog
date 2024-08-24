@@ -7,6 +7,7 @@ export interface BlogPost {
   author: string;
   tags: string[];
   category?: string;
+  coverImage?: string;
 }
 
 export const blogPosts: BlogPost[] = [
