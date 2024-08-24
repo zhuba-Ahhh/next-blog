@@ -31,7 +31,7 @@ export const mdxComponents: MDXComponents = {
   ),
   a: (props: any) => (
     <a
-      className="text-blue-500 hover:underline dark:text-blue-400"
+      className="text-blue-500 dark:text-blue-400"
       {...props}
     />
   ),

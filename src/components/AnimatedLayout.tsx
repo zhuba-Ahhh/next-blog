@@ -1,6 +1,11 @@
 "use client";
 
-import { LazyMotion, domAnimation, motion, AnimatePresence } from "framer-motion";
+import {
+  LazyMotion,
+  domAnimation,
+  motion,
+  AnimatePresence,
+} from "framer-motion";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
@@ -25,7 +30,7 @@ export default function AnimatedLayout({ children }: AnimatedLayoutProps) {
 
   return (
     <LazyMotion features={domAnimation}>
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <motion.div
           key={pathname}
           initial="initial"

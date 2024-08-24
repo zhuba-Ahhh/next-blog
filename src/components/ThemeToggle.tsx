@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import { useThemeType } from "@/hooks";
 
 const MoonIcon = () => (
   <svg viewBox="0 0 1024 1024" className="w-5 h-5">
@@ -22,7 +22,7 @@ const SunIcon = () => (
 
 function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useThemeType();
   const [userOverride, setUserOverride] = useState(false);
 
   useEffect(() => {

@@ -1,43 +1,29 @@
 "use client";
 import { useState, useMemo, useEffect, useCallback } from "react";
-import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { blogPosts } from "@/data/blogPosts";
 import {
-  Input,
-  Button,
-  Badge,
   Skeleton,
   Card,
   CardHeader,
-  CardTitle,
-  CardDescription,
   CardContent,
   CardFooter,
   Alert,
   AlertDescription,
   AlertTitle,
-  Label,
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
 } from "@/components/ui";
-import { ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AlertCircle } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
+import { BlogSearch } from "./BlogSearch";
+import { TagList } from "./TagList";
+import { BlogPostCard } from "./BlogPostCard";
+import { Pagination } from "./Pagination";
 
 const POSTS_PER_PAGE = 6;
 const INITIAL_TAG_COUNT = 10;
 
 // 添加新的排序选项类型
 type SortOption = "date" | "title";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 20 },
-};
 
 export default function BlogList() {
   const router = useRouter();
@@ -138,74 +124,23 @@ export default function BlogList() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8 text-center">博客文章</h1>
-      <div className="mb-6 flex items-end space-x-4">
-        <div className="flex-grow">
-          <Label htmlFor="search" className="mb-2 block">
-            搜索文章
-          </Label>
-          <Input
-            id="search"
-            type="text"
-            placeholder="输入关键词..."
-            value={searchTerm}
-            onChange={handleSearch}
-          />
-        </div>
-        <div className="w-40">
-          <Label htmlFor="sort" className="mb-2 block">
-            排序方式
-          </Label>
-          <Select
-            onValueChange={(value: SortOption) => setSortOption(value)}
-            defaultValue={sortOption}
-          >
-            <SelectTrigger id="sort" className="w-full">
-              <SelectValue placeholder="选择排序方式" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="date">按日期排序</SelectItem>
-              <SelectItem value="title">按标题排序</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-      <div className="mb-6 flex flex-wrap items-center gap-2">
-        <Badge
-          variant={selectedTag === null ? "default" : "secondary"}
-          className="cursor-pointer"
-          onClick={() => handleTagClick(null)}
-        >
-          全部
-        </Badge>
-        {visibleTags.map((tag) => (
-          <Badge
-            key={tag}
-            variant={tag === selectedTag ? "default" : "secondary"}
-            className="cursor-pointer"
-            onClick={() => handleTagClick(tag)}
-          >
-            {tag}
-          </Badge>
-        ))}
-        {allTags.length > INITIAL_TAG_COUNT && (
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => setIsTagsExpanded(!isTagsExpanded)}
-            className="ml-2"
-          >
-            {isTagsExpanded ? (
-              <>
-                收起 <ChevronUp className="ml-1 h-4 w-4" />
-              </>
-            ) : (
-              <>
-                展开 <ChevronDown className="ml-1 h-4 w-4" />
-              </>
-            )}
-          </Button>
-        )}
-      </div>
+      
+      <BlogSearch
+        searchTerm={searchTerm}
+        onSearchChange={handleSearch}
+        sortOption={sortOption}
+        onSortChange={(value: SortOption) => setSortOption(value)}
+      />
+      
+      <TagList
+        allTags={allTags}
+        selectedTag={selectedTag}
+        onTagClick={handleTagClick}
+        isTagsExpanded={isTagsExpanded}
+        onToggleExpand={() => setIsTagsExpanded(!isTagsExpanded)}
+        initialTagCount={INITIAL_TAG_COUNT}
+      />
+      
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {isLoading ? (
           Array.from({ length: POSTS_PER_PAGE }).map((_, index) => (
@@ -226,48 +161,12 @@ export default function BlogList() {
         ) : currentPosts.length > 0 ? (
           <AnimatePresence mode="wait">
             {currentPosts.map((post, index) => (
-              <motion.div
+              <BlogPostCard
                 key={post.id}
-                variants={cardVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                layout
-              >
-                <Card>
-                  <CardHeader>
-                    <CardTitle>
-                      <Link
-                        href={`/blog/${post.id}`}
-                        className="hover:underline"
-                      >
-                        {post.title}
-                      </Link>
-                    </CardTitle>
-                    <CardDescription>
-                      {post.date} | {post.author}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="line-clamp-1 overflow-hidden">
-                      {post.excerpt}
-                    </p>
-                  </CardContent>
-                  <CardFooter className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="text-xs px-2 py-1 h-6 cursor-pointer"
-                        onClick={() => handleTagClick(tag)}
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </CardFooter>
-                </Card>
-              </motion.div>
+                post={post}
+                onTagClick={handleTagClick}
+                index={index}
+              />
             ))}
           </AnimatePresence>
         ) : (
@@ -288,30 +187,13 @@ export default function BlogList() {
           </div>
         )}
       </div>
+      
       {filteredPostsMemo.length > 0 && (
-        <motion.div
-          variants={cardVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          layout
-        >
-          <div className="mt-8 flex justify-center">
-            {Array.from(
-              { length: Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE) },
-              (_, i) => (
-                <Button
-                  key={i}
-                  onClick={() => paginate(i + 1)}
-                  variant={currentPage === i + 1 ? "default" : "outline"}
-                  className="mx-1"
-                >
-                  {i + 1}
-                </Button>
-              )
-            )}
-          </div>
-        </motion.div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE)}
+          onPageChange={paginate}
+        />
       )}
     </div>
   );

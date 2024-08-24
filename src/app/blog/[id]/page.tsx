@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogPosts";
 import ReadingProgress from "@/components/ReadingProgress";
 import { extractHeadings, estimateReadingTime } from "@/utils/blogHelpers";
-import type { BlogPost, Heading } from "./types";
+import type { Heading } from "./types";
+import type { BlogPost } from "@/data/blogPosts";
 import dynamic from "next/dynamic";
 
 const AnimatedBlogPost = dynamic(() => import("./AnimatedBlogPost"), {

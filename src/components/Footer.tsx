@@ -2,6 +2,12 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
 export default function Footer() {
+  const links = [
+    { href: "/privacy", label: "隐私政策" },
+    { href: "/terms", label: "使用条款" },
+    { href: "/contact", label: "联系我们" },
+  ];
+
   return (
     <footer className="border-t py-6 md:py-0">
       <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
@@ -11,24 +17,11 @@ export default function Footer() {
           </p>
         </div>
         <nav className="flex items-center space-x-4">
-          <Link
-            href="/privacy"
-            className="text-sm text-muted-foreground hover:underline"
-          >
-            <Badge>隐私政策</Badge>
-          </Link>
-          <Link
-            href="/terms"
-            className="text-sm text-muted-foreground hover:underline"
-          >
-            <Badge>使用条款</Badge>
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm text-muted-foreground hover:underline"
-          >
-            <Badge>联系我们</Badge>
-          </Link>
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className="text-sm text-muted-foreground">
+              <Badge>{link.label}</Badge>
+            </Link>
+          ))}
         </nav>
       </div>
     </footer>
