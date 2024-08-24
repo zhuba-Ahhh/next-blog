@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 
 import { ThemeProvider } from "next-themes";
+import AnimatedLayout from "@/components/AnimatedLayout";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -31,7 +32,9 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class">
           <Header />
-          <main className="flex-grow container mx-auto px-4">{children}</main>
+          <AnimatedLayout>
+            <main className="flex-grow container mx-auto px-4 h-full">{children}</main>
+          </AnimatedLayout>
           <Footer />
         </ThemeProvider>
       </body>

@@ -26,12 +26,18 @@ import {
 } from "@/components/ui";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { AlertCircle } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const POSTS_PER_PAGE = 6;
 const INITIAL_TAG_COUNT = 10;
 
 // 添加新的排序选项类型
 type SortOption = "date" | "title";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function BlogList() {
   const router = useRouter();
@@ -218,35 +224,51 @@ export default function BlogList() {
             </Card>
           ))
         ) : currentPosts.length > 0 ? (
-          currentPosts.map((post) => (
-            <Card key={post.id}>
-              <CardHeader>
-                <CardTitle>
-                  <Link href={`/blog/${post.id}`} className="hover:underline">
-                    {post.title}
-                  </Link>
-                </CardTitle>
-                <CardDescription>
-                  {post.date} | {post.author}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p>{post.excerpt}</p>
-              </CardContent>
-              <CardFooter className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <Badge
-                    key={tag}
-                    variant="secondary"
-                    className="text-xs px-2 py-1 h-6 cursor-pointer"
-                    onClick={() => handleTagClick(tag)}
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </CardFooter>
-            </Card>
-          ))
+          <AnimatePresence>
+            {currentPosts.map((post, index) => (
+              <motion.div
+                key={post.id}
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <Card>
+                  <CardHeader>
+                    <CardTitle>
+                      <Link
+                        href={`/blog/${post.id}`}
+                        className="hover:underline"
+                      >
+                        {post.title}
+                      </Link>
+                    </CardTitle>
+                    <CardDescription>
+                      {post.date} | {post.author}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="line-clamp-1 overflow-hidden">
+                      {post.excerpt}
+                    </p>
+                  </CardContent>
+                  <CardFooter className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <Badge
+                        key={tag}
+                        variant="secondary"
+                        className="text-xs px-2 py-1 h-6 cursor-pointer"
+                        onClick={() => handleTagClick(tag)}
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         ) : (
           <div className="col-span-full">
             <Alert variant="default">
