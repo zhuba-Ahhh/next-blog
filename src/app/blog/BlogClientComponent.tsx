@@ -24,8 +24,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { AlertCircle } from "lucide-react";
+import { ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const POSTS_PER_PAGE = 6;
