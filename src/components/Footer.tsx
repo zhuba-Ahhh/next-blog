@@ -11,22 +11,13 @@ export default function Footer() {
           </p>
         </div>
         <nav className="flex items-center space-x-4">
-          <Link
-            href="/privacy"
-            className="text-sm text-muted-foreground hover:underline"
-          >
+          <Link href="/privacy" className="text-sm text-muted-foreground">
             <Badge>隐私政策</Badge>
           </Link>
-          <Link
-            href="/terms"
-            className="text-sm text-muted-foreground hover:underline"
-          >
+          <Link href="/terms" className="text-sm text-muted-foreground">
             <Badge>使用条款</Badge>
           </Link>
-          <Link
-            href="/contact"
-            className="text-sm text-muted-foreground hover:underline"
-          >
+          <Link href="/contact" className="text-sm text-muted-foreground">
             <Badge>联系我们</Badge>
           </Link>
         </nav>

@@ -14,10 +14,7 @@ function RelatedPosts({ posts }: { posts: BlogPost[] }) {
         <ul className="space-y-2">
           {posts.map((relatedPost) => (
             <li key={relatedPost.id}>
-              <Link
-                href={`/blog/${relatedPost.id}`}
-                className="text-primary hover:underline"
-              >
+              <Link href={`/blog/${relatedPost.id}`} className="text-primary">
                 {relatedPost.title}
               </Link>
             </li>

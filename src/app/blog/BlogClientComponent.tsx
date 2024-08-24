@@ -240,9 +240,10 @@ export default function BlogList() {
                     <CardTitle>
                       <Link
                         href={`/blog/${post.id}`}
-                        className="hover:underline"
                       >
-                        {post.title}
+                        <p className="line-clamp-1 overflow-hidden">
+                          {post.title}
+                        </p>
                       </Link>
                     </CardTitle>
                     <CardDescription>

@@ -19,7 +19,7 @@ const TableOfContents = React.memo(function TableOfContents({
             <li key={index} className={`${heading.level === 3 ? "ml-2" : ""}`}>
               <a
                 href={`#${heading.slug}`}
-                className="text-primary dark:text-primary-light hover:underline text-sm block truncate"
+                className="text-primary dark:text-primary-light text-sm block truncate"
                 title={heading.text}
               >
                 {heading.text.length > 20
