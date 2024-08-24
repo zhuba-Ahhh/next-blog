@@ -68,6 +68,7 @@ export const mdxComponents: MDXComponents = {
           customStyle={{
             backgroundColor: "var(--code-bg)",
             color: "var(--code-text)",
+            paddingRight: "7rem",
           }}
           {...props}
         />
