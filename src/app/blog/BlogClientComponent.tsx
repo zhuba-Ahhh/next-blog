@@ -34,8 +34,9 @@ const INITIAL_TAG_COUNT = 10;
 type SortOption = "date" | "title";
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: -20 },
   visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 20 },
 };
 
 export default function BlogList() {
@@ -223,15 +224,16 @@ export default function BlogList() {
             </Card>
           ))
         ) : currentPosts.length > 0 ? (
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {currentPosts.map((post, index) => (
               <motion.div
                 key={post.id}
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
-                exit="hidden"
+                exit="exit"
                 transition={{ duration: 0.3, delay: index * 0.1 }}
+                layout
               >
                 <Card>
                   <CardHeader>
@@ -287,21 +289,29 @@ export default function BlogList() {
         )}
       </div>
       {filteredPostsMemo.length > 0 && (
-        <div className="mt-8 flex justify-center">
-          {Array.from(
-            { length: Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE) },
-            (_, i) => (
-              <Button
-                key={i}
-                onClick={() => paginate(i + 1)}
-                variant={currentPage === i + 1 ? "default" : "outline"}
-                className="mx-1"
-              >
-                {i + 1}
-              </Button>
-            )
-          )}
-        </div>
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          layout
+        >
+          <div className="mt-8 flex justify-center">
+            {Array.from(
+              { length: Math.ceil(filteredPostsMemo.length / POSTS_PER_PAGE) },
+              (_, i) => (
+                <Button
+                  key={i}
+                  onClick={() => paginate(i + 1)}
+                  variant={currentPage === i + 1 ? "default" : "outline"}
+                  className="mx-1"
+                >
+                  {i + 1}
+                </Button>
+              )
+            )}
+          </div>
+        </motion.div>
       )}
     </div>
   );

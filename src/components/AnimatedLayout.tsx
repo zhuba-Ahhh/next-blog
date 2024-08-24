@@ -1,11 +1,13 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+
+import { LazyMotion, domAnimation, motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { ReactNode } from "react";
 
 const pageVariants = {
-  initial: { opacity: 0, x: -200 },
+  initial: { opacity: 0, x: "-100%" },
   in: { opacity: 1, x: 0 },
-  out: { opacity: 0, x: 200 },
+  // out: { opacity: 0, x: "100%" },
 };
 
 const pageTransition = {
@@ -14,26 +16,28 @@ const pageTransition = {
   duration: 0.5,
 };
 
-export default function AnimatedLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface AnimatedLayoutProps {
+  children: ReactNode;
+}
+
+export default function AnimatedLayout({ children }: AnimatedLayoutProps) {
   const pathname = usePathname();
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={pathname}
-        initial="initial"
-        animate="in"
-        exit="out"
-        variants={pageVariants}
-        transition={pageTransition}
-        className="flex-grow container mx-auto px-4"
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <LazyMotion features={domAnimation}>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={pathname}
+          initial="initial"
+          animate="in"
+          // exit="out"
+          variants={pageVariants}
+          transition={pageTransition}
+          className="flex-grow container mx-auto px-4"
+        >
+          {children}
+        </motion.div>
+      </AnimatePresence>
+    </LazyMotion>
   );
 }

@@ -33,7 +33,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
           <Header />
           <AnimatedLayout>
-            <main className="flex-grow container mx-auto px-4 h-full">{children}</main>
+            <main className="flex-grow container mx-auto px-4 h-full">
+              {children}
+            </main>
           </AnimatedLayout>
           <Footer />
         </ThemeProvider>
