@@ -2,11 +2,6 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import typography from "@tailwindcss/typography";
 import animate from "tailwindcss-animate";
-import bundleAnalyzer from "@next/bundle-analyzer";
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
 
 const config = {
   darkMode: ["class"],
@@ -96,4 +91,4 @@ const config = {
   plugins: [animate, typography],
 } satisfies Config;
 
-export default withBundleAnalyzer(config);
+export default config;

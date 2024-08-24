@@ -23,6 +23,11 @@ import {
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
 import rehypeInlineCode from "@/lib/rehypeInlineCode";
+import dynamic from "next/dynamic";
+
+const CopyButton = dynamic(() => import("@/components/CopyButton"), {
+  ssr: false,
+});
 
 function ShareButtons({ url, title }: { url: string; title: string }) {
   return (
@@ -149,7 +154,7 @@ const components = {
       );
     }
     return (
-      <div className="relative">
+      <div className="relative group">
         <SyntaxHighlighter
           language={language}
           style={oneLight}
@@ -163,9 +168,7 @@ const components = {
           }}
           {...props}
         />
-        <div className="absolute top-2 right-2 text-xs font-mono text-gray-500 dark:text-gray-400">
-          {language}
-        </div>
+        <CopyButton text={props.children} language={language} />
       </div>
     );
   },

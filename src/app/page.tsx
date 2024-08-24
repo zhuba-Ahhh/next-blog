@@ -5,7 +5,9 @@ import { blogPosts } from "@/data/blogPosts";
 
 export default function Home() {
   // 根据日期排序博客文章,并取最新的两篇
-  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 2);
+  const sortedPosts = [...blogPosts]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 2);
 
   return (
     <div className="flex flex-col items-center justify-center h-full text-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-4">
@@ -24,7 +26,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        你好,我是[zhuba-Ahhh]。作为一名前端开发者,我热衷于探索和分享Web开发的最新趋势、技巧和最佳实践。
+        你好,我是[Zhuba-Ahhh]。作为一名前端开发者,我热衷于探索和分享Web开发的最新趋势、技巧和最佳实践。
       </motion.p>
 
       {/* 探索博客按钮 */}

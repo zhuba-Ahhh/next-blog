@@ -45,7 +45,7 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center">
           <Image
-            src="/img/avatar.jpg"
+            src="/img/avatar.png"
             alt="博主头像"
             width={200}
             height={200}
@@ -57,7 +57,7 @@ export default function About() {
                 theme === "dark" ? "text-indigo-300" : "text-indigo-700"
               }`}
             >
-              博主昵称
+              Zhuba-Ahhh
             </h2>
             <p className={theme === "dark" ? "text-gray-400" : "text-gray-600"}>
               前端开发者 / 技术博主
