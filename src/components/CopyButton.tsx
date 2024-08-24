@@ -3,7 +3,7 @@
 import React, { useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { throttle } from "lodash-es";
-import { useTheme } from "next-themes";
+import { useThemeType } from "@/hooks";
 
 interface CopyButtonProps {
   text: string;
@@ -13,7 +13,7 @@ interface CopyButtonProps {
 const CopyButton: React.FC<CopyButtonProps> = ({ text, language }) => {
   const [state, setState] = useState<"idle" | "copy" | "copied">("idle");
   const [isHovered, setIsHovered] = useState(false);
-  const { theme } = useTheme();
+  const { theme } = useThemeType();
 
   const throttledCopy = useMemo(
     () =>

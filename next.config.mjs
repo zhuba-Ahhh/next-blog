@@ -12,12 +12,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  productionBrowserSourceMaps: true,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  webpack: (config, { isServer }) => {
+  webpack: (config, { dev, isServer }) => {
     if (!isServer) {
       config.externals = {
         // 添加其他需要从 CDN 加载的依赖
       };
+      if (!dev && !isServer) {
+        config.optimization.usedExports = true;
+      }
     }
     return config;
   },
