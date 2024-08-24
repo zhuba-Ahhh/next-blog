@@ -17,48 +17,36 @@ interface Comment {
   author: string;
   content: string;
   date: string;
-  replies: Comment[];
+  replies?: Comment[];
 }
+
+type NewComment = Pick<Comment, "author" | "content">;
 
 export default function Comments() {
   const [comments, setComments] = useState<Comment[]>([]);
-  const [newComment, setNewComment] = useState({ author: "", content: "" });
+  const [newComment, setNewComment] = useState<NewComment>({
+    author: "",
+    content: "",
+  });
   const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
 
   const sortedComments = useMemo(() => {
     return [...comments].sort((a, b) => {
-      return sortOrder === "newest"
-        ? new Date(b.date).getTime() - new Date(a.date).getTime()
-        : new Date(a.date).getTime() - new Date(b.date).getTime();
+      if (sortOrder === "newest") {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      } else {
+        return new Date(a.date).getTime() - new Date(b.date).getTime();
+      }
     });
   }, [comments, sortOrder]);
 
-  const addReply = useCallback((parentId: number, replyContent: string) => {
-    setComments((prevComments) => {
-      const newComments = [...prevComments];
-      const parentComment = newComments.find((c) => c.id === parentId);
-      if (parentComment) {
-        parentComment.replies.push({
-          id: Date.now(),
-          author: "匿名用户",
-          content: replyContent,
-          date: new Date().toLocaleString(),
-          replies: [],
-        });
-      }
-      return newComments;
-    });
-  }, []);
-
   const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
+    (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       const comment: Comment = {
+        ...newComment,
         id: Date.now(),
-        author: newComment.author.trim(),
-        content: newComment.content.trim(),
-        date: new Date().toLocaleString(),
-        replies: [],
+        date: new Date().toISOString(),
       };
       setComments((prevComments) => [...prevComments, comment]);
       setNewComment({ author: "", content: "" });
@@ -116,19 +104,21 @@ export default function Comments() {
             <CardContent>
               <p>{comment.content}</p>
             </CardContent>
-            <CardFooter>
-              {comment.replies.map((reply) => (
-                <Card key={reply.id} className="mt-2 w-full">
-                  <CardHeader>
-                    <CardTitle>{reply.author}</CardTitle>
-                    <CardDescription>{reply.date}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p>{reply.content}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </CardFooter>
+            {comment?.replies && comment?.replies?.length > 0 && (
+              <CardFooter>
+                {comment?.replies?.map((reply) => (
+                  <Card key={reply.id} className="mt-2 w-full">
+                    <CardHeader>
+                      <CardTitle>{reply.author}</CardTitle>
+                      <CardDescription>{reply.date}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p>{reply.content}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </CardFooter>
+            )}
           </Card>
         ))}
       </div>
