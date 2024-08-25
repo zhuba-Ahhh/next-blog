@@ -28,10 +28,6 @@ export default function RootLayout({
       <html lang="zh" suppressHydrationWarning className="h-full">
         <head>
           <link rel="icon" href="/next.svg" type="image/svg+xml" />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css"
-          />
         </head>
         <body
           className={cn(
