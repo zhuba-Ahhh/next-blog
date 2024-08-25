@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { Heading } from "./types";
 import { scrollToTop } from "@/utils";
 
@@ -7,6 +7,8 @@ interface TableOfContentsProps {
 }
 
 const TableOfContents: React.FC<TableOfContentsProps> = ({ headings }) => {
+  const [activeId, setActiveId] = useState<string>("");
+
   const scrollToTopFn = useCallback(scrollToTop, []);
 
   const handleClick = useCallback(
@@ -18,10 +20,31 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings }) => {
         const y =
           element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
+        setActiveId(id); // Update activeId when clicked
       }
     },
     []
   );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-80px 0px -80% 0px", threshold: 0.1 }
+    );
+
+    headings.forEach((heading) => {
+      const element = document.getElementById(heading.slug);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, [headings]);
 
   return (
     <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md w-[240px] mr-2">
@@ -36,14 +59,17 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings }) => {
           {headings.map((heading) => (
             <li
               key={heading.slug}
-              className={`${
-                heading.level === 3 ? "ml-4" : ""
-              } hover:bg-gray-100 dark:hover:bg-gray-700 rounded`}
+              className={`${heading.level === 3 ? "ml-4" : ""} rounded`}
             >
               <a
                 href={`#${heading.slug}`}
                 onClick={(e) => handleClick(e, heading.slug)}
-                className="text-gray-600 dark:text-gray-300 text-sm block py-1 px-2 hover:text-blue-500 transition-colors duration-200"
+                className={`text-sm block py-1 px-2 transition-colors duration-200
+                  ${
+                    activeId === heading.slug
+                      ? "bg-gray-100 dark:bg-gray-700 text-blue-500 dark:text-blue-300"
+                      : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-300"
+                  }`}
                 title={heading.text}
               >
                 {heading.text}
