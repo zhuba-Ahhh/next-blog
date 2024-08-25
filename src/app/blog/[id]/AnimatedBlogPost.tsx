@@ -30,7 +30,7 @@ export default function AnimatedBlogPost({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-4 py-8 text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800"
+      className="container mx-auto px-4 py-8 pt-16 text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800"
     >
       <div className="flex flex-col md:flex-row gap-8">
         <aside className="md:w-1/4">
@@ -38,6 +38,7 @@ export default function AnimatedBlogPost({
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="sticky top-20"
           >
             <TableOfContents headings={headings} />
           </motion.div>
