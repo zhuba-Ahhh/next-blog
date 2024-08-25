@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import BlogHeader from "./BlogHeader";
 import BlogContent from "./BlogContent";
 import BlogFooter from "./BlogFooter";
@@ -19,7 +19,12 @@ interface AnimatedBlogPostProps {
   relatedPosts: BlogPost[];
 }
 
-export default function AnimatedBlogPost({ post, headings, readingTime, relatedPosts }: AnimatedBlogPostProps) {
+export default function AnimatedBlogPost({
+  post,
+  headings,
+  readingTime,
+  relatedPosts,
+}: AnimatedBlogPostProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

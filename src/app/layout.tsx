@@ -26,11 +26,14 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="zh" suppressHydrationWarning className="h-full">
-        <link rel="icon" href="/next.svg" type="image/svg+xml" />
+        <head>
+          <link rel="icon" href="/next.svg" type="image/svg+xml" />
+        </head>
         <body
           className={cn(
             `${inter.className} flex flex-col bg-background font-sans antialiased h-full`,
-            inter.variable
+            inter.variable,
+            "font-['LXGW_WenKai',sans-serif]"
           )}
         >
           <ThemeProvider attribute="class">
