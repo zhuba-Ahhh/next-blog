@@ -29,7 +29,7 @@ export function BlogSearch({ searchTerm, onSearchChange, sortOption, onSortChang
           排序方式
         </Label>
         <Select onValueChange={onSortChange} defaultValue={sortOption}>
-          <SelectTrigger id="sort" className="w-full">
+          <SelectTrigger id="sort" className="w-full" aria-label="选择排序方式">
             <SelectValue placeholder="选择排序方式" />
           </SelectTrigger>
           <SelectContent>
