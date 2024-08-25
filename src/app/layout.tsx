@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 
 import { cn } from "@/lib/utils";
 
+import { ViewTransitions } from "next-view-transitions";
+
 import { ThemeProvider } from "next-themes";
 import AnimatedLayout from "@/components/AnimatedLayout";
 
@@ -22,24 +24,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh" suppressHydrationWarning className="h-full">
-      <link rel="icon" href="/next.svg" type="image/svg+xml" />
-      <body
-        className={cn(
-          `${inter.className} flex flex-col bg-background font-sans antialiased h-full`,
-          inter.variable
-        )}
-      >
-        <ThemeProvider attribute="class">
-          <Header />
-          <AnimatedLayout>
-            <main className="flex-grow container mx-auto px-4 h-full">
-              {children}
-            </main>
-          </AnimatedLayout>
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="zh" suppressHydrationWarning className="h-full">
+        <link rel="icon" href="/next.svg" type="image/svg+xml" />
+        <body
+          className={cn(
+            `${inter.className} flex flex-col bg-background font-sans antialiased h-full`,
+            inter.variable
+          )}
+        >
+          <ThemeProvider attribute="class">
+            <Header />
+            <AnimatedLayout>
+              <main className="flex-grow container mx-auto px-4 h-full">
+                {children}
+              </main>
+            </AnimatedLayout>
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

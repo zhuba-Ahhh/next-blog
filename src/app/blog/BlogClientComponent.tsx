@@ -124,14 +124,14 @@ export default function BlogList() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8 text-center">博客文章</h1>
-      
+
       <BlogSearch
         searchTerm={searchTerm}
         onSearchChange={handleSearch}
         sortOption={sortOption}
         onSortChange={(value: SortOption) => setSortOption(value)}
       />
-      
+
       <TagList
         allTags={allTags}
         selectedTag={selectedTag}
@@ -140,7 +140,7 @@ export default function BlogList() {
         onToggleExpand={() => setIsTagsExpanded(!isTagsExpanded)}
         initialTagCount={INITIAL_TAG_COUNT}
       />
-      
+
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {isLoading ? (
           Array.from({ length: POSTS_PER_PAGE }).map((_, index) => (
@@ -187,7 +187,7 @@ export default function BlogList() {
           </div>
         )}
       </div>
-      
+
       {filteredPostsMemo.length > 0 && (
         <Pagination
           currentPage={currentPage}
