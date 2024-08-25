@@ -40,7 +40,7 @@ export function BlogPostCard({ post, onTagClick, index }: BlogPostCardProps) {
         <CardHeader>
           <CardTitle>
             <Link href={`/blog/${post.id}`}>
-              <p className="line-clamp-1 overflow-hidden">{post.title}</p>
+              <h3 className="line-clamp-1 overflow-hidden">{post.title}</h3>
             </Link>
           </CardTitle>
           <CardDescription>
