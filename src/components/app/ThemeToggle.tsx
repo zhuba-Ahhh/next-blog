@@ -1,6 +1,7 @@
 "use client";
+import React from "react";
 import { useState, useEffect } from "react";
-import { useThemeType } from "@/hooks";
+import { useThemeType } from "../../hooks";
 
 const MoonIcon = () => (
   <svg viewBox="0 0 1024 1024" className="w-5 h-5">

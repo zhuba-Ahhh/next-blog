@@ -1,5 +1,5 @@
 import { Link } from "next-view-transitions";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "../../components/ui/badge";
 
 export default function Footer() {
   const links = [
@@ -18,7 +18,11 @@ export default function Footer() {
         </div>
         <nav className="flex items-center space-x-4">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm text-muted-foreground">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted-foreground"
+            >
               <Badge>{link.label}</Badge>
             </Link>
           ))}

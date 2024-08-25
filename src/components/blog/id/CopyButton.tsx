@@ -3,7 +3,7 @@
 import React, { useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { throttle } from "lodash-es";
-import { useThemeType } from "@/hooks";
+import { useThemeType } from "../../../hooks";
 
 interface CopyButtonProps {
   text: string;

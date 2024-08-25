@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/style/globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/app/Header";
+import Footer from "@/components/app/Footer";
 
 import { cn } from "@/lib/utils";
 
 import { ViewTransitions } from "next-view-transitions";
 
 import { ThemeProvider } from "next-themes";
-import AnimatedLayout from "@/components/AnimatedLayout";
+import AnimatedLayout from "@/components/app/AnimatedLayout";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -38,11 +38,7 @@ export default function RootLayout({
         >
           <ThemeProvider attribute="class">
             <Header />
-            <AnimatedLayout>
-              <main className="flex-grow container mx-auto px-4 h-full">
-                {children}
-              </main>
-            </AnimatedLayout>
+            <AnimatedLayout>{children}</AnimatedLayout>
             <Footer />
           </ThemeProvider>
         </body>

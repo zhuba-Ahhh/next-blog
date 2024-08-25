@@ -3,7 +3,7 @@ import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import dynamic from "next/dynamic";
 import { MDXComponents } from "./types";
 
-const CopyButton = dynamic(() => import("@/components/CopyButton"), {
+const CopyButton = dynamic(() => import("@/components/blog/id/CopyButton"), {
   ssr: false,
 });
 
@@ -30,10 +30,7 @@ export const mdxComponents: MDXComponents = {
     <p className="mb-4 text-gray-600 dark:text-gray-400" {...props} />
   ),
   a: (props: any) => (
-    <a
-      className="text-blue-500 dark:text-blue-400"
-      {...props}
-    />
+    <a className="text-blue-500 dark:text-blue-400" {...props} />
   ),
   ol: (props: any) => (
     <ol
@@ -68,7 +65,7 @@ export const mdxComponents: MDXComponents = {
           customStyle={{
             backgroundColor: "var(--code-bg)",
             color: "var(--code-text)",
-            paddingRight: "7rem",
+            paddingRight: "6rem",
           }}
           {...props}
         />
