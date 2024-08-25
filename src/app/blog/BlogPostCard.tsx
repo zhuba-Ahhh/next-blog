@@ -24,6 +24,9 @@ const cardVariants = {
 };
 
 export function BlogPostCard({ post, onTagClick, index }: BlogPostCardProps) {
+  const displayTags = post.tags.slice(0, 3);
+  const remainingTags = post.tags.length - 3;
+
   return (
     <motion.div
       variants={cardVariants}
@@ -48,7 +51,7 @@ export function BlogPostCard({ post, onTagClick, index }: BlogPostCardProps) {
           <p className="line-clamp-1 overflow-hidden">{post.excerpt}</p>
         </CardContent>
         <CardFooter className="flex flex-wrap gap-2">
-          {post.tags.map((tag) => (
+          {displayTags.map((tag) => (
             <Badge
               key={tag}
               variant="secondary"
@@ -58,6 +61,11 @@ export function BlogPostCard({ post, onTagClick, index }: BlogPostCardProps) {
               {tag}
             </Badge>
           ))}
+          {remainingTags > 0 && (
+            <Badge variant="secondary" className="text-xs px-2 py-1 h-6">
+              +{remainingTags}...
+            </Badge>
+          )}
         </CardFooter>
       </Card>
     </motion.div>

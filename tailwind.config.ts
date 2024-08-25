@@ -5,9 +5,7 @@ import animate from "tailwindcss-animate";
 
 const config = {
   darkMode: ["class"],
-  content: [
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {

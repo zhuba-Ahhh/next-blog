@@ -7,7 +7,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 const pageVariants = {
   initial: { opacity: 0, x: "-100%" },
@@ -31,17 +31,17 @@ export default function AnimatedLayout({ children }: AnimatedLayoutProps) {
   return (
     <LazyMotion features={domAnimation}>
       <AnimatePresence mode="wait">
-        <motion.div
+        <motion.main
           key={pathname}
           initial="initial"
           animate="in"
-          // exit="out"
+          exit="out"
           variants={pageVariants}
-          transition={pageTransition}
+          // transition={pageTransition}
           className="flex-grow container mx-auto px-4"
         >
           {children}
-        </motion.div>
+        </motion.main>
       </AnimatePresence>
     </LazyMotion>
   );

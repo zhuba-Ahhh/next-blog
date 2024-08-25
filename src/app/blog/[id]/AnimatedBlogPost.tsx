@@ -7,7 +7,7 @@ import BlogFooter from "./BlogFooter";
 import RelatedPosts from "./RelatedPosts";
 import ShareButtons from "./ShareButtons";
 import TableOfContents from "./TableOfContents";
-import Comments from "@/components/Comments";
+import Comments from "@/components/blog/id/Comments";
 import { mdxComponents } from "./MdxComponents";
 import type { Heading } from "./types";
 import type { BlogPost } from "@/data/blogPosts";

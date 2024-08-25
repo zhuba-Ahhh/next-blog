@@ -2,6 +2,15 @@
 import { Link } from "next-view-transitions";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
+import dynamic from "next/dynamic";
+
+// 延迟加载非关键组件
+const TechStack = dynamic(() => import("@/components/page/TechStack"), {
+  ssr: false,
+});
+const LatestPosts = dynamic(() => import("@/components/page/LatestPosts"), {
+  ssr: false,
+});
 
 export default function Home() {
   // 根据日期排序博客文章,并取最新的两篇
@@ -11,12 +20,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center h-full text-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-4">
-      {/* 标题和介绍 */}
+      {/* 标题和介绍 - 保持优先级高 */}
       <motion.h1
         className="text-5xl font-bold mb-4"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         欢迎来到我的博客
       </motion.h1>
@@ -24,7 +33,7 @@ export default function Home() {
         className="text-lg mb-6 max-w-2xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
+        transition={{ delay: 0.1, duration: 0.3 }}
       >
         你好,我是[Zhuba-Ahhh]。作为一名前端开发者,我热衷于探索和分享Web开发的最新趋势、技巧和最佳实践。
       </motion.p>
@@ -33,7 +42,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
+        transition={{ delay: 0.2, duration: 0.3 }}
       >
         <Link
           href="/blog"
@@ -43,70 +52,18 @@ export default function Home() {
         </Link>
       </motion.div>
 
-      {/* 最新文章预览 */}
-      <motion.div
-        className="mt-12 w-full max-w-4xl"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.9, duration: 0.5 }}
-      >
-        <h2 className="text-3xl font-semibold mb-4">最新文章</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {sortedPosts.map((post, index) => (
-            <Link href={`/blog/${post.id}`} key={post.id}>
-              <motion.div
-                className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-lg cursor-pointer border border-white border-opacity-20"
-                whileHover={{
-                  scale: 1.03,
-                  backgroundColor: "rgba(255,255,255,0.15)",
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                <p className="text-sm opacity-80">{post.date}</p>
-              </motion.div>
-            </Link>
-          ))}
-        </div>
-      </motion.div>
+      {/* 最新文章预览 - 延迟加载 */}
+      <LatestPosts />
 
-      {/* 技术栈展示 */}
-      <motion.div
-        className="mt-12 w-full max-w-4xl"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
-      >
-        <h2 className="text-3xl font-semibold mb-4">技术栈</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {["React", "Next.js", "TypeScript", "Tailwind CSS"].map(
-            (tech, index) => (
-              <motion.span
-                key={tech}
-                className="bg-white bg-opacity-10 px-4 py-2 rounded-full text-sm font-medium"
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "rgba(255,255,255,0.2)",
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                {tech}
-              </motion.span>
-            )
-          )}
-        </div>
-      </motion.div>
+      {/* 技术栈展示 - 延迟加载 */}
+      <TechStack posts={sortedPosts} />
 
       {/* 联系方式 */}
       <motion.div
         className="mt-12 text-sm opacity-80"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
+        transition={{ delay: 0.3, duration: 0.3 }}
       >
         <p>
           联系我: 3477826311@qq.com |{" "}

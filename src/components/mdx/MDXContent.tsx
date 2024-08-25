@@ -1,5 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 const components = {
   h1: (props: any) => <h1 className="text-3xl font-bold my-4" {...props} />,

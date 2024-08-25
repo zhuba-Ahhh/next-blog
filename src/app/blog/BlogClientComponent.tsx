@@ -98,11 +98,6 @@ export default function BlogList() {
     [router]
   );
 
-  const visibleTags = useMemo(
-    () => (isTagsExpanded ? allTags : allTags.slice(0, INITIAL_TAG_COUNT)),
-    [isTagsExpanded, allTags]
-  );
-
   const handleSearch = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const newSearchTerm = e.target.value;
