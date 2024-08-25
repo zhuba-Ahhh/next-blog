@@ -1,5 +1,5 @@
 import { Link } from "next-view-transitions";
-import { Badge } from "../../components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 export default function Footer() {
   const links = [

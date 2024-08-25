@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-import type { BlogPost } from "../../data/blogPosts";
+import type { BlogPost } from "@/data/blogPosts";
 
 interface LatestPostsProps {
   posts: BlogPost[];

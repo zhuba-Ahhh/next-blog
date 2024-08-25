@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useCallback, useMemo } from "react";
-import { Input } from "../../../components/ui/input";
-import { Textarea } from "../../../components/ui/textarea";
-import { Button } from "../../../components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -10,7 +10,7 @@ import {
   CardTitle,
   CardDescription,
   CardFooter,
-} from "../../../components/ui/card";
+} from "@/components/ui/card";
 
 interface Comment {
   id: number;
