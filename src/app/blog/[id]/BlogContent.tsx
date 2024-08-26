@@ -5,28 +5,40 @@ import remarkGfm from "remark-gfm";
 import rehypeInlineCode from "@/lib/rehypeInlineCode";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import BlogPostMDXContent from "@/data/BlogPostMDXContent";
 
 interface BlogContentProps {
   content: string;
   components: MDXComponents;
+  contentFile?: string;
 }
 
-export default function BlogContent({ content, components }: BlogContentProps) {
+export default function BlogContent({
+  content,
+  components,
+  contentFile,
+}: BlogContentProps) {
   return (
-    <MDXRemote
-      source={content}
-      components={components}
-      options={{
-        mdxOptions: {
-          remarkPlugins: [remarkGfm],
-          rehypePlugins: [
-            rehypeSlug,
-            [rehypeAutolinkHeadings, { behavior: "wrap" }],
-            rehypeInlineCode,
-          ],
-        },
-        parseFrontmatter: true,
-      }}
-    />
+    <>
+      {contentFile ? (
+        <BlogPostMDXContent contentFile={contentFile} components={components} />
+      ) : (
+        <MDXRemote
+          source={content}
+          components={components}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm],
+              rehypePlugins: [
+                rehypeSlug,
+                [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                rehypeInlineCode,
+              ],
+            },
+            parseFrontmatter: true,
+          }}
+        />
+      )}
+    </>
   );
 }

@@ -50,7 +50,11 @@ export default function AnimatedBlogPost({
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <BlogHeader post={post} readingTime={readingTime} />
-          <BlogContent content={post.content} components={mdxComponents} />
+          <BlogContent
+            content={post.content}
+            contentFile={post?.contentFile}
+            components={mdxComponents}
+          />
           <BlogFooter post={post} />
           <RelatedPosts posts={relatedPosts} />
           <ShareButtons
