@@ -5,6 +5,9 @@ import {
   content4,
   content5,
   content6,
+  content7,
+  content8,
+  content9,
 } from "./ts";
 
 export interface BlogPost {
@@ -80,55 +83,7 @@ export const blogPosts: BlogPost[] = [
     id: 7,
     title: "WebAssembly与前端的未来",
     excerpt: "探索WebAssembly如何革新Web应用开发...",
-    content: `
-# WebAssembly与前端的未来
-
-WebAssembly (Wasm) 正在改变Web应用的性能界限。本文将深入探讨Wasm的工作原理、与JavaScript的协作方式,以及在前端项目中的实际应用案例。
-
-## WebAssembly简介
-
-WebAssembly是一种低级的类汇编语言,可以在现代Web浏览器中运行。它的主要特点包括:
-
-1. 近乎原生的执行速度
-2. 跨平台兼容性
-3. 与JavaScript的无缝集成
-
-## WebAssembly的工作原理
-
-WebAssembly模块通常由C++、Rust等语言编译而来。它的执行过程如下:
-
-1. 加载.wasm文件
-2. 实例化WebAssembly模块
-3. 调用WebAssembly函数
-
-## 与JavaScript的协作
-
-WebAssembly可以与JavaScript进行双向通信:
-
-\`\`\`javascript
-// 加载WebAssembly模块
-WebAssembly.instantiateStreaming(fetch('module.wasm'))
-  .then(result => {
-    const exports = result.instance.exports;
-    const result = exports.someFunction(42);
-    console.log(result);
-  });
-\`\`\`
-
-## 实际应用案例
-
-1. 图像处理: 使用WebAssembly加速滤镜应用
-2. 游戏引擎: 将复杂的游戏逻辑编译为WebAssembly
-3. 加密算法: 实现高性能的加密/解密操作
-
-## WebAssembly的未来发展
-
-1. 多线程支持: 利用Web Workers实现并行计算
-2. 垃圾回收: 简化内存管理
-3. 异常处理: 改善错误处理机制
-
-WebAssembly正在不断发展,为Web应用带来更多可能性。通过掌握WebAssembly,前端开发者可以构建更高性能、更复杂的Web应用。
-    `,
+    content: content7,
     date: "2024-04-15",
     author: "吴九",
     tags: ["WebAssembly", "性能优化", "前端创新"],
@@ -137,53 +92,7 @@ WebAssembly正在不断发展,为Web应用带来更多可能性。通过掌握We
     id: 8,
     title: "AI驱动的前端开发:机遇与挑战",
     excerpt: "探讨AI技术如何改变前端开发流程...",
-    content: `
-# AI驱动的前端开发:机遇与挑战
-
-人工智能正在深刻影响前端开发领域。本文将介绍AI在代码自动补全、UI设计生成、性能优化等方面的应用。
-
-## AI在前端开发中的应用
-
-1. 代码自动补全
-   - GitHub Copilot
-   - TabNine
-
-2. UI设计生成
-   - Figma的AI功能
-   - Adobe Sensei
-
-3. 性能优化
-   - 自动化性能分析
-   - 智能代码重构
-
-## AI编程助手的使用技巧
-
-以GitHub Copilot为例:
-
-1. 编写清晰的注释
-2. 使用自然语言描述功能
-3. 结合单元测试提高准确性
-
-## 机器学习优化用户体验
-
-1. 个性化推荐
-2. 智能表单填充
-3. 预测用户行为
-
-## AI带来的伦理问题
-
-1. 版权问题
-2. 隐私保护
-3. 算法偏见
-
-## AI对开发者角色的影响
-
-1. 重点转向高层次设计
-2. 增强问题解决能力
-3. 持续学习新技术
-
-AI技术正在改变前端开发的方方面面。开发者需要拥抱这些变化,同时保持批判性思考,以充分利用AI带来的机遇并应对挑战。
-    `,
+    content: content8,
     date: "2024-04-20",
     author: "郑十",
     tags: ["AI", "前端开发", "自动化"],
@@ -192,84 +101,7 @@ AI技术正在改变前端开发的方方面面。开发者需要拥抱这些变
     id: 9,
     title: "Web3和去中心化应用(DApps)开发入门",
     excerpt: "学习构建基于区块链的Web应用...",
-    content: `
-# Web3和去中心化应用(DApps)开发入门
-
-Web3技术正在兴起,为开发者带来新的机遇。本文将介绍Web3的核心概念,并指导如何创建一个简单的DApp。
-
-## Web3核心概念
-
-1. 智能合约: 自动执行的程序,运行在区块链上
-2. 去中心化存储: IPFS, Filecoin等
-3. 去中心化身份验证: MetaMask, WalletConnect等
-
-## 创建简单DApp
-
-使用Ethereum和Solidity创建一个简单的投票DApp:
-
-1. 编写智能合约:
-
-\`\`\`solidity
-pragma solidity ^0.8.0;
-
-contract Voting {
-    mapping(string => uint256) public votes;
-
-    function vote(string memory candidate) public {
-        votes[candidate] += 1;
-    }
-
-    function getVotes(string memory candidate) public view returns (uint256) {
-        return votes[candidate];
-    }
-}
-\`\`\`
-
-2. 使用Web3.js与合约交互:
-
-\`\`\`javascript
-import Web3 from 'web3';
-
-const web3 = new Web3(Web3.givenProvider);
-const contract = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
-
-async function vote(candidate) {
-    const accounts = await web3.eth.getAccounts();
-    await contract.methods.vote(candidate).send({ from: accounts[0] });
-}
-\`\`\`
-
-3. 集成React前端:
-
-\`\`\`jsx
-function VotingApp() {
-    const [candidate, setCandidate] = useState('');
-    const [votes, setVotes] = useState(0);
-
-    async function handleVote() {
-        await vote(candidate);
-        const newVotes = await contract.methods.getVotes(candidate).call();
-        setVotes(newVotes);
-    }
-
-    return (
-        <div>
-            <input value={candidate} onChange={e => setCandidate(e.target.value)} />
-            <button onClick={handleVote}>Vote</button>
-            <p>Votes: {votes}</p>
-        </div>
-    );
-}
-\`\`\`
-
-## Web3应用面临的挑战
-
-1. 可扩展性: 处理高并发交易
-2. 用户体验: 简化钱包连接和交易确认
-3. 法律合规: 应对不同地区的监管要求
-
-Web3技术为开发者提供了创新的机会,但也带来了新的挑战。通过不断学习和实践,我们可以在这个新兴领域中创造出革命性的应用。
-    `,
+    content: content9,
     date: "2024-04-25",
     author: "黄十一",
     tags: ["Web3", "区块链", "DApps"],
