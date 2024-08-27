@@ -8,6 +8,7 @@ export interface BlogPost {
   tags: string[];
   category?: string;
   coverImage?: string;
+  contentFile?: string; // 新增字段,指向mdx文件
 }
 
 export const blogPosts: BlogPost[] = [
@@ -15,6 +16,7 @@ export const blogPosts: BlogPost[] = [
     id: 1,
     title: "深入理解React Hooks",
     excerpt: "探索React Hooks的工作原理和最佳实践...",
+    contentFile: "1.mdx",
     content: `
 # 深入理解React Hooks
 

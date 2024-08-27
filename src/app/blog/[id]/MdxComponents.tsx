@@ -7,6 +7,32 @@ const CopyButton = dynamic(() => import("@/components/blog/id/CopyButton"), {
   ssr: false,
 });
 
+const Table: React.FC<React.TableHTMLAttributes<HTMLTableElement>> = (
+  props
+) => <table className="min-w-full divide-y divide-gray-200" {...props} />;
+
+const Th: React.FC<React.ThHTMLAttributes<HTMLTableHeaderCellElement>> = (
+  props
+) => (
+  <th
+    className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+    {...props}
+  />
+);
+
+const Td: React.FC<React.TdHTMLAttributes<HTMLTableDataCellElement>> = (
+  props
+) => (
+  <td
+    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+    {...props}
+  />
+);
+
+const Tr: React.FC<React.HTMLAttributes<HTMLTableRowElement>> = (props) => (
+  <tr className="bg-white" {...props} />
+);
+
 export const mdxComponents: MDXComponents = {
   h1: (props: any) => (
     <h1
@@ -45,7 +71,7 @@ export const mdxComponents: MDXComponents = {
     const match = /language-(\w+)/.exec(className || "");
     const language = match ? match[1] : "text";
     const isInline = className === "inline-code";
-    if (isInline) {
+    if (isInline || !className) {
       return (
         <code
           className="bg-gray-100 dark:bg-gray-800 rounded px-1 py-0.5 font-mono text-sm"
@@ -74,4 +100,8 @@ export const mdxComponents: MDXComponents = {
     );
   },
   pre: (props: any) => <div {...props} />,
+  table: Table,
+  th: Th,
+  td: Td,
+  tr: Tr,
 };
