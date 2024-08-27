@@ -17,10 +17,14 @@ interface AnimatedBlogPostProps {
   headings: Heading[];
   readingTime: number;
   relatedPosts: BlogPost[];
+  prevPost?: BlogPost;
+  nextPost?: BlogPost;
 }
 
 export default function AnimatedBlogPost({
   post,
+  prevPost,
+  nextPost,
   headings,
   readingTime,
   relatedPosts,
@@ -55,7 +59,7 @@ export default function AnimatedBlogPost({
             contentFile={post?.contentFile}
             components={mdxComponents}
           />
-          <BlogFooter post={post} />
+          <BlogFooter post={post} prevPost={prevPost} nextPost={nextPost} />
           <RelatedPosts posts={relatedPosts} />
           <ShareButtons
             url={`https://yourblog.com/blog/${post.id}`}
