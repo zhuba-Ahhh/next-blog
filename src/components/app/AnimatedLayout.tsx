@@ -38,7 +38,7 @@ export default function AnimatedLayout({ children }: AnimatedLayoutProps) {
           exit="out"
           variants={pageVariants}
           // transition={pageTransition}
-          className="flex-grow container mx-auto px-4"
+          className="flex-grow container mx-auto px-4 mt-16"
         >
           {children}
         </motion.main>
