@@ -6,11 +6,11 @@
 9:I[30760,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"default"]
 a:I[50986,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"Link"]
 4:["id","11","d"]
-0:["pnRzWCJYX41a1l8gAN8YF",[[["",{"children":["blog",{"children":[["id","11","d"],{"children":["__PAGE__?{\"id\":\"11\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","11","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/129d53c6328736bb.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
-c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
+0:["ywbVbaWl95tZGrZ933Fvh",[[["",{"children":["blog",{"children":[["id","11","d"],{"children":["__PAGE__?{\"id\":\"11\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","11","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b295c53235df6f34.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
+c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
 d:"$Sreact.suspense"
-e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"BailoutToCSR"]
-f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
+e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"BailoutToCSR"]
+f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
 10:T88c,
 # 前端可视化技术的新趋势
 
@@ -93,6 +93,199 @@ WebGPU是下一代图形和计算API,有望在未来取代WebGL。它提供了�
 3. 虚拟现实(VR)和增强现实(AR)应用
 
 前端可视化技术正在不断突破边界,为用户提供更丰富、更直观的数据展示和交互体验。通过掌握这些新兴技术,前端开发者可以创造出令人惊叹的视觉效果和用户体验。
-    2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":11,"title":"前端可视化技术的新趋势","excerpt":"探索数据可视化和3D渲染的最新进展...","content":"$10","date":"2024-05-05","author":"赵十三","tags":["数据可视化","WebGL","3D渲染"]},"headings":[{"level":1,"text":"前端可视化技术的新趋势","slug":"前端可视化技术的新趋势"},{"level":2,"text":"WebGL和Three.js","slug":"webgl和three.js"},{"level":2,"text":"数据可视化库","slug":"数据可视化库"},{"level":2,"text":"WebGPU","slug":"webgpu"},{"level":2,"text":"实际应用案例","slug":"实际应用案例"}],"readingTime":1,"relatedPosts":[]}]}]}]]
-b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客"}]]
+    11:T61f,
+# 微前端架构实践与性能优化
+
+微前端架构允许多个独立开发、部署的前端应用共存于一个页面。本文将详细介绍微前端的实现方法和优化策略。
+
+## 微前端实现方法
+
+1. 使用Single-SPA框架:
+
+```javascript
+import { registerApplication, start } from 'single-spa';
+
+registerApplication({
+  name: 'app1',
+  app: () => import('./app1/main.js'),
+  activeWhen: '/app1'
+});
+
+registerApplication({
+  name: 'app2',
+  app: () => import('./app2/main.js'),
+  activeWhen: '/app2'
+});
+
+start();
+```
+
+2. 使用Qiankun框架:
+
+```javascript
+import { registerMicroApps, start } from 'qiankun';
+
+registerMicroApps([
+  {
+    name: 'app1',
+    entry: '//localhost:8080',
+    container: '#container',
+    activeRule: '/app1',
+  },
+  {
+    name: 'app2',
+    entry: '//localhost:8081',
+    container: '#container',
+    activeRule: '/app2',
+  },
+]);
+
+start();
+```
+
+## 微前端通信机制
+
+1. 基于CustomEvent的发布订阅模式
+2. 使用Props进行父子应用通信
+3. 全局状态管理(如Redux)
+
+## 样式隔离
+
+1. BEM命名约定
+2. CSS Modules
+3. Shadow DOM
+
+## 性能优化策略
+
+1. 应用预加载
+2. 公共依赖提取
+3. 按需加载子应用
+
+## 实践经验与注意事项
+
+1. 统一技术栈,降低维护成本
+2. 制定明确的应用边界
+3. 建立完善的监控体系
+
+微前端架构为大型前端项目提供了灵活的解决方案,但也带来了额外的复杂性。通过合理的架构设计和优化策略,我们可以充分发挥微前端的优势,构建高效、可维护的大型前端应用。
+    12:Ta4f,
+# 渐进式Web应用(PWA)开发指南
+
+渐进式Web应用(PWA)结合了Web和原生应用的优点,提供了卓越的用户体验。本文将深入探讨PWA的核心技术和实现方法。
+
+## Service Workers
+
+Service Workers是PWA的核心,用于实现离线缓存和后台同步。
+
+注册Service Worker:
+
+```javascript
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful');
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+```
+
+实现离线缓存:
+
+```javascript
+// sw.js
+const CACHE_NAME = 'my-site-cache-v1';
+const urlsToCache = [
+  '/',
+  '/styles/main.css',
+  '/script/main.js'
+];
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+```
+
+## Web App Manifest
+
+Web App Manifest定义了应用的图标、启动行为等信息。
+
+```json
+{
+  "name": "My PWA",
+  "short_name": "MyPWA",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
+```
+
+## Push Notifications
+
+Push Notifications允许应用向用户发送实时通知。
+
+```javascript
+// 请求推送权限
+Notification.requestPermission().then(function(permission) {
+  if (permission === 'granted') {
+    console.log('Notification permission granted.');
+  }
+});
+
+// 监听推送事件
+self.addEventListener('push', function(event) {
+  const options = {
+    body: event.data.text(),
+    icon: 'icons/icon-192x192.png',
+    badge: 'icons/badge-128x128.png'
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('My PWA', options)
+  );
+});
+```
+
+## PWA的未来发展
+
+1. Web Bluetooth: 连接蓝牙设备
+2. Web USB: 访问USB设备
+3. Web Share: 共享内容
+
+PWA正在不断发展,为用户提供更多可能性。通过掌握PWA的核心技术,前端开发者可以构建出类原生的Web应用,为用户带来卓越的体验。
+    2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":11,"title":"前端可视化技术的新趋势","excerpt":"探索数据可视化和3D渲染的最新进展...","content":"$10","date":"2024-05-05","author":"赵十三","tags":["数据可视化","WebGL","3D渲染"]},"headings":[{"level":1,"text":"前端可视化技术的新趋势","slug":"前端可视化技术的新趋势"},{"level":2,"text":"WebGL和Three.js","slug":"webgl和three.js"},{"level":2,"text":"数据可视化库","slug":"数据可视化库"},{"level":2,"text":"WebGPU","slug":"webgpu"},{"level":2,"text":"实际应用案例","slug":"实际应用案例"}],"readingTime":1,"relatedPosts":[],"prevPost":{"id":10,"title":"微前端架构实践与性能优化","excerpt":"深入理解微前端的实现原理和优化策略...","content":"$11","date":"2024-04-30","author":"刘十二","tags":["微前端","架构设计","性能优化"]},"nextPost":{"id":12,"title":"渐进式Web应用(PWA)开发指南","excerpt":"学习如何构建离线可用、类原生应用体验的Web应用...","content":"$12","date":"2024-05-10","author":"钱十四","tags":["PWA","离线应用","移动Web"]}}]}]}]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","4",{"name":"keywords","content":"Next.js,React,JavaScript,前端开发"}],["$","meta","5",{"property":"og:title","content":"我的博客"}],["$","meta","6",{"property":"og:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","7",{"property":"og:url","content":"https://yourblog.com"}],["$","meta","8",{"property":"og:locale","content":"zh_CN"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"我的博客"}],["$","meta","12",{"name":"twitter:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}]]
 1:null

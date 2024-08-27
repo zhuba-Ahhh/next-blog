@@ -6,11 +6,11 @@
 9:I[30760,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"default"]
 a:I[50986,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"Link"]
 4:["id","12","d"]
-0:["pnRzWCJYX41a1l8gAN8YF",[[["",{"children":["blog",{"children":[["id","12","d"],{"children":["__PAGE__?{\"id\":\"12\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","12","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/129d53c6328736bb.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
-c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
+0:["ywbVbaWl95tZGrZ933Fvh",[[["",{"children":["blog",{"children":[["id","12","d"],{"children":["__PAGE__?{\"id\":\"12\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","12","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b295c53235df6f34.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
+c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
 d:"$Sreact.suspense"
-e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"BailoutToCSR"]
-f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
+e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"BailoutToCSR"]
+f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
 10:Ta4f,
 # 渐进式Web应用(PWA)开发指南
 
@@ -129,6 +129,197 @@ self.addEventListener('push', function(event) {
 3. Web Share: 共享内容
 
 PWA正在不断发展,为用户提供更多可能性。通过掌握PWA的核心技术,前端开发者可以构建出类原生的Web应用,为用户带来卓越的体验。
-    2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":12,"title":"渐进式Web应用(PWA)开发指南","excerpt":"学习如何构建离线可用、类原生应用体验的Web应用...","content":"$10","date":"2024-05-10","author":"钱十四","tags":["PWA","离线应用","移动Web"]},"headings":[{"level":1,"text":"渐进式Web应用(PWA)开发指南","slug":"渐进式web应用(pwa)开发指南"},{"level":2,"text":"Service Workers","slug":"service-workers"},{"level":2,"text":"Web App Manifest","slug":"web-app-manifest"},{"level":2,"text":"Push Notifications","slug":"push-notifications"},{"level":2,"text":"PWA的未来发展","slug":"pwa的未来发展"}],"readingTime":1,"relatedPosts":[]}]}]}]]
-b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客"}]]
+    11:T88c,
+# 前端可视化技术的新趋势
+
+前端可视化技术正在快速发展,本文将介绍最新的3D渲染和数据可视化技术,以及它们的实际应用。
+
+## WebGL和Three.js
+
+WebGL是一种用于渲染交互式3D图形的JavaScript API。Three.js是基于WebGL的3D库,大大简化了3D场景的创建过程。
+
+创建一个简单的3D场景:
+
+```javascript
+import * as THREE from 'three';
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+}
+
+animate();
+```
+
+## 数据可视化库
+
+1. D3.js: 强大而灵活的数据可视化库
+2. ECharts: 功能丰富的图表库
+
+使用ECharts创建交互式图表:
+
+```javascript
+import * as echarts from 'echarts';
+
+const chartDom = document.getElementById('main');
+const myChart = echarts.init(chartDom);
+
+const option = {
+    title: {
+        text: '示例图表'
+    },
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'bar'
+    }]
+};
+
+myChart.setOption(option);
+```
+
+## WebGPU
+
+WebGPU是下一代图形和计算API,有望在未来取代WebGL。它提供了更低级的硬件访问,可以实现更高效的渲染和计算。
+
+## 实际应用案例
+
+1. 交互式数据仪表板
+2. 3D产品展示
+3. 虚拟现实(VR)和增强现实(AR)应用
+
+前端可视化技术正在不断突破边界,为用户提供更丰富、更直观的数据展示和交互体验。通过掌握这些新兴技术,前端开发者可以创造出令人惊叹的视觉效果和用户体验。
+    12:T99a,
+# GraphQL与现代API设计
+
+GraphQL正在改变我们设计和使用API的方式。本文将深入讨论GraphQL的核心概念和优势,并指导如何在实际项目中使用GraphQL。
+
+## GraphQL简介
+
+GraphQL是一种用于API的查询语言,也是一个运行时。它的主要特点包括:
+
+1. 类型系统: 强类型定义提高了API的可预测性
+2. 按需获取: 客户端可以精确指定所需数据,减少过度获取
+3. 实时更新: Subscriptions支持实时数据流
+
+## 使用GraphQL
+
+1. 定义Schema:
+
+```javascript
+type Query {
+  getPost(id: ID!): Post
+  getAllPosts: [Post]
+}
+
+type Mutation {
+  createPost(input: PostInput!): Post
+  updatePost(id: ID!, input: PostInput!): Post
+  deletePost(id: ID!): Post
+}
+
+type Subscription {
+  postCreated: Post
+}
+
+type Post {
+  id: ID!
+  title: String!
+  content: String!
+  author: Author!
+}
+
+type Author {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+input PostInput {
+  title: String!
+  content: String!
+  authorId: ID!
+}
+```
+
+2. 使用Apollo Client:
+
+```javascript
+import { ApolloClient, InMemoryCache, ApolloProvider, useQuery, useMutation } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000/graphql',
+  cache: new InMemoryCache()
+});
+
+function App() {
+  return (
+    <ApolloProvider client={client}>
+      <PostList />
+    </ApolloProvider>
+  );
+}
+
+function PostList() {
+  const { loading, error, data } = useQuery(GET_ALL_POSTS);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
+  return (
+    <ul>
+      {data.getAllPosts.map(post => (
+        <li key={post.id}>{post.title}</li>
+      ))}
+    </ul>
+  );
+}
+
+const GET_ALL_POSTS = gql`
+  query GetAllPosts {
+    getAllPosts {
+      id
+      title
+    }
+  }
+`;
+```
+
+## 性能优化策略
+
+1. 查询合并: 将多个查询合并为一个,减少网络请求
+2. 缓存管理: 合理使用缓存,避免重复请求
+3. 分页查询: 对大量数据进行分页查询,提高性能
+
+## 实践经验与注意事项
+
+1. 避免过度使用Subscriptions: Subscriptions可能会增加复杂性和性能开销
+2. 使用Apollo Client的最佳实践: 如使用`useQuery`和`useMutation`钩子
+3. 处理错误和异常: 使用GraphQL错误处理机制,如`errors`字段和`onError`回调
+
+GraphQL为前后端交互带来了新的可能性。通过掌握GraphQL的核心概念和最佳实践,前端开发者可以构建出高性能、可维护的API,为用户提供更好的体验。
+    2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":12,"title":"渐进式Web应用(PWA)开发指南","excerpt":"学习如何构建离线可用、类原生应用体验的Web应用...","content":"$10","date":"2024-05-10","author":"钱十四","tags":["PWA","离线应用","移动Web"]},"headings":[{"level":1,"text":"渐进式Web应用(PWA)开发指南","slug":"渐进式web应用(pwa)开发指南"},{"level":2,"text":"Service Workers","slug":"service-workers"},{"level":2,"text":"Web App Manifest","slug":"web-app-manifest"},{"level":2,"text":"Push Notifications","slug":"push-notifications"},{"level":2,"text":"PWA的未来发展","slug":"pwa的未来发展"}],"readingTime":1,"relatedPosts":[],"prevPost":{"id":11,"title":"前端可视化技术的新趋势","excerpt":"探索数据可视化和3D渲染的最新进展...","content":"$11","date":"2024-05-05","author":"赵十三","tags":["数据可视化","WebGL","3D渲染"]},"nextPost":{"id":13,"title":"GraphQL与现代API设计","excerpt":"探索GraphQL如何改变前后端交互模式...","content":"$12","date":"2024-05-15","author":"孙十五","tags":["GraphQL","API设计","全栈开发"]}}]}]}]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","4",{"name":"keywords","content":"Next.js,React,JavaScript,前端开发"}],["$","meta","5",{"property":"og:title","content":"我的博客"}],["$","meta","6",{"property":"og:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","7",{"property":"og:url","content":"https://yourblog.com"}],["$","meta","8",{"property":"og:locale","content":"zh_CN"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"我的博客"}],["$","meta","12",{"name":"twitter:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}]]
 1:null

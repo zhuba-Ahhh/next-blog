@@ -6,11 +6,104 @@
 9:I[30760,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"default"]
 a:I[50986,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"Link"]
 4:["id","5","d"]
-0:["pnRzWCJYX41a1l8gAN8YF",[[["",{"children":["blog",{"children":[["id","5","d"],{"children":["__PAGE__?{\"id\":\"5\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","5","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/129d53c6328736bb.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
-c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
+0:["ywbVbaWl95tZGrZ933Fvh",[[["",{"children":["blog",{"children":[["id","5","d"],{"children":["__PAGE__?{\"id\":\"5\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","5","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b295c53235df6f34.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
+c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
 d:"$Sreact.suspense"
-e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"BailoutToCSR"]
-f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
-2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":5,"title":"深入理解JavaScript异步编程","excerpt":"探索JavaScript中的异步编程模式和最佳实践...","content":"\n# JavaScript异步编程深度解析\n\nJavaScript的异步编程是前端开发中的重要概念。本文将深入探讨各种异步编程模式及其应用。\n\n## 回调函数\n\n回调函数是最基本的异步编程方式:\n\n```javascript\nfunction fetchData(callback) {\n  setTimeout(() => {\n    callback('Data fetched');\n  }, 1000);\n}\n\nfetchData((result) => {\n  console.log(result);\n});\n```\n\n## Promise\n\nPromise提供了更优雅的异步处理方式:\n\n```javascript\nfunction fetchData() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      resolve('Data fetched');\n    }, 1000);\n  });\n}\n\nfetchData()\n  .then(result => console.log(result))\n  .catch(error => console.error(error));\n```\n\n## Async/Await\n\nAsync/Await是基于Promise的语法糖,使异步代码更易读:\n\n```javascript\nasync function getData() {\n  try {\n    const result = await fetchData();\n    console.log(result);\n  } catch (error) {\n    console.error(error);\n  }\n}\n\ngetData();\n```\n\n通过掌握这些异步编程模式,我们可以更好地处理复杂的异步操作,提高代码的可读性和可维护性。\n    ","date":"2024-04-05","author":"陈七","tags":["JavaScript","异步编程","Promise","Async/Await"]},"headings":[{"level":1,"text":"JavaScript异步编程深度解析","slug":"javascript异步编程深度解析"},{"level":2,"text":"回调函数","slug":"回调函数"},{"level":2,"text":"Promise","slug":"promise"},{"level":2,"text":"Async/Await","slug":"async/await"}],"readingTime":1,"relatedPosts":[]}]}]}]]
-b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客"}]]
+e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"BailoutToCSR"]
+f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
+10:Ta8b,
+# TypeScript高级类型技巧
+
+TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际子展这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。
+
+## 条件类型
+
+条件类型允许我们根据条件选择不同的类型。它的语法如下：
+
+```
+type SomeType<T> = T extends SomeCondition ? TrueType : FalseType;
+```
+
+例如,我们可以使用条件类型来创建一个`Nullable`类型：
+
+```
+type Nullable<T> = T extends null | undefined ? T : T & { notNull: true };
+```
+
+## 映射类型
+
+映射类型允许我们对现有类型的每个属性进行转换。它的语法如下：
+
+```
+type MappedType<T> = {
+  [P in keyof T]: TransformedType;
+};
+```
+
+例如,我们可以使用映射类型来创建一个`Readonly`类型：
+
+```
+type Readonly<T> = {
+  readonly [P in keyof T]: T[P];
+};
+```
+
+## 联合类型和交叉类型
+
+联合类型允许我们表示多个类型中的任意一个。它的语法如下：
+
+```
+type UnionType = Type1 | Type2 | Type3;
+```
+
+交叉类型允许我们组合多个类型的属性。它的语法如下：
+
+```
+type IntersectionType = Type1 & Type2 & Type3;
+```
+
+例如,我们可以使用交叉类型来创建一个`WithRequired`类型：
+
+```
+type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] };
+```
+
+## 类型推断
+
+TypeScript的类型推断机制可以自动推断变量的类型。它基于以下规则：
+
+1. 如果有明确的类型注释,则使用该类型
+2. 如果没有类型注释,则从初始化表达式推断类型
+3. 如果初始化表达式是函数调用,则使用函数返回类型
+
+例如,以下代码中的`x`和`y`都会被推断为`number`类型：
+
+```
+let x = 10;
+let y = x * 2;
+```
+
+## 自定义类型守卫
+
+自定义类型守卫允许我们在运行时检查类型。它的语法如下：
+
+```
+function isTypeGuard(value: any): value is Type {
+  // 检查类型
+}
+```
+
+例如,我们可以使用自定义类型守卫来检查一个值是否是`string`类型：
+
+```
+function isString(value: any): value is string {
+  return typeof value === 'string';
+}
+```
+
+## 结论
+
+TypeScript的高级类型技巧可以帮助我们创建更灵活、更安全的代码。通过掌握条件类型、映射类型、联合类型和交叉类型等高级类型,我们可以更好地表达复杂的类型关系。同时,通过理解TypeScript的类型推断机制和自定义类型守卫,我们可以更好地控制类型检查。
+    2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":5,"title":"深入理解JavaScript异步编程","excerpt":"探索JavaScript中的异步编程模式和最佳实践...","content":"\n# JavaScript异步编程深度解析\n\nJavaScript的异步编程是前端开发中的重要概念。本文将深入探讨各种异步编程模式及其应用。\n\n## 回调函数\n\n回调函数是最基本的异步编程方式:\n\n```javascript\nfunction fetchData(callback) {\n  setTimeout(() => {\n    callback('Data fetched');\n  }, 1000);\n}\n\nfetchData((result) => {\n  console.log(result);\n});\n```\n\n## Promise\n\nPromise提供了更优雅的异步处理方式:\n\n```javascript\nfunction fetchData() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      resolve('Data fetched');\n    }, 1000);\n  });\n}\n\nfetchData()\n  .then(result => console.log(result))\n  .catch(error => console.error(error));\n```\n\n## Async/Await\n\nAsync/Await是基于Promise的语法糖,使异步代码更易读:\n\n```javascript\nasync function getData() {\n  try {\n    const result = await fetchData();\n    console.log(result);\n  } catch (error) {\n    console.error(error);\n  }\n}\n\ngetData();\n```\n\n通过掌握这些异步编程模式,我们可以更好地处理复杂的异步操作,提高代码的可读性和可维护性。\n    ","date":"2024-04-05","author":"陈七","tags":["JavaScript","异步编程","Promise","Async/Await"]},"headings":[{"level":1,"text":"JavaScript异步编程深度解析","slug":"javascript异步编程深度解析"},{"level":2,"text":"回调函数","slug":"回调函数"},{"level":2,"text":"Promise","slug":"promise"},{"level":2,"text":"Async/Await","slug":"async/await"}],"readingTime":1,"relatedPosts":[],"prevPost":{"id":4,"title":"TypeScript高级类型技巧","excerpt":"掌握TypeScript中的高级类型用法...","content":"$10","date":"2024-03-30","author":"赵六","tags":["TypeScript","类型系统","前端开发"]},"nextPost":{"id":6,"title":"React性能优化实战指南","excerpt":"学习React应用的高级性能优化技巧...","content":"\n# React性能优化实战指南\n\n在构建大型React应用时,性能优化至关重要。本文将介绍一些实用的React性能优化技巧。\n\n## 使用React.memo\n\nReact.memo可以帮助我们避免不必要的重渲染:\n\n```jsx\nconst MyComponent = React.memo(function MyComponent(props) {\n  /* 渲染使用到的props */\n});\n```\n\n## 使用useMemo和useCallback\n\nuseMemo和useCallback可以帮助我们缓存计算结果和回调函数:\n\n```jsx\nconst memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);\n\nconst memoizedCallback = useCallback(\n  () => {\n    doSomething(a, b);\n  },\n  [a, b],\n);\n```\n\n## 虚拟化长列表\n\n对于长列表,我们可以使用虚拟化技术来提高性能:\n\n```jsx\nimport { FixedSizeList as List } from 'react-window';\n\nfunction Row({ index, style }) {\n  return <div style={style}>Row {index}</div>;\n}\n\nfunction Example() {\n  return (\n    <List\n      height={150}\n      itemCount={1000}\n      itemSize={35}\n      width={300}\n    >\n      {Row}\n    </List>\n  );\n}\n```\n\n通过应用这些优化技巧,我们可以显著提升React应用的性能,为用户提供更流畅的体验。\n    ","date":"2024-04-10","author":"林八","tags":["React","性能优化","虚拟列表"]}}]}]}]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","4",{"name":"keywords","content":"Next.js,React,JavaScript,前端开发"}],["$","meta","5",{"property":"og:title","content":"我的博客"}],["$","meta","6",{"property":"og:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","7",{"property":"og:url","content":"https://yourblog.com"}],["$","meta","8",{"property":"og:locale","content":"zh_CN"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"我的博客"}],["$","meta","12",{"name":"twitter:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}]]
 1:null

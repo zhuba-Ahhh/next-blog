@@ -6,11 +6,11 @@
 9:I[30760,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"default"]
 a:I[50986,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"Link"]
 4:["id","9","d"]
-0:["pnRzWCJYX41a1l8gAN8YF",[[["",{"children":["blog",{"children":[["id","9","d"],{"children":["__PAGE__?{\"id\":\"9\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","9","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/129d53c6328736bb.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
-c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
+0:["ywbVbaWl95tZGrZ933Fvh",[[["",{"children":["blog",{"children":[["id","9","d"],{"children":["__PAGE__?{\"id\":\"9\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","9","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b295c53235df6f34.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
+c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
 d:"$Sreact.suspense"
-e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"BailoutToCSR"]
-f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-9c60d3fafa07c66c.js"],"default"]
+e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"BailoutToCSR"]
+f:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
 10:T7f0,
 # Web3和去中心化应用(DApps)开发入门
 
@@ -88,6 +88,81 @@ function VotingApp() {
 3. 法律合规: 应对不同地区的监管要求
 
 Web3技术为开发者提供了创新的机会,但也带来了新的挑战。通过不断学习和实践,我们可以在这个新兴领域中创造出革命性的应用。
-    2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":9,"title":"Web3和去中心化应用(DApps)开发入门","excerpt":"学习构建基于区块链的Web应用...","content":"$10","date":"2024-04-25","author":"黄十一","tags":["Web3","区块链","DApps"]},"headings":[{"level":1,"text":"Web3和去中心化应用(DApps)开发入门","slug":"web3和去中心化应用(dapps)开发入门"},{"level":2,"text":"Web3核心概念","slug":"web3核心概念"},{"level":2,"text":"创建简单DApp","slug":"创建简单dapp"},{"level":2,"text":"Web3应用面临的挑战","slug":"web3应用面临的挑战"}],"readingTime":1,"relatedPosts":[]}]}]}]]
-b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客"}]]
+    11:T61f,
+# 微前端架构实践与性能优化
+
+微前端架构允许多个独立开发、部署的前端应用共存于一个页面。本文将详细介绍微前端的实现方法和优化策略。
+
+## 微前端实现方法
+
+1. 使用Single-SPA框架:
+
+```javascript
+import { registerApplication, start } from 'single-spa';
+
+registerApplication({
+  name: 'app1',
+  app: () => import('./app1/main.js'),
+  activeWhen: '/app1'
+});
+
+registerApplication({
+  name: 'app2',
+  app: () => import('./app2/main.js'),
+  activeWhen: '/app2'
+});
+
+start();
+```
+
+2. 使用Qiankun框架:
+
+```javascript
+import { registerMicroApps, start } from 'qiankun';
+
+registerMicroApps([
+  {
+    name: 'app1',
+    entry: '//localhost:8080',
+    container: '#container',
+    activeRule: '/app1',
+  },
+  {
+    name: 'app2',
+    entry: '//localhost:8081',
+    container: '#container',
+    activeRule: '/app2',
+  },
+]);
+
+start();
+```
+
+## 微前端通信机制
+
+1. 基于CustomEvent的发布订阅模式
+2. 使用Props进行父子应用通信
+3. 全局状态管理(如Redux)
+
+## 样式隔离
+
+1. BEM命名约定
+2. CSS Modules
+3. Shadow DOM
+
+## 性能优化策略
+
+1. 应用预加载
+2. 公共依赖提取
+3. 按需加载子应用
+
+## 实践经验与注意事项
+
+1. 统一技术栈,降低维护成本
+2. 制定明确的应用边界
+3. 建立完善的监控体系
+
+微前端架构为大型前端项目提供了灵活的解决方案,但也带来了额外的复杂性。通过合理的架构设计和优化策略,我们可以充分发挥微前端的优势,构建高效、可维护的大型前端应用。
+    2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":["$","$Lf",null,{"post":{"id":9,"title":"Web3和去中心化应用(DApps)开发入门","excerpt":"学习构建基于区块链的Web应用...","content":"$10","date":"2024-04-25","author":"黄十一","tags":["Web3","区块链","DApps"]},"headings":[{"level":1,"text":"Web3和去中心化应用(DApps)开发入门","slug":"web3和去中心化应用(dapps)开发入门"},{"level":2,"text":"Web3核心概念","slug":"web3核心概念"},{"level":2,"text":"创建简单DApp","slug":"创建简单dapp"},{"level":2,"text":"Web3应用面临的挑战","slug":"web3应用面临的挑战"}],"readingTime":1,"relatedPosts":[],"prevPost":{"id":8,"title":"AI驱动的前端开发:机遇与挑战","excerpt":"探讨AI技术如何改变前端开发流程...","content":"\n# AI驱动的前端开发:机遇与挑战\n\n人工智能正在深刻影响前端开发领域。本文将介绍AI在代码自动补全、UI设计生成、性能优化等方面的应用。\n\n## AI在前端开发中的应用\n\n1. 代码自动补全\n   - GitHub Copilot\n   - TabNine\n\n2. UI设计生成\n   - Figma的AI功能\n   - Adobe Sensei\n\n3. 性能优化\n   - 自动化性能分析\n   - 智能代码重构\n\n## AI编程助手的使用技巧\n\n以GitHub Copilot为例:\n\n1. 编写清晰的注释\n2. 使用自然语言描述功能\n3. 结合单元测试提高准确性\n\n## 机器学习优化用户体验\n\n1. 个性化推荐\n2. 智能表单填充\n3. 预测用户行为\n\n## AI带来的伦理问题\n\n1. 版权问题\n2. 隐私保护\n3. 算法偏见\n\n## AI对开发者角色的影响\n\n1. 重点转向高层次设计\n2. 增强问题解决能力\n3. 持续学习新技术\n\nAI技术正在改变前端开发的方方面面。开发者需要拥抱这些变化,同时保持批判性思考,以充分利用AI带来的机遇并应对挑战。\n    ","date":"2024-04-20","author":"郑十","tags":["AI","前端开发","自动化"]},"nextPost":{"id":10,"title":"微前端架构实践与性能优化","excerpt":"深入理解微前端的实现原理和优化策略...","content":"$11","date":"2024-04-30","author":"刘十二","tags":["微前端","架构设计","性能优化"]}}]}]}]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","4",{"name":"keywords","content":"Next.js,React,JavaScript,前端开发"}],["$","meta","5",{"property":"og:title","content":"我的博客"}],["$","meta","6",{"property":"og:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","7",{"property":"og:url","content":"https://yourblog.com"}],["$","meta","8",{"property":"og:locale","content":"zh_CN"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"我的博客"}],["$","meta","12",{"name":"twitter:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}]]
 1:null
