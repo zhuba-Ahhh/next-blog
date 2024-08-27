@@ -1,4 +1,11 @@
-import { content1, content2, content3, content4, content5 } from "./ts";
+import {
+  content1,
+  content2,
+  content3,
+  content4,
+  content5,
+  content6,
+} from "./ts";
 
 export interface BlogPost {
   id: number;
@@ -64,63 +71,7 @@ export const blogPosts: BlogPost[] = [
     id: 6,
     title: "React性能优化实战指南",
     excerpt: "学习React应用的高级性能优化技巧...",
-    content: `
-# React性能优化实战指南
-
-在构建大型React应用时,性能优化至关重要。本文将介绍一些实用的React性能优化技巧。
-
-## 使用React.memo
-
-React.memo可以帮助我们避免不必要的重渲染:
-
-\`\`\`jsx
-const MyComponent = React.memo(function MyComponent(props) {
-  /* 渲染使用到的props */
-});
-\`\`\`
-
-## 使用useMemo和useCallback
-
-useMemo和useCallback可以帮助我们缓存计算结果和回调函数:
-
-\`\`\`jsx
-const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
-
-const memoizedCallback = useCallback(
-  () => {
-    doSomething(a, b);
-  },
-  [a, b],
-);
-\`\`\`
-
-## 虚拟化长列表
-
-对于长列表,我们可以使用虚拟化技术来提高性能:
-
-\`\`\`jsx
-import { FixedSizeList as List } from 'react-window';
-
-function Row({ index, style }) {
-  return <div style={style}>Row {index}</div>;
-}
-
-function Example() {
-  return (
-    <List
-      height={150}
-      itemCount={1000}
-      itemSize={35}
-      width={300}
-    >
-      {Row}
-    </List>
-  );
-}
-\`\`\`
-
-通过应用这些优化技巧,我们可以显著提升React应用的性能,为用户提供更流畅的体验。
-    `,
+    content: content6,
     date: "2024-04-10",
     author: "林八",
     tags: ["React", "性能优化", "虚拟列表"],
