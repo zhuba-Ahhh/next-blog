@@ -49,26 +49,26 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings }) => {
   return (
     <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md w-[240px] mr-2">
       <h2
-        className="text-lg font-bold mb-3 text-gray-900 dark:text-gray-100 cursor-pointer"
+        className="text-lg font-bold mb-3 text-gray-900 dark:text-gray-100 cursor-pointer hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-200"
         onClick={scrollToTopFn}
       >
         文章目录
       </h2>
       <nav>
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {headings.map((heading) => (
             <li
               key={heading.slug}
-              className={`${heading.level === 3 ? "ml-4" : ""} rounded`}
+              className={`${heading.level === 3 ? "ml-3" : ""} rounded`}
             >
               <a
                 href={`#${heading.slug}`}
                 onClick={(e) => handleClick(e, heading.slug)}
-                className={`text-sm block py-1 px-2 transition-colors duration-200
+                className={`text-sm block py-1 px-2 transition-colors duration-200 rounded
                   ${
                     activeId === heading.slug
-                      ? "bg-gray-100 dark:bg-gray-700 text-blue-500 dark:text-blue-300"
-                      : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-300"
+                      ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 font-medium"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-500 dark:hover:text-blue-300"
                   }`}
                 title={heading.text}
               >
