@@ -1,4 +1,4 @@
-import { content1, content2, content3 } from "./ts";
+import { content1, content2, content3, content4 } from "./ts";
 
 export interface BlogPost {
   id: number;
@@ -46,100 +46,7 @@ export const blogPosts: BlogPost[] = [
     id: 4,
     title: "TypeScript高级类型技巧",
     excerpt: "掌握TypeScript中的高级类型用法...",
-    content: `
-# TypeScript高级类型技巧
-
-TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际子展这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。
-
-## 条件类型
-
-条件类型允许我们根据条件选择不同的类型。它的语法如下：
-
-\`\`\`
-type SomeType<T> = T extends SomeCondition ? TrueType : FalseType;
-\`\`\`
-
-例如,我们可以使用条件类型来创建一个\`Nullable\`类型：
-
-\`\`\`
-type Nullable<T> = T extends null | undefined ? T : T & { notNull: true };
-\`\`\`
-
-## 映射类型
-
-映射类型允许我们对现有类型的每个属性进行转换。它的语法如下：
-
-\`\`\`
-type MappedType<T> = {
-  [P in keyof T]: TransformedType;
-};
-\`\`\`
-
-例如,我们可以使用映射类型来创建一个\`Readonly\`类型：
-
-\`\`\`
-type Readonly<T> = {
-  readonly [P in keyof T]: T[P];
-};
-\`\`\`
-
-## 联合类型和交叉类型
-
-联合类型允许我们表示多个类型中的任意一个。它的语法如下：
-
-\`\`\`
-type UnionType = Type1 | Type2 | Type3;
-\`\`\`
-
-交叉类型允许我们组合多个类型的属性。它的语法如下：
-
-\`\`\`
-type IntersectionType = Type1 & Type2 & Type3;
-\`\`\`
-
-例如,我们可以使用交叉类型来创建一个\`WithRequired\`类型：
-
-\`\`\`
-type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] };
-\`\`\`
-
-## 类型推断
-
-TypeScript的类型推断机制可以自动推断变量的类型。它基于以下规则：
-
-1. 如果有明确的类型注释,则使用该类型
-2. 如果没有类型注释,则从初始化表达式推断类型
-3. 如果初始化表达式是函数调用,则使用函数返回类型
-
-例如,以下代码中的\`x\`和\`y\`都会被推断为\`number\`类型：
-
-\`\`\`
-let x = 10;
-let y = x * 2;
-\`\`\`
-
-## 自定义类型守卫
-
-自定义类型守卫允许我们在运行时检查类型。它的语法如下：
-
-\`\`\`
-function isTypeGuard(value: any): value is Type {
-  // 检查类型
-}
-\`\`\`
-
-例如,我们可以使用自定义类型守卫来检查一个值是否是\`string\`类型：
-
-\`\`\`
-function isString(value: any): value is string {
-  return typeof value === 'string';
-}
-\`\`\`
-
-## 结论
-
-TypeScript的高级类型技巧可以帮助我们创建更灵活、更安全的代码。通过掌握条件类型、映射类型、联合类型和交叉类型等高级类型,我们可以更好地表达复杂的类型关系。同时,通过理解TypeScript的类型推断机制和自定义类型守卫,我们可以更好地控制类型检查。
-    `,
+    content: content4,
     date: "2024-03-30",
     author: "赵六",
     tags: ["TypeScript", "类型系统", "前端开发"],

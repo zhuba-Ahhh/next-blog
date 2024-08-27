@@ -3,13 +3,25 @@ import { useMemo } from "react";
 export function extractHeadings(content: string) {
   const headingRegex = /^(#{1,3})\s+(.+)$/gm;
   const headings = [];
+  const slugCounts: Record<string, number> = {};
   let match;
 
   while ((match = headingRegex.exec(content)) !== null) {
+    const text = match[2];
+    let slug = text.toLowerCase().replace(/\s+/g, "-");
+
+    // 检查slug是否已存在，如果存在，则添加数字
+    if (slug in slugCounts) {
+      slugCounts[slug]++;
+      slug = `${slug}-${slugCounts[slug]}`;
+    } else {
+      slugCounts[slug] = 0;
+    }
+
     headings.push({
       level: match[1].length,
-      text: match[2],
-      slug: `${match[2].toLowerCase().replace(/\s+/g, "-")}`,
+      text: text,
+      slug: slug,
     });
   }
 
