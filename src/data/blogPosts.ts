@@ -1,4 +1,4 @@
-import { content1, content2, content3, content4 } from "./ts";
+import { content1, content2, content3, content4, content5 } from "./ts";
 
 export interface BlogPost {
   id: number;
@@ -55,64 +55,7 @@ export const blogPosts: BlogPost[] = [
     id: 5,
     title: "深入理解JavaScript异步编程",
     excerpt: "探索JavaScript中的异步编程模式和最佳实践...",
-    content: `
-# JavaScript异步编程深度解析
-
-JavaScript的异步编程是前端开发中的重要概念。本文将深入探讨各种异步编程模式及其应用。
-
-## 回调函数
-
-回调函数是最基本的异步编程方式:
-
-\`\`\`javascript
-function fetchData(callback) {
-  setTimeout(() => {
-    callback('Data fetched');
-  }, 1000);
-}
-
-fetchData((result) => {
-  console.log(result);
-});
-\`\`\`
-
-## Promise
-
-Promise提供了更优雅的异步处理方式:
-
-\`\`\`javascript
-function fetchData() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('Data fetched');
-    }, 1000);
-  });
-}
-
-fetchData()
-  .then(result => console.log(result))
-  .catch(error => console.error(error));
-\`\`\`
-
-## Async/Await
-
-Async/Await是基于Promise的语法糖,使异步代码更易读:
-
-\`\`\`javascript
-async function getData() {
-  try {
-    const result = await fetchData();
-    console.log(result);
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-getData();
-\`\`\`
-
-通过掌握这些异步编程模式,我们可以更好地处理复杂的异步操作,提高代码的可读性和可维护性。
-    `,
+    content: content5,
     date: "2024-04-05",
     author: "陈七",
     tags: ["JavaScript", "异步编程", "Promise", "Async/Await"],
