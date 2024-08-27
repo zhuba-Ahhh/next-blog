@@ -35,7 +35,8 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.1, duration: 0.3 }}
       >
-        你好,我是[Zhuba-Ahhh]。作为一名前端开发者,我热衷于探索和分享Web开发的最新趋势、技巧和最佳实践。
+        你好,我是[{process.env.NEXT_PUBLIC_AUTHOR_NAME}
+        ]。作为一名前端开发者,我热衷于探索和分享Web开发的最新趋势、技巧和最佳实践。
       </motion.p>
 
       {/* 探索博客按钮 */}
@@ -66,12 +67,12 @@ export default function Home() {
         transition={{ delay: 0.3, duration: 0.3 }}
       >
         <p>
-          联系我: 3477826311@qq.com |{" "}
-          <a href="https://github.com/zhuba-Ahhh" className="underline">
+          联系我: {process.env.NEXT_PUBLIC_AUTHOR_EMAIL} |{" "}
+          <a href={process.env.NEXT_PUBLIC_GITHUB_URL} className="underline">
             GitHub
           </a>{" "}
           |{" "}
-          <a href="https://twitter.com/yourusername" className="underline">
+          <a href={process.env.NEXT_PUBLIC_TWITTER_URL} className="underline">
             Twitter
           </a>
         </p>
