@@ -11,8 +11,20 @@ import { ThemeProvider } from "next-themes";
 import AnimatedLayout from "@/components/app/AnimatedLayout";
 
 export const metadata: Metadata = {
-  title: "我的博客",
-  description: "欢迎来到我的博客",
+  title: {
+    default: "我的博客",
+    template: "%s | 我的博客",
+  },
+  description: "欢迎来到我的博客,这里分享前端开发的最新趋势和技巧",
+  keywords: ["Next.js", "React", "JavaScript", "前端开发"],
+  authors: [{ name: process.env.NEXT_PUBLIC_AUTHOR_NAME }],
+  creator: process.env.NEXT_PUBLIC_AUTHOR_NAME,
+  openGraph: {
+    type: "website",
+    locale: "zh_CN",
+    url: "https://yourblog.com",
+    // site_name: "我的博客"
+  },
 };
 
 export default function RootLayout({
