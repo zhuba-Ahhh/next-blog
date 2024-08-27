@@ -57,7 +57,7 @@ export default function About() {
                 theme === "dark" ? "text-indigo-300" : "text-indigo-700"
               }`}
             >
-              Zhuba-Ahhh
+              {process.env.NEXT_PUBLIC_AUTHOR_NAME}
             </h2>
             <p className={theme === "dark" ? "text-gray-400" : "text-gray-600"}>
               前端开发者 / 技术博主

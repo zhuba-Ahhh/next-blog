@@ -21,9 +21,8 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPost({ params }: BlogPostParams) {
-  const post = blogPosts.find((p) => p.id.toString() === params.id) as
-    | BlogPost
-    | undefined;
+  const postIndex = blogPosts.findIndex((p) => p.id.toString() === params.id);
+  const post = blogPosts[postIndex];
 
   if (!post) {
     notFound();
@@ -38,6 +37,10 @@ export default async function BlogPost({ params }: BlogPostParams) {
     )
     .slice(0, 3);
 
+  const prevPost = postIndex > 0 ? blogPosts[postIndex - 1] : void 0;
+  const nextPost =
+    postIndex < blogPosts.length - 1 ? blogPosts[postIndex + 1] : void 0;
+
   return (
     <>
       <ReadingProgress />
@@ -46,6 +49,8 @@ export default async function BlogPost({ params }: BlogPostParams) {
         headings={headings}
         readingTime={readingTime}
         relatedPosts={relatedPosts}
+        prevPost={prevPost}
+        nextPost={nextPost}
       />
     </>
   );

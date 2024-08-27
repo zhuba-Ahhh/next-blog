@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
 export function extractHeadings(content: string) {
   const headingRegex = /^(#{1,3})\s+(.+)$/gm;
@@ -9,7 +9,7 @@ export function extractHeadings(content: string) {
     headings.push({
       level: match[1].length,
       text: match[2],
-      slug: match[2].toLowerCase().replace(/\s+/g, "-"),
+      slug: `${match[2].toLowerCase().replace(/\s+/g, "-")}`,
     });
   }
 
