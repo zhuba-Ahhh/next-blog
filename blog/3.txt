@@ -1,20 +1,20 @@
-3:I[60380,[],""]
-5:I[563,[],""]
-6:I[50986,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"ViewTransitions"]
-7:I[2741,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"ThemeProvider"]
-8:I[55882,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"default"]
-9:I[30760,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"default"]
-a:I[50986,["322","static/chunks/322-b0b8be3dbd5c811c.js","185","static/chunks/app/layout-6c8a7d73b31e8e91.js"],"Link"]
+3:I[79132,[],""]
+5:I[61640,[],""]
+6:I[20568,["801","static/chunks/801-6a6288535dddc4d0.js","185","static/chunks/app/layout-d2e8fabc08dab44e.js"],"ViewTransitions"]
+7:I[53787,["801","static/chunks/801-6a6288535dddc4d0.js","185","static/chunks/app/layout-d2e8fabc08dab44e.js"],"ThemeProvider"]
+8:I[58877,["801","static/chunks/801-6a6288535dddc4d0.js","185","static/chunks/app/layout-d2e8fabc08dab44e.js"],"default"]
+9:I[84514,["801","static/chunks/801-6a6288535dddc4d0.js","185","static/chunks/app/layout-d2e8fabc08dab44e.js"],"default"]
+a:I[20568,["801","static/chunks/801-6a6288535dddc4d0.js","185","static/chunks/app/layout-d2e8fabc08dab44e.js"],"Link"]
 4:["id","3","d"]
-0:["N1ZU6oLRI8sqsYdlsQc5_",[[["",{"children":["blog",{"children":[["id","3","d"],{"children":["__PAGE__?{\"id\":\"3\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","3","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/b295c53235df6f34.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
-c:I[14194,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
+0:["3q-VqlpLPSnIC5BGkjAeF",[[["",{"children":["blog",{"children":[["id","3","d"],{"children":["__PAGE__?{\"id\":\"3\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["id","3","d"],{"children":["__PAGE__",{},[["$L1","$L2"],null],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","$L6",null,{"children":["$","html",null,{"lang":"zh","suppressHydrationWarning":true,"className":"h-full","children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/next.svg","type":"image/svg+xml"}]}],["$","body",null,{"className":"flex flex-col bg-background antialiased h-full","children":["$","$L7",null,{"attribute":"class","children":[["$","$L8",null,{}],["$","$L9",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"border-t py-6 md:py-0","children":["$","div",null,{"className":"container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row","children":[["$","div",null,{"className":"flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0","children":["$","p",null,{"className":"text-center text-sm leading-loose text-muted-foreground md:text-left","children":"© 2024 我的博客. 保留所有权利。"}]}],["$","nav",null,{"className":"flex items-center space-x-4","children":[["$","$La","/privacy",{"href":"/privacy","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"隐私政策"}]}],["$","$La","/terms",{"href":"/terms","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"使用条款"}]}],["$","$La","/contact",{"href":"/contact","className":"text-sm text-muted-foreground","children":["$","div",null,{"className":"inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 active:scale-95 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 active:bg-primary/70","children":"联系我们"}]}]]}]]}]}]]}]}]]}]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4b751e17faaae912.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b9e5f75db2a40d89.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/93c09f23e5e79b42.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/d95f70565c8fec8b.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","4",{"rel":"stylesheet","href":"/_next/static/css/15a4a72a41cadd99.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","5",{"rel":"stylesheet","href":"/_next/static/css/5e92f1bdc02d74d7.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","6",{"rel":"stylesheet","href":"/_next/static/css/40369ad5673d83bc.css","precedence":"next","crossOrigin":"$undefined"}]],[null,"$Lb"]]]]]
+c:I[89910,["885","static/chunks/8f130de0-c0e8f355f941e5da.js","969","static/chunks/fae302de-2756ce0d99ef6df0.js","838","static/chunks/80ded2dd-7803c993f8372b8b.js","801","static/chunks/801-6a6288535dddc4d0.js","465","static/chunks/465-f97fe32c96aa72ab.js","910","static/chunks/910-be038b4621a49a7d.js","147","static/chunks/147-44ee4364cc387869.js","548","static/chunks/app/blog/%5Bid%5D/page-c85389902ba82461.js"],"default"]
 d:"$Sreact.suspense"
-e:I[93145,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"BailoutToCSR"]
+e:I[21212,["885","static/chunks/8f130de0-c0e8f355f941e5da.js","969","static/chunks/fae302de-2756ce0d99ef6df0.js","838","static/chunks/80ded2dd-7803c993f8372b8b.js","801","static/chunks/801-6a6288535dddc4d0.js","465","static/chunks/465-f97fe32c96aa72ab.js","910","static/chunks/910-be038b4621a49a7d.js","147","static/chunks/147-44ee4364cc387869.js","548","static/chunks/app/blog/%5Bid%5D/page-c85389902ba82461.js"],"BailoutToCSR"]
 2:[["$","$Lc",null,{}],["$","$d",null,{"fallback":null,"children":["$","$Le",null,{"reason":"next/dynamic","children":"$Lf"}]}]]
 b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"我的博客"}],["$","meta","3",{"name":"description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","4",{"name":"keywords","content":"Next.js,React,JavaScript,前端开发"}],["$","meta","5",{"property":"og:title","content":"我的博客"}],["$","meta","6",{"property":"og:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}],["$","meta","7",{"property":"og:url","content":"https://yourblog.com"}],["$","meta","8",{"property":"og:locale","content":"zh_CN"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"我的博客"}],["$","meta","12",{"name":"twitter:description","content":"欢迎来到我的博客,这里分享前端开发的最新趋势和技巧"}]]
 1:null
-10:I[21858,["885","static/chunks/8f130de0-c7d1338a662b28bd.js","969","static/chunks/fae302de-456e5d4ead4d6a1d.js","838","static/chunks/80ded2dd-ad96456360d3ba7f.js","322","static/chunks/322-b0b8be3dbd5c811c.js","561","static/chunks/561-4b795d2c0254b24b.js","470","static/chunks/470-9a06a95cca284ff8.js","636","static/chunks/636-5322a2f7bbcb716f.js","548","static/chunks/app/blog/%5Bid%5D/page-de8b555dad09e78a.js"],"default"]
-11:Tc70,
+10:I[19251,["885","static/chunks/8f130de0-c0e8f355f941e5da.js","969","static/chunks/fae302de-2756ce0d99ef6df0.js","838","static/chunks/80ded2dd-7803c993f8372b8b.js","801","static/chunks/801-6a6288535dddc4d0.js","465","static/chunks/465-f97fe32c96aa72ab.js","910","static/chunks/910-be038b4621a49a7d.js","147","static/chunks/147-44ee4364cc387869.js","548","static/chunks/app/blog/%5Bid%5D/page-c85389902ba82461.js"],"default"]
+11:T18a8,
 # CSS-in-JS解决方案对比
 
 CSS-in-JS已成为现代前端开发中的重要工具。本文将对比分析几种流行的CSS-in-JS解决方案,包括styled-components、Emotion、CSS Modules等。我们将从性能、开发体验、维护性等多个角度进行评估,并提供每种方案的最佳使用场景。此外,我们还将探讨CSS-in-JS与传统CSS方法的区别,以及如何在大型项目中有效管理样式。
@@ -22,6 +22,31 @@ CSS-in-JS已成为现代前端开发中的重要工具。本文将对比分析�
 ## styled-components
 
 styled-components是最流行的CSS-in-JS库之一。它结合了CSS和JavaScript的优点,使得我们可以在React组件中定义样式。
+
+### 示例代码
+
+```jsx
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background-color: ${props => props.primary ? 'blue' : 'white'};
+  color: ${props => props.primary ? 'white' : 'blue'};
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid blue;
+  border-radius: 3px;
+`;
+
+function App() {
+  return (
+    <div>
+      <Button>普通按钮</Button>
+      <Button primary>主要按钮</Button>
+    </div>
+  );
+}
+```
 
 ### 优点
 
@@ -45,6 +70,24 @@ styled-components适用于需要动态样式和主题化的项目,尤其是中�
 
 Emotion是另一种流行的CSS-in-JS库,它提供了更灵活的API和更好的性能。
 
+### 示例代码
+
+```jsx
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+
+const buttonStyle = css`
+  background-color: hotpink;
+  &:hover {
+    color: white;
+  }
+`;
+
+function EmotionButton() {
+  return <button css={buttonStyle}>这是一个Emotion按钮</button>;
+}
+```
+
 ### 优点
 
 1. 高性能
@@ -65,6 +108,28 @@ Emotion适用于需要高性能和CSS Modules特性的项目,尤其是大型项�
 
 CSS Modules是一种CSS-in-JS解决方案,它将CSS模块化,并将类名作为JavaScript对象导出。
 
+### 示例代码
+
+```css
+/* Button.module.css */
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+```
+
+```jsx
+import React from 'react';
+import styles from './Button.module.css';
+
+function Button() {
+  return <button className={styles.button}>CSS Modules按钮</button>;
+}
+```
+
 ### 优点
 
 1. 简单易用
@@ -81,7 +146,36 @@ CSS Modules是一种CSS-in-JS解决方案,它将CSS模块化,并将类名作为J
 
 CSS Modules适用于需要简单、可维护的样式解决方案的项目,尤其是小型项目。
 
+## 其他值得关注的CSS-in-JS解决方案
+
+### JSS
+
+JSS是一个强大的CSS-in-JS工具,它允许你使用JavaScript来描述样式。
+
+#### 优点
+- 高度可定制
+- 支持插件系统
+- 良好的性能
+
+#### 缺点
+- 学习曲线较陡
+- 社区相对较小
+
+### Linaria
+
+Linaria是一个零运行时CSS-in-JS库,它在构建时将样式提取到CSS文件中。
+
+#### 优点
+- 零运行时开销
+- 支持静态提取
+- 类型安全
+
+#### 缺点
+- 不支持某些动态样式
+- 工具链集成可能复杂
+
 ## CSS-in-JS与传统CSS的区别
+
 
 CSS-in-JS与传统CSS有一些重要的区别:
 
@@ -97,11 +191,56 @@ CSS-in-JS与传统CSS有一些重要的区别:
 2. 使用主题化: 主题化可以使样式更易于维护和扩展,尤其是在多个项目或不同环境中。
 3. 使用CSS Modules: CSS Modules可以提供简单、可维护的样式解决方案,尤其是在小型项目中。
 4. 使用CSS-in-JS库的最佳实践: 每个CSS-in-JS库都有自己的最佳实践,例如styled-components的`ThemeProvider`和Emotion的`css`函数。
+5. 建立样式指南: 创建一个详细的样式指南,包括颜色、字体、间距等规范,以确保整个项目的一致性。
+6. 组件化: 将常用的样式封装成可重用的组件,减少重复代码。
+7. 性能优化: 使用工具如stylelint来检查和优化CSS,避免不必要的样式规则。
+
+### 示例: 使用主题化
+
+```jsx
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+
+const theme = {
+  colors: {
+    primary: '#0070f3',
+    secondary: '#ff4081',
+  },
+  fonts: {
+    main: 'Arial, sans-serif',
+  },
+};
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: ${props => props.theme.fonts.main};
+    color: ${props => props.theme.colors.primary};
+  }
+`;
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      {/* 应用的其余部分 */}
+    </ThemeProvider>
+  );
+}
+```
+
+## 选择合适的CSS-in-JS解决方案
+
+在选择CSS-in-JS解决方案时,需要考虑以下因素:
+
+1. 项目规模: 大型项目可能更适合使用Emotion或JSS等性能更好的解决方案。
+2. 团队经验: 考虑团队成员对不同解决方案的熟悉程度。
+3. 性能需求: 如果运行时性能至关重要,可以考虑Linaria等零运行时解决方案。
+4. 开发体验: 选择能提供良好开发体验和调试工具的解决方案。
+5. 生态系统: 考虑解决方案的社区支持和可用的工具/插件。
 
 ## 结论
 
-CSS-in-JS是一种强大的工具,它可以提供更好的作用域隔离、动态样式支持和主题化。styled-components、Emotion和CSS Modules都是流行的解决方案,每种方案都有自己的优缺点和最佳使用场景。在选择CSS-in-JS库时,应该根据项目的需求和规模来权衡性能、开发体验和维护性。
-    12:T1fd5,
+CSS-in-JS是一种强大的工具,它可以提供更好的作用域隔离、动态样式支持和主题化。styled-components、Emotion、CSS Modules以及其他解决方案如JSS和Linaria都有各自的优缺点和适用场景。在选择CSS-in-JS库时,应该根据项目的需求、规模、团队经验和性能要求来权衡。无论选择哪种解决方案,建立良好的样式管理实践都是确保项目长期可维护性的关键。
+12:T1fd5,
 # Next.js 13新特性解析
 
 Next.js 13是一个重大更新，引入了许多激动人心的新特性，如App Router、服务器组件、流式渲染等。本文将详细介绍这些新特性的使用方法和优势，以及如何从Next.js 12迁移到13版本。
@@ -443,8 +582,7 @@ export async function GET(
 Next.js 13不仅带来了App Router、服务器组件和流式渲染等重大新特性,还在性能优化、开发体验和国际化支持等方面做出了显著改进。Turbopack的引入预示着未来更快的构建速度,而改进的Middleware API和TypeScript支持则为开发者提供了更强大、更灵活的工具。
 
 随着Next.js生态系统的不断发展,我们可以期待看到更多创新和改进。无论你是正在构建新项目还是考虑升级现有应用,Next.js 13都值得你认真考虑和尝试。
-13:Ta8b,
-# TypeScript高级类型技巧
+13:Tf5d,# TypeScript高级类型技巧
 
 TypeScript的类型系统非常强大,但也有一定的学习曲线。本文将深入探讨TypeScript中的高级类型技巧,包括条件类型、映射类型、联合类型和交叉类型等。我们将通过实际子展这些高级类型的应用,如何使用它们来创建更灵活、更安全的代码。同时,我们还将讨论TypeScript的类型推断机制,以及如何编写和使用自定义类型守卫。
 
@@ -533,7 +671,67 @@ function isString(value: any): value is string {
 }
 ```
 
+## 泛型约束
+
+泛型约束允许我们限制泛型类型参数可以接受的类型。它的语法如下:
+
+```typescript
+interface WithLength {
+  length: number;
+}
+
+function logLength<T extends WithLength>(arg: T): T {
+  console.log(arg.length);
+  return arg;
+}
+```
+
+这个例子中,我们限制了泛型类型`T`必须包含`length`属性。
+
+## 索引类型查询操作符
+
+索引类型查询操作符`keyof`可以获取一个类型的所有属性名。例如:
+
+```typescript
+interface Person {
+  name: string;
+  age: number;
+}
+
+type PersonKeys = keyof Person; // "name" | "age"
+```
+
+## 类型别名与接口
+
+类型别名和接口都可以用来定义自定义类型,但它们有一些细微的区别:
+
+```typescript
+// 类型别名
+type Point = {
+  x: number;
+  y: number;
+};
+
+// 接口
+interface Point {
+  x: number;
+  y: number;
+}
+```
+
+类型别名可以表示任何类型,而接口只能表示对象类型。接口可以被类实现和继承,而类型别名不行。
+
+## 字面量类型
+
+字面量类型允许我们指定一个值作为类型:
+
+```typescript
+type Direction = "north" | "south" | "east" | "west";
+let myDirection: Direction = "north"; // 有效
+myDirection = "northeast"; // 错误
+```
+
 ## 结论
 
-TypeScript的高级类型技巧可以帮助我们创建更灵活、更安全的代码。通过掌握条件类型、映射类型、联合类型和交叉类型等高级类型,我们可以更好地表达复杂的类型关系。同时,通过理解TypeScript的类型推断机制和自定义类型守卫,我们可以更好地控制类型检查。
-    f:["$","$L10",null,{"post":{"id":3,"title":"CSS-in-JS解决方案对比","excerpt":"比较流行的CSS-in-JS库的优缺点...","content":"$11","date":"2024-03-25","author":"王五","tags":["CSS-in-JS","styled-components","Emotion"]},"headings":[{"level":1,"text":"CSS-in-JS解决方案对比","slug":"css-in-js解决方案对比"},{"level":2,"text":"styled-components","slug":"styled-components"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"缺点","slug":"缺点"},{"level":3,"text":"最佳使用场景","slug":"最佳使用场景"},{"level":2,"text":"Emotion","slug":"emotion"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"缺点","slug":"缺点"},{"level":3,"text":"最佳使用场景","slug":"最佳使用场景"},{"level":2,"text":"CSS Modules","slug":"css-modules"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"缺点","slug":"缺点"},{"level":3,"text":"最佳使用场景","slug":"最佳使用场景"},{"level":2,"text":"CSS-in-JS与传统CSS的区别","slug":"css-in-js与传统css的区别"},{"level":2,"text":"在大型项目中管理样式","slug":"在大型项目中管理样式"},{"level":2,"text":"结论","slug":"结论"}],"readingTime":1,"relatedPosts":[],"prevPost":{"id":2,"title":"Next.js 13新特性解析","excerpt":"深入了解Next.js 13带来的革命性变化...","content":"$12","date":"2024-03-20","author":"李四","tags":["Next.js","服务器组件","性能优化"]},"nextPost":{"id":4,"title":"TypeScript高级类型技巧","excerpt":"掌握TypeScript中的高级类型用法...","content":"$13","date":"2024-03-30","author":"赵六","tags":["TypeScript","类型系统","前端开发"]}}]
+通过掌握这些高级类型技巧,我们可以更精确地控制类型,提高代码的可读性和可维护性。TypeScript的类型系统为我们提供了强大的工具,让我们能够在编译时捕获更多潜在的错误,同时也使得代码更加自文档化。持续学习和实践这些高级特性,将帮助我们成为更优秀的TypeScript开发者。
+f:["$","$L10",null,{"post":{"id":3,"title":"CSS-in-JS解决方案对比","excerpt":"比较流行的CSS-in-JS库的优缺点...","content":"$11","date":"2024-03-25","author":"王五","tags":["CSS-in-JS","styled-components","Emotion"]},"headings":[{"level":1,"text":"CSS-in-JS解决方案对比","slug":"css-in-js解决方案对比"},{"level":2,"text":"styled-components","slug":"styled-components"},{"level":3,"text":"示例代码","slug":"示例代码"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"缺点","slug":"缺点"},{"level":3,"text":"最佳使用场景","slug":"最佳使用场景"},{"level":2,"text":"Emotion","slug":"emotion"},{"level":3,"text":"示例代码","slug":"示例代码-1"},{"level":3,"text":"优点","slug":"优点-1"},{"level":3,"text":"缺点","slug":"缺点-1"},{"level":3,"text":"最佳使用场景","slug":"最佳使用场景-1"},{"level":2,"text":"CSS Modules","slug":"css-modules"},{"level":3,"text":"示例代码","slug":"示例代码-2"},{"level":3,"text":"优点","slug":"优点-2"},{"level":3,"text":"缺点","slug":"缺点-2"},{"level":3,"text":"最佳使用场景","slug":"最佳使用场景-2"},{"level":2,"text":"其他值得关注的CSS-in-JS解决方案","slug":"其他值得关注的css-in-js解决方案"},{"level":3,"text":"JSS","slug":"jss"},{"level":3,"text":"Linaria","slug":"linaria"},{"level":2,"text":"CSS-in-JS与传统CSS的区别","slug":"css-in-js与传统css的区别"},{"level":2,"text":"在大型项目中管理样式","slug":"在大型项目中管理样式"},{"level":3,"text":"示例: 使用主题化","slug":"示例:-使用主题化"},{"level":2,"text":"选择合适的CSS-in-JS解决方案","slug":"选择合适的css-in-js解决方案"},{"level":2,"text":"结论","slug":"结论"}],"readingTime":2,"relatedPosts":[],"prevPost":{"id":2,"title":"Next.js 13新特性解析","excerpt":"深入了解Next.js 13带来的革命性变化...","content":"$12","date":"2024-03-20","author":"李四","tags":["Next.js","服务器组件","性能优化"]},"nextPost":{"id":4,"title":"TypeScript高级类型技巧","excerpt":"掌握TypeScript中的高级类型用法...","content":"$13","date":"2024-03-30","author":"赵六","tags":["TypeScript","类型系统","前端开发"]}}]
