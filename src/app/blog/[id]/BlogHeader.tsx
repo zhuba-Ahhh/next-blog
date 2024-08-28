@@ -4,9 +4,14 @@ import { BlogPost } from "@/data/blogPosts";
 interface BlogHeaderProps {
   post: BlogPost;
   readingTime: number;
+  wordCount: number;
 }
 
-export default function BlogHeader({ post, readingTime }: BlogHeaderProps) {
+export default function BlogHeader({
+  post,
+  readingTime,
+  wordCount,
+}: BlogHeaderProps) {
   const { title, author, date, coverImage } = post;
   return (
     <>
@@ -20,8 +25,8 @@ export default function BlogHeader({ post, readingTime }: BlogHeaderProps) {
         <span>{author}</span>
         <span>|</span>
         <span className="flex items-center">
-          <ClockIcon className="w-4 h-4 mr-1" />
-          预计阅读时间: {readingTime} 分钟
+          <ClockIcon className="w-4 h-4 mr-1" />共 {wordCount} 字，预计阅读时间:{" "}
+          {readingTime} 分钟
         </span>
       </div>
       {coverImage && (

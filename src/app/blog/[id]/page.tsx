@@ -29,7 +29,7 @@ export default async function BlogPost({ params }: BlogPostParams) {
   }
 
   const headings: Heading[] = extractHeadings(post.content);
-  const readingTime: number = estimateReadingTime(post.content);
+  const [readingTime, wordCount] = estimateReadingTime(post.content);
 
   const relatedPosts: BlogPost[] = blogPosts
     .filter(
@@ -48,6 +48,7 @@ export default async function BlogPost({ params }: BlogPostParams) {
         post={post}
         headings={headings}
         readingTime={readingTime}
+        wordCount={wordCount}
         relatedPosts={relatedPosts}
         prevPost={prevPost}
         nextPost={nextPost}
