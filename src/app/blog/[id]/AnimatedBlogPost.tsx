@@ -16,6 +16,7 @@ interface AnimatedBlogPostProps {
   post: BlogPost;
   headings: Heading[];
   readingTime: number;
+  wordCount: number;
   relatedPosts: BlogPost[];
   prevPost?: BlogPost;
   nextPost?: BlogPost;
@@ -26,6 +27,7 @@ export default function AnimatedBlogPost({
   prevPost,
   nextPost,
   headings,
+  wordCount,
   readingTime,
   relatedPosts,
 }: AnimatedBlogPostProps) {
@@ -53,7 +55,11 @@ export default function AnimatedBlogPost({
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <BlogHeader post={post} readingTime={readingTime} />
+          <BlogHeader
+            post={post}
+            readingTime={readingTime}
+            wordCount={wordCount}
+          />
           <BlogContent
             content={post.content}
             contentFile={post?.contentFile}

@@ -28,10 +28,10 @@ export function extractHeadings(content: string) {
   return headings;
 }
 
-export function estimateReadingTime(content: string): number {
+export function estimateReadingTime(content: string): number[] {
   const wordsPerMinute = 200;
   const wordCount = content.split(/\s+/).length;
-  return Math.ceil(wordCount / wordsPerMinute);
+  return [Math.ceil(wordCount / wordsPerMinute), wordCount];
 }
 
 export function useExtractHeadings(content: string) {
