@@ -18,6 +18,7 @@ export default function BlogContent({
   components,
   contentFile,
 }: BlogContentProps) {
+  console.log(content, "content111111");
   return (
     <>
       {contentFile ? (
