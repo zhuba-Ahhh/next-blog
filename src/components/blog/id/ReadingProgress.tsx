@@ -25,11 +25,15 @@ export default function ReadingProgress() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
-      <div
-        style={{ width: `${width}%` }}
-        className="h-full bg-primary transition-all duration-300 ease-out"
-      ></div>
-    </div>
+    <>
+      {width && (
+        <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+          <div
+            style={{ width: `${width}%` }}
+            className="h-full bg-primary transition-all duration-300 ease-out"
+          ></div>
+        </div>
+      )}
+    </>
   );
 }
