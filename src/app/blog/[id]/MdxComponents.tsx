@@ -36,19 +36,22 @@ const Tr: React.FC<React.HTMLAttributes<HTMLTableRowElement>> = (props) => (
 export const mdxComponents: MDXComponents = {
   h1: (props: any) => (
     <h1
-      className="text-3xl font-bold mt-8 mb-4 text-gray-900 dark:text-white scroll-mt-20"
+      id={props.children.toString().toLowerCase().replace(/\s+/g, "-")}
+      className="relative text-3xl font-bold mt-8 mb-4 text-gray-900 dark:text-white scroll-mt-20 cursor-pointer before:content-['#'] before:absolute before:-left-6 before:opacity-0 hover:before:opacity-100 before:text-blue-500 dark:before:text-blue-400" // 设置 # 符号颜色与字体对齐
       {...props}
     />
   ),
   h2: (props: any) => (
     <h2
-      className="text-2xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200 scroll-mt-20"
+      id={props.children.toString().toLowerCase().replace(/\s+/g, "-")}
+      className="relative text-2xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200 scroll-mt-20 cursor-pointer before:content-['#'] before:absolute before:-left-6 before:opacity-0 hover:before:opacity-100 before:text-gray-800 dark:before:text-gray-200" // 设置 # 符号颜色与字体对齐
       {...props}
     />
   ),
   h3: (props: any) => (
     <h3
-      className="text-xl font-medium mt-4 mb-2 text-gray-700 dark:text-gray-300 scroll-mt-20"
+      id={props.children.toString().toLowerCase().replace(/\s+/g, "-")}
+      className="relative text-xl font-medium mt-4 mb-2 text-gray-700 dark:text-gray-300 scroll-mt-20 cursor-pointer before:content-['#'] before:absolute before:-left-6 before:opacity-0 hover:before:opacity-100 before:text-gray-700 dark:before:text-gray-300" // 设置 # 符号颜色与字体对齐
       {...props}
     />
   ),

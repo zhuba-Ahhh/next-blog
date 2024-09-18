@@ -25,7 +25,7 @@ const TechStack: React.FC = () => {
         {technologies.map((tech) => (
           <motion.div
             key={tech.name}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center cursor-pointer"
             whileHover={{ scale: 1.1 }}
           >
             <Image

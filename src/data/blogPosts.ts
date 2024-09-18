@@ -14,6 +14,7 @@ import {
   content13,
   content14,
   content15,
+  content16,
 } from "./ts";
 
 export interface BlogPost {
@@ -165,5 +166,14 @@ export const blogPosts: BlogPost[] = [
     date: "2024-05-25",
     author: "吴十七",
     tags: ["工程化", "构建优化", "性能优化"],
+  },
+  {
+    id: 16,
+    title: "Serverless架构与前端开发",
+    excerpt: "探讨Serverless架构如何简化前端开发流程...",
+    content: content16,
+    date: "2024-05-30",
+    author: "李十八",
+    tags: ["Serverless", "前端开发", "云计算"],
   },
 ];

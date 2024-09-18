@@ -35,6 +35,7 @@ export default function BlogList() {
   const [isTagsExpanded, setIsTagsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [sortOption, setSortOption] = useState<SortOption>("date");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
   const handleSearchParamsChange = useCallback(() => {
     const tag = searchParams.get("tag");
@@ -63,17 +64,21 @@ export default function BlogList() {
         (!selectedTag || post.tags.includes(selectedTag))
     );
 
-    // 根据选择的排序选项进行排序
+    // 根据选择的排序选项和顺序进行排序
     posts.sort((a, b) => {
+      const dateComparison =
+        new Date(b.date).getTime() - new Date(a.date).getTime();
+      const titleComparison = a.title.localeCompare(b.title);
+
       if (sortOption === "date") {
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
+        return sortOrder === "asc" ? -dateComparison : dateComparison; // 根据排序顺序调整比较结果
       } else {
-        return a.title.localeCompare(b.title);
+        return sortOrder === "asc" ? titleComparison : -titleComparison; // 根据排序顺序调整比较结果
       }
     });
 
     return posts;
-  }, [searchTerm, selectedTag, filteredPosts, sortOption]);
+  }, [searchTerm, selectedTag, filteredPosts, sortOption, sortOrder]); // 添加 sortOrder 作为依赖项
 
   const currentPosts = useMemo(() => {
     const indexOfLastPost = currentPage * POSTS_PER_PAGE;
@@ -124,9 +129,12 @@ export default function BlogList() {
         searchTerm={searchTerm}
         onSearchChange={handleSearch}
         sortOption={sortOption}
-        onSortChange={(value: SortOption) => setSortOption(value)}
+        sortOrder={sortOrder} // 添加排序顺序
+        onSortChange={(option: SortOption, order: "asc" | "desc") => {
+          setSortOption(option);
+          setSortOrder(order); // 更新排序顺序
+        }}
       />
-
       <TagList
         allTags={allTags}
         selectedTag={selectedTag}
