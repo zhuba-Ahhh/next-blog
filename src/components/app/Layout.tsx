@@ -8,20 +8,20 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  // const [showScrollTop, setShowScrollTop] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = debounce(() => {
-      setShowScrollTop(window.pageYOffset > 300);
-    }, 100);
+  // useEffect(() => {
+  //   const handleScroll = debounce(() => {
+  //     setShowScrollTop(window.pageYOffset > 300);
+  //   }, 100);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
@@ -30,7 +30,7 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <Footer />
-      {showScrollTop && (
+      {/* {showScrollTop && (
         <button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow-lg transition-opacity duration-300 ease-in-out"
@@ -38,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
         >
           ↑
         </button>
-      )}
+      )} */}
     </div>
   );
 }

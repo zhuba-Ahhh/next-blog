@@ -8,7 +8,7 @@ export default function About() {
 
   return (
     <div
-      className={`max-w-4xl mx-auto rounded-lg shadow-lg p-8 my-10 
+      className={`max-w-4xl mx-auto rounded-lg shadow-lg p-8 my-10 transition-all duration-300 ease-in-out 
       ${
         theme === "dark"
           ? "bg-gray-800 text-white"
@@ -16,7 +16,7 @@ export default function About() {
       }`}
     >
       <h1
-        className={`text-4xl font-bold mb-6 ${
+        className={`text-4xl font-bold mb-6 transition-colors duration-300 ${
           theme === "dark" ? "text-indigo-300" : "text-indigo-800"
         }`}
       >
@@ -24,7 +24,7 @@ export default function About() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          className={`md:col-span-2 prose lg:prose-xl ${
+          className={`md:col-span-2 prose lg:prose-xl transition-all duration-300 ${
             theme === "dark" ? "text-gray-300" : "text-gray-700"
           }`}
         >
@@ -43,7 +43,7 @@ export default function About() {
             如果你有任何问题、建议或合作意向，欢迎随时与我联系。让我们一起在编程的世界里探索和创新！
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center transition-transform duration-300 hover:scale-105">
           <Image
             src="/img/avatar.png"
             alt="博主头像"
