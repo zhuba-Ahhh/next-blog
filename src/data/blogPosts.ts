@@ -15,6 +15,7 @@ import {
   content14,
   content15,
   content16,
+  content18,
 } from "./ts";
 
 export interface BlogPost {
@@ -175,5 +176,14 @@ export const blogPosts: BlogPost[] = [
     date: "2024-05-30",
     author: "李十八",
     tags: ["Serverless", "前端开发", "云计算"],
+  },
+  {
+    id: 18,
+    title: "@nestjs/swagger部署报错",
+    excerpt: "@nestjs/swagger撰写api文档...",
+    content: content18,
+    date: "2024-12-10",
+    author: "李十八",
+    tags: ["nestjs", "nodejs"],
   },
 ];
