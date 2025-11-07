@@ -1,14 +1,14 @@
 import { uuid } from '@/utils';
-import { dictums as defalutDictums, dictumsType } from './data/dictum';
+import { dictumsType } from './data';
 
 const DictumList = (props: { origin?: string; dictums?: dictumsType; onClick?: () => void }) => {
   const {
     origin = `烽火戏诸侯《剑来》`,
-    dictums = defalutDictums,
+    dictums = [],
   } = props;
 
   return (
-    <div className="grid gap-8 p-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {dictums.map((dictum, index) => (
         <div key={`${uuid()}-${index}`} data-swapy-slot={index} className="h-full cursor-pointer">
           <div
