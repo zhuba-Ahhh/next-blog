@@ -1,0 +1,188 @@
+.container {
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: var(--primary);
+  --tw-gradient-to: var(--secondary);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: var(--secondary-foreground);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.aplayerContainer {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+}
+
+.aplayerContainer:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* APlayer 样式覆盖，使其与网站主题一致 */
+.aplayer {
+  background-color: var(--background) !important;
+  border-radius: 0.5rem;
+  box-shadow: none !important;
+}
+
+.aplayer.aplayer-withlist .aplayer-info {
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.aplayer .aplayer-info .aplayer-music {
+  color: var(--foreground) !important;
+}
+
+.aplayer .aplayer-info .aplayer-author {
+  color: var(--secondary-foreground) !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  color: var(--secondary-foreground) !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+  background: var(--border) !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar .aplayer-loaded {
+  background: var(--secondary-foreground) !important;
+  opacity: 0.3;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar .aplayer-played {
+  background: var(--primary) !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar .aplayer-thumb {
+  background: var(--primary) !important;
+  border: 2px solid var(--background) !important;
+}
+
+.aplayer .aplayer-icon {
+  color: var(--foreground) !important;
+  transition: color 0.2s ease;
+}
+
+.aplayer .aplayer-icon:hover {
+  color: var(--primary) !important;
+}
+
+.aplayer .aplayer-list {
+  background-color: var(--background) !important;
+}
+
+.aplayer .aplayer-list ol li {
+  color: var(--foreground) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.aplayer .aplayer-list ol li.aplayer-list-light {
+  background-color: var(--secondary) !important;
+  opacity: 0.1;
+}
+
+.aplayer .aplayer-list ol li:hover {
+  background-color: var(--secondary) !important;
+  opacity: 0.05;
+}
+
+.aplayer .aplayer-lrc {
+  color: var(--secondary-foreground) !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  color: var(--primary) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .aplayerContainer {
+    max-width: 100%;
+  }
+  
+  .aplayer {
+    font-size: 14px !important;
+  }
+  
+  .aplayer .aplayer-info {
+    padding: 12px !important;
+  }
+  
+  .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .aplayer {
+    font-size: 13px !important;
+  }
+  
+  .aplayer .aplayer-info {
+    padding: 10px !important;
+  }
+  
+  .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    font-size: 15px !important;
+  }
+}
+
+/* 适配暗色模式 */
+:root.dark {
+  --aplayer-bg: var(--background) !important;
+  --aplayer-text: var(--foreground) !important;
+  --aplayer-author: var(--secondary-foreground) !important;
+  --aplayer-height: 64px;
+}
+
+/* 加载动画样式 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

@@ -1,36 +1,217 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 我的博客 - Next.js 博客系统
 
-## Getting Started
+这是一个基于 Next.js 14 构建的现代化个人博客系统，支持 MDX 内容渲染、主题切换、文章搜索和标签筛选等功能。
 
-First, run the development server:
+## 项目概述
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+本博客系统采用现代前端技术栈构建，具有以下特点：
+
+- 基于 Next.js 14 App Router 架构
+- 支持 MDX 内容渲染，方便编写富文本博客文章
+- 响应式设计，适配不同设备屏幕
+- 深色/浅色主题切换
+- 文章搜索、标签筛选和排序功能
+- 阅读进度指示器和目录导航
+- 相关文章推荐
+- 文章分享功能
+- 评论系统集成
+
+## 技术栈
+
+### 核心技术
+
+- **Next.js 14** - 基于 React 的全栈框架
+- **React 18** - 用于构建用户界面的 JavaScript 库
+- **TypeScript** - 静态类型检查
+- **Tailwind CSS** - 实用优先的 CSS 框架
+- **MDX** - Markdown + JSX 的内容格式
+
+### UI 和动画
+
+- **Framer Motion** - 动画库
+- **Lucide React** - 图标库
+- **Radix UI** - 可访问的 UI 组件库
+- **Next View Transitions** - 页面转场动画
+
+### 工具和插件
+
+- **Next Themes** - 主题切换功能
+- **React Syntax Highlighter** - 代码高亮
+- **Rehype/Remark Plugins** - MDX 处理插件
+- **Tailwind Merge** - 类名合并工具
+
+## 主要功能特性
+
+### 1. 博客文章管理
+
+- 文章列表展示，支持分页
+- 文章详情页，支持 MDX 内容渲染
+- 文章搜索功能，支持标题和内容搜索
+- 文章标签筛选
+- 文章排序（按日期、按标题）
+
+### 2. 用户体验增强
+
+- 深色/浅色主题切换
+- 页面转场动画
+- 阅读进度指示器
+- 文章目录导航
+- 返回顶部按钮
+- 相关文章推荐
+
+### 3. 内容展示优化
+
+- 代码高亮
+- 阅读时间估计
+- 字数统计
+- 文章头部固定导航
+- 标签云展示
+
+## 项目结构
+
+```
+src/
+├── app/             # Next.js App Router 页面
+│   ├── about/       # 关于页面
+│   ├── blog/        # 博客相关页面
+│   ├── contact/     # 联系页面
+│   ├── privacy/     # 隐私政策页面
+│   ├── terms/       # 使用条款页面
+│   ├── layout.tsx   # 全局布局
+│   └── page.tsx     # 首页
+├── components/      # 组件目录
+│   ├── app/         # 应用级组件
+│   ├── blog/        # 博客相关组件
+│   ├── mdx/         # MDX 组件
+│   ├── page/        # 页面级组件
+│   └── ui/          # UI 组件
+├── data/            # 数据目录
+│   ├── content/     # 内容文件
+│   ├── ts/          # TypeScript 内容文件
+│   ├── blogPosts.ts # 博客文章数据
+│   └── BlogPostMDXContent.tsx # MDX 内容组件
+├── hooks/           # 自定义 hooks
+├── lib/             # 工具库
+├── style/           # 样式文件
+└── utils/           # 工具函数
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 快速开始
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 安装依赖
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+pnpm install
+```
 
-## Learn More
+### 开发环境运行
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 构建生产版本
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+pnpm build
+```
 
-## Deploy on Vercel
+### 预览生产构建
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm serve
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 已完成功能
+
+1. **基础框架搭建**
+   - Next.js 14 项目初始化
+   - TypeScript 配置
+   - Tailwind CSS 集成
+   - MDX 支持配置
+
+2. **核心页面实现**
+   - 首页
+   - 博客列表页
+   - 博客详情页
+   - 关于页面
+   - 联系页面
+   - 隐私政策和使用条款页面
+
+3. **博客功能模块**
+   - 文章数据结构设计
+   - 文章列表展示和分页
+   - 文章详情渲染
+   - 文章搜索和筛选
+   - 标签管理
+
+4. **用户界面增强**
+   - 主题切换（深色/浅色模式）
+   - 页面转场动画
+   - 响应式设计
+   - 骨架屏加载状态
+
+5. **内容展示优化**
+   - 代码高亮
+   - 阅读进度指示
+   - 文章目录导航
+   - 相关文章推荐
+   - 分享功能
+
+## 功能优化建议
+
+1. **性能优化**
+   - 实现图片懒加载
+   - 优化 MDX 渲染性能
+   - 添加资源预加载
+   - 实现路由预取
+
+2. **SEO 优化**
+   - 添加更完善的元数据
+   - 实现结构化数据
+   - 优化页面标题和描述
+   - 添加站点地图
+
+3. **用户体验优化**
+   - 实现评论功能的后端支持
+   - 添加文章收藏功能
+   - 实现文章点赞功能
+   - 添加订阅功能
+
+4. **开发体验优化**
+   - 添加自动化测试
+   - 完善 TypeScript 类型定义
+   - 添加代码质量工具
+   - 实现 CI/CD 流程
+
+## 可接入的新功能
+
+1. **内容管理功能**
+   - 集成 CMS 系统（如 Sanity、Contentful 等）
+   - 实现基于文件系统的博客文章管理
+   - 添加文章草稿功能
+
+2. **社交功能**
+   - 集成社交媒体分享
+   - 添加用户登录/注册
+   - 实现评论通知
+
+3. **分析和统计**
+   - 集成访问统计
+   - 添加热门文章功能
+   - 实现阅读习惯分析
+
+4. **扩展功能**
+   - 添加 RSS 订阅
+   - 实现博客订阅邮件推送
+   - 添加主题切换自定义选项
+   - 实现自定义页面模板
+
+5. **性能和可访问性**
+   - 实现 PWA 功能
+   - 优化可访问性支持
+   - 添加离线阅读功能
+
+## 许可证
+
+本项目采用 MIT 许可证 - 详情请查看 LICENSE 文件

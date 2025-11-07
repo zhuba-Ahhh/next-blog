@@ -37,6 +37,10 @@ export default function RootLayout({
       <html lang="zh" suppressHydrationWarning className="h-full">
         <head>
           <link rel="icon" href="/next.svg" type="image/svg+xml" />
+          {/* APlayer和MetingJS预加载脚本 */}
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
+          <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" defer></script>
+          <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" defer></script>
         </head>
         <body className={cn(`flex flex-col bg-background antialiased h-full`)}>
           <ThemeProvider attribute="class">
