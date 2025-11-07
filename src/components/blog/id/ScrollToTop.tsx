@@ -25,10 +25,10 @@ export default function ScrollToTop() {
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 p-2 bg-gray-800 text-white rounded-full shadow-lg transition-opacity duration-300" // 添加过渡效果
+          className="fixed bottom-12 right-6 p-2 bg-gray-800 text-white rounded-full shadow-lg transition-opacity duration-300" // 添加过渡效果
           style={{ visibility: showScroll ? "visible" : "hidden" }} // 使用visibility控制显示
         >
-          回到顶部
+          顶部
         </button>
       )}
     </>

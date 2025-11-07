@@ -1,5 +1,7 @@
+'use client'
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { MDXComponents } from "./types";
+import React from 'react';
 
 import remarkGfm from "remark-gfm";
 import rehypeInlineCode from "@/lib/rehypeInlineCode";

@@ -35,7 +35,7 @@ export default function BlogList() {
   const [isTagsExpanded, setIsTagsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [sortOption, setSortOption] = useState<SortOption>("date");
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 
   const handleSearchParamsChange = useCallback(() => {
     const tag = searchParams.get("tag");

@@ -16,6 +16,7 @@ import {
   content15,
   content16,
   content18,
+  content19,
 } from "./ts";
 
 export interface BlogPost {
@@ -36,7 +37,6 @@ export const blogPosts: BlogPost[] = [
     id: 1,
     title: "深入理解React Hooks",
     excerpt: "探索React Hooks的工作原理和最佳实践...",
-    // contentFile: "1.mdx",
     content: content1,
     date: "2024-03-15",
     author: "张三",
@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "学习构建基于区块链的Web应用...",
     content: content9,
     date: "2024-04-25",
-    author: "黄十一",
+    author: "陈十一",
     tags: ["Web3", "区块链", "DApps"],
   },
   {
@@ -185,5 +185,14 @@ export const blogPosts: BlogPost[] = [
     date: "2024-12-10",
     author: "李十八",
     tags: ["nestjs", "nodejs"],
+  },
+  {
+    id: 19,
+    title: "React 实现流式接口对接：打造实时响应的 AI 对话体验",
+    excerpt: "流式接口显著改善大模型的用户体验。",
+    content: content19,
+    date: "2025-04-01",
+    author: "陈十久",
+    tags: ["React", "Hooks", "前端开发"],
   },
 ];
